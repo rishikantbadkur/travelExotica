@@ -58,7 +58,6 @@ const TourLanding = () => {
               {tour?.images.map((path) => (
                 <div className={styles.tourLanding__hero__imageBox} key={path}>
                   <img
-                    loading="lazy"
                     className={styles.tourLanding__hero__image}
                     src={`/assets/images/tours/${tour?.name}/${path}`}
                     alt={tour.name}

@@ -8,7 +8,7 @@ const useWindowTouchClose = (toggleClose) => {
       if (
         e.target.name === "person-circle-outline" ||
         String(e.target.getAttribute("class")).split("_").includes("content") ||
-        String(e.target.getAttribute("class").split("_").includes("custom"))
+        String(e.target.getAttribute("class")).split("_").includes("custom")
       ) {
         return;
       }
