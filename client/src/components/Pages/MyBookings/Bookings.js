@@ -57,7 +57,7 @@ const Bookings = ({ bookings }) => {
                 layout
               >
                 <Link
-                  to={`/app/tours/${booking.tour.slug}`}
+                  to={`/app/tours/${booking.tour._id}/${booking.tour.slug}`}
                   state={{ id: booking.tour.id }}
                   style={{ textDecoration: "none", color: "inherit" }}
                 >

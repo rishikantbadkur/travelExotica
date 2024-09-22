@@ -119,7 +119,7 @@ const Header = () => {
             )}
             {logOutMenu && (
               <HeaderLogout
-                logOutHandler={logoutClickHandler}
+                logOutModalHandler={logoutClickHandler}
                 toggleLogoutMenu={logoutMenuToggle}
               ></HeaderLogout>
             )}
