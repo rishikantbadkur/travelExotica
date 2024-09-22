@@ -82,7 +82,7 @@ function ResetPassword() {
                 </aside>
                 {mutation.status === "success" && (
                   <aside>
-                    <Link to="/home" style={{ textDecoration: "none" }}>
+                    <Link to="/app/home" style={{ textDecoration: "none" }}>
                       <Button btnSub={true}>Home</Button>
                     </Link>
                   </aside>

@@ -6,6 +6,7 @@ import Spinner from "../../UI/Spinner/Spinner";
 import Bookings from "./Bookings";
 import useMyBookingData from "../../../hooks/useMyBookingData";
 import { useNavigate } from "react-router-dom";
+import useWindowScroll from "../../../hooks/useWindowScroll";
 
 const MyBooking = () => {
   const [
@@ -18,6 +19,8 @@ const MyBooking = () => {
   ] = useMyBookingData();
 
   const navigate = useNavigate();
+
+  useWindowScroll();
 
   if (isUserLoading || isLoading) {
     return <Spinner></Spinner>;
