@@ -95,6 +95,7 @@ const Modal = ({
       </div>
     );
   }
+  console.log(modal);
 
   return ReactDOM.createPortal(
     <div className={styles.modal_overlay}>{modal}</div>,
