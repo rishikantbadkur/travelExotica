@@ -273,9 +273,6 @@ body {
 }
 
 @media (max-width: 37.5em) {
-  html {
-    font-size: 45%;
-  }
   .heading_primary {
     font-size: 5.2rem;
   }
@@ -292,6 +289,6 @@ body {
 
 @media (max-width: 15.625em) {
   html {
-    font-size: 35%;
+    font-size: 38%;
   }
 }
