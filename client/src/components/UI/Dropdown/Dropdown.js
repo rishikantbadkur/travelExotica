@@ -64,7 +64,7 @@ const Dropdown = memo(({ itinerary }) => {
                     {clicked === el.day && (
                       <motion.div
                         className={styles.dropdown_container__sub}
-                        animate={{ height: "20rem", opacity: 1 }}
+                        animate={{ height: "auto", opacity: 1 }}
                         initial={{ height: 0, opacity: 0 }}
                         exit={{ height: 0, opacity: 0 }}
                         transition={{ type: "tween" }}
