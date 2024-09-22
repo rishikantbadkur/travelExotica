@@ -9,7 +9,7 @@ import styles from "./UserAccountDetails.module.css";
 import stylesGeneral from "../../../styles/general.module.css";
 import Button from "../../UI/Button/Button";
 import SpinnerMini from "../../UI/SpinnerMini/SpinnerMini";
-import Footer from "../Footer/Footer";
+import { useNavigate } from "react-router-dom";
 
 function UserAccountDetails() {
   const [password, setPassword] = useState("");
@@ -17,6 +17,8 @@ function UserAccountDetails() {
   const [confirmNewPassword, setConfirmNewPassword] = useState("");
 
   const { userState, isLoading, error } = useContext(UserContext);
+
+  const navigate = useNavigate();
 
   const mutation = useMutation({
     mutationFn: updatePassword,
@@ -79,6 +81,11 @@ function UserAccountDetails() {
 
   if (error) {
     toast.error("Something went wrong while fetching the account details");
+  }
+
+  if (userState?.user.length === 0) {
+    navigate("/app/login");
+    return;
   }
 
   return (

@@ -31,6 +31,8 @@ const WildSearch = lazy(() =>
   import("./components/Pages/WildSearch/WildSearch")
 );
 
+const Header = lazy(() => import("./components/Pages/Header/Header"));
+
 function App() {
   return (
     <>
@@ -49,7 +51,14 @@ function App() {
             <Route
               path="*"
               element={
-                <Suspense fallback={<Spinner />}>
+                <Suspense
+                  fallback={
+                    <>
+                      <Header />
+                      <Spinner />
+                    </>
+                  }
+                >
                   <Routes>
                     <Route path="services" element={<Services />} />
                     <Route path="contacts" element={<Contacts />} />

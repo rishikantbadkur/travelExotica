@@ -25,7 +25,14 @@ function useMyBookingData() {
     },
   });
 
-  return [bookingData, isLoading, error, isUserLoading, userLoadError];
+  return [
+    bookingData,
+    isLoading,
+    error,
+    isUserLoading,
+    userLoadError,
+    userState,
+  ];
 }
 
 export default useMyBookingData;

@@ -1,11 +1,21 @@
-import React from "react";
+import React, { useContext } from "react";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 import styles from "./Blogs.module.css";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
+import { UserContext } from "../../users/UserProvider";
 
 function Blogs() {
+  const { userState } = useContext(UserContext);
+
+  const navigate = useNavigate();
+
+  if (userState?.user.length === 0) {
+    navigate("/app/login");
+    return;
+  }
   return (
     <>
       <Header />
