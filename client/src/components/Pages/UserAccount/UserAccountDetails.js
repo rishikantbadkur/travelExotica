@@ -9,7 +9,7 @@ import styles from "./UserAccountDetails.module.css";
 import stylesGeneral from "../../../styles/general.module.css";
 import Button from "../../UI/Button/Button";
 import SpinnerMini from "../../UI/SpinnerMini/SpinnerMini";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 
 function UserAccountDetails() {
   const [password, setPassword] = useState("");
@@ -18,7 +18,7 @@ function UserAccountDetails() {
 
   const { userState, isLoading, error } = useContext(UserContext);
 
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   const mutation = useMutation({
     mutationFn: updatePassword,
@@ -84,7 +84,8 @@ function UserAccountDetails() {
   }
 
   if (userState?.user.length === 0) {
-    navigate("/app/login");
+    // navigate("/app/login");
+    window.location.href = "/app/login";
     return;
   }
 

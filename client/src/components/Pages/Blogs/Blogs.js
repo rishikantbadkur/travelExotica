@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { motion } from "framer-motion";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 
 import styles from "./Blogs.module.css";
 import Header from "../Header/Header";
@@ -10,10 +10,11 @@ import { UserContext } from "../../users/UserProvider";
 function Blogs() {
   const { userState } = useContext(UserContext);
 
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   if (userState?.user.length === 0) {
-    navigate("/app/login");
+    // navigate("/app/login");
+    window.location.href = "/app/login";
     return;
   }
   return (
