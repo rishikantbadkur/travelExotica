@@ -15,7 +15,7 @@ const Modal = ({
   modalType,
   logOutModal,
 }) => {
-  useWindowTouchClose(onClose);
+  // useWindowTouchClose(onClose);
   if (!isOpen) {
     return null;
   }
