@@ -31,9 +31,7 @@ const Header = () => {
     navigate("/app/login");
   }
 
-  function logoutClickHandler(e) {
-    e.preventDefault();
-
+  function logoutClickHandler() {
     setIsModelOpen(true);
   }
 
