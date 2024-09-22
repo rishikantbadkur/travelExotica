@@ -55,6 +55,8 @@ const Header = () => {
     setIsModelOpen(false);
   }
 
+  console.log(isModelOpen);
+
   return (
     <>
       {isModelOpen && (
