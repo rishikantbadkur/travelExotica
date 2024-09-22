@@ -9,7 +9,12 @@ const HeaderLogout = ({ logOutModalHandler, toggleLogoutMenu }) => {
     <div className={styles.logout_container}>
       <ul className={styles.options_list}>
         <li className={styles.option_item}>
-          <button className={styles.btn_custom} onClick={logOutModalHandler}>
+          <button
+            className={styles.btn_custom}
+            onClick={() => {
+              logOutModalHandler();
+            }}
+          >
             Log Out
           </button>
         </li>
