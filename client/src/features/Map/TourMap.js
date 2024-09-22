@@ -44,6 +44,7 @@ const TourMap = ({ tourMap }) => {
         doubleClickZoom={false}
         touchZoom={false}
         boxZoom={false}
+        dragging={false}
       >
         <TileLayer
           url={URL}
