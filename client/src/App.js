@@ -51,14 +51,7 @@ function App() {
             <Route
               path="*"
               element={
-                <Suspense
-                  fallback={
-                    <>
-                      <Header />
-                      <Spinner />
-                    </>
-                  }
-                >
+                <Suspense fallback={<Spinner />}>
                   <Routes>
                     <Route path="services" element={<Services />} />
                     <Route path="contacts" element={<Contacts />} />
