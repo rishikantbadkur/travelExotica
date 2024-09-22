@@ -1,0 +1,32 @@
+.card_container {
+  padding: 4.8rem;
+
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 1rem;
+}
+
+.user_img {
+  height: 40px;
+  width: 40px;
+  background-color: grey;
+  border-radius: 100px;
+}
+
+.card_footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 1.6rem;
+}
+
+.user_name {
+  margin-left: 1.6rem;
+}
+
+.text_small {
+  font-size: 1.4rem;
+}
+
+.rating_ctn {
+  margin-top: 1.5rem;
+}

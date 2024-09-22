@@ -1,0 +1,135 @@
+.img_container {
+  max-width: 100vw;
+  height: 50rem;
+  background-image: url("../../../assets//images/contacts/contact_main.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.img_container::after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, #000000 50%, #00000000 100%);
+  opacity: 0.5;
+  background-color: transparent;
+}
+
+.text_main {
+  z-index: 5;
+  font-size: 5rem;
+  line-height: 6rem;
+}
+
+.container_wrapper {
+  padding: 12rem 1.6rem;
+  display: flex;
+  justify-content: space-between;
+  max-width: 135rem;
+  margin: auto;
+}
+
+.font_black {
+  color: #000;
+}
+
+.heading_text {
+  margin-top: 3.6rem;
+}
+
+.body_text {
+  margin-top: 1.2rem;
+}
+
+.text_underline {
+  display: inline-block;
+  text-decoration: underline;
+}
+
+.body_text_length {
+  max-width: 30ch;
+}
+
+.location,
+.contacts,
+.message {
+  display: flex;
+  flex-direction: column;
+}
+
+.icon_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 5.6rem;
+  width: 5.6rem;
+  border-radius: 10rem;
+}
+
+.color_grey {
+  background-color: #f2f2f2;
+}
+
+.color_green {
+  background-color: #1bbc9b;
+}
+
+.color_black {
+  background-color: #434a54;
+}
+
+.icon_location,
+.icon_message,
+.icon_contact {
+  font-size: 3.2rem;
+  transform: translateY(0.3rem);
+}
+
+.icon_location {
+  color: #1bbc9b;
+}
+
+.icon_contact,
+.icon_message {
+  color: #fff;
+}
+
+.section__footer__subheading_container {
+  text-align: center;
+}
+
+@media (max-width: 56.25em) {
+  .container_wrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 6.4rem;
+  }
+
+  .location,
+  .contacts,
+  .message {
+    align-items: center;
+  }
+
+  .body_text {
+    text-align: center;
+  }
+}
+
+@media (max-width: 37.5em) {
+  .text_main {
+    font-size: 3rem;
+  }
+  .container_wrapper {
+    padding: 8rem 1.6rem;
+  }
+}

@@ -1,0 +1,67 @@
+.booking_form_body {
+  padding-top: 3.2rem;
+  padding-bottom: 3.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+}
+
+.booking_body_container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.form_border {
+  border-bottom: 0.1rem solid #e4e4e4;
+}
+
+.body_margin {
+  padding-bottom: 3.2rem;
+}
+
+.tour_date_value {
+  line-height: 1.4rem;
+}
+
+.tour_date_value select {
+  padding: 0.5rem 0.5rem 0.5rem 0;
+  font-family: "Poppins", sans-serif;
+  color: #6e6e6e;
+  font-size: 1.4rem;
+  border: none;
+}
+
+.tour_date_value select:focus {
+  outline: none;
+}
+
+.booking_body_adult_container,
+.booking_body_children_container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.counter_container {
+  display: flex;
+  gap: 1.6rem;
+  align-items: center;
+}
+
+.counter_value {
+  font-weight: 700;
+  font-size: 2.5rem;
+  line-height: 3.5rem;
+  color: #000;
+}
+
+.counter_btn {
+  border: none;
+  background-color: #fff;
+  font-size: 2rem;
+  color: #6e6e6e;
+}
+
+.counter_btn:hover {
+  cursor: pointer;
+}

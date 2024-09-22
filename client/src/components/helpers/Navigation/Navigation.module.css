@@ -1,0 +1,42 @@
+.navigation {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.mobile_nav {
+  flex-direction: column;
+}
+
+.header__links {
+  list-style: none;
+  display: flex;
+  gap: 3.8rem;
+  align-items: center;
+}
+
+.header__link {
+  letter-spacing: 1.2px;
+  font-size: 1.2rem;
+  line-height: 2rem;
+  padding: 1.2rem;
+  border: none;
+  color: #6e6e6e;
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.header__link:hover {
+  color: #1bbc9b;
+}
+
+:global(.active) {
+  color: #1bbc9b;
+}
+
+@media (max-width: 37.5em) {
+  .header__link {
+    font-size: 1.6rem;
+  }
+}

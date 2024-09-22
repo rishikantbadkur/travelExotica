@@ -1,0 +1,1925 @@
+[
+  {
+    "startLocation": {
+      "description": "Delhi",
+      "type": "Point",
+      "coordinates": [75.8579055765648, 22.721765981957358],
+      "address": "New Delhi"
+    },
+    "ratingsAverage": 4.8,
+    "ratingsQuantity": 6,
+    "images": ["tour-1.jpg", "tour-2.jpg", "tour-3.jpg"],
+    "startDates": [
+      "2023-03-15T09:00:00.000Z",
+      "2021-04-15T09:00:00.000Z",
+      "2021-05-15T09:00:00.000Z"
+    ],
+    "_id": "5c88fa8cf4afda39709c295a",
+    "name": "The Snow Adventurer",
+    "duration": 11,
+    "maxGroupSize": 30,
+    "difficulty": "Difficult",
+    "price": 24999,
+    "keywords": ["Sports Activities", "Family-Friendly", "Adventure Travel"],
+    "summary": "Exciting adventure in the snow with snowboarding and skiing, join us in a journey to be remembered lifelong",
+    "description": "There is something magical about winter, it is easy to lose sight in the sense of this wonder.To curl up in the real celebration of this season, visit the places where winter in India is much more than the cold soothing breeze, where there's snow everywhere. \nAs bone-chilling winter continues, some parts of Northern India have become a snowy wonderland. If you want to celebrate winter where it snows the most, then pack your bags and get set go to these places NOW.",
+    "imageCover": "cover.jpg",
+
+    "itinerary": [
+      {
+        "day": 1,
+        "highlight": "Arrival and Orientation",
+        "plan": "Upon arrival, you’ll be greeted by your guide and transferred to your hotel. After settling in, you’ll attend an orientation meeting to go over the itinerary and meet your fellow travelers."
+      },
+      {
+        "day": 2,
+        "highlight": "Exploring Kufri",
+        "plan": "After breakfast, gear yourself up for river rafting and other activities. Post that explore the place at your own pace."
+      },
+
+      {
+        "day": 3,
+        "highlight": "Evening at Manali",
+        "plan": "After breakfast, you will be leaving for Manali, reach Manali by evening and spend the evening at your leisure."
+      },
+      {
+        "day": 4,
+        "highlight": "Cherishing nearby places",
+        "plan": "Your morning will start very early today, as you you would be leaving for Rohtang pass and will be covering various places enroute"
+      },
+      {
+        "day": 5,
+        "highlight": "Exploring Manali",
+        "plan": "After breakfast, you would be visiting the famous places in manali. Post that you are free to spend the day at your own pace"
+      },
+      {
+        "day": 6,
+        "highlight": "Trip to Ladakh",
+        "plan": "After breakfast, you will be leaving for Ladakh, the Manali to Ladakh route is something you will cherish forever, reach Ladakh by evening"
+      },
+      {
+        "day": 7,
+        "highlight": "Rest for the day",
+        "plan": "After a non-stop journey, you are free to spend the day at your own pace."
+      },
+      {
+        "day": 8,
+        "highlight": "Exploring Leh",
+        "plan": "We will be exploring places in and aroun Leh."
+      },
+      {
+        "day": 9,
+        "highlight": "Road trip again, Kashmir this time",
+        "plan": "Post breakfast, grab the window seat and be ready to witness the heaven on Earth"
+      },
+      {
+        "day": 10,
+        "highlight": "From a Shikara ride in Srinagar to trekking to the alpine lakes",
+        "plan": "Take a light breakfast and tie your shoe laces for some adventures"
+      },
+      {
+        "day": 11,
+        "highlight": "Gulmarg “The Meadow of Flowers”",
+        "plan": "Involve in the various snow activities in Gulmarg"
+      },
+      {
+        "day": 12,
+        "highlight": "Bidding goodbye",
+        "plan": "After a memorable trip, it’s time to bid goodbye to the fellow travellers"
+      }
+    ],
+    "locations": [
+      {
+        "_id": "5c88fa8cf4afda39709c295c",
+        "description": "Kufri",
+        "type": "Point",
+        "coordinates": [77.26972041699021, 31.10437854009781],
+        "day": 2
+      },
+      {
+        "_id": "5c88fa8cf4afda39709c295b",
+        "description": "Manali",
+        "type": "Point",
+        "coordinates": [77.18876975005882, 32.246222163650174],
+        "day": 4
+      },
+      {
+        "_id": "5c88fa8cf4afda39709c295f",
+        "description": "Ladakh",
+        "type": "Point",
+        "coordinates": [77.19799653886446, 34.66376177742353],
+        "day": 7
+      },
+      {
+        "_id": "5c88fa8cf4afda39709c295d",
+        "description": "Srinagar",
+        "type": "Point",
+        "coordinates": [74.87930796067509, 34.152284102158895],
+        "day": 10
+      },
+      {
+        "_id": "5c88fa8cf4afda39709c295e",
+        "description": "Gulmarg",
+        "type": "Point",
+        "coordinates": [74.33605035159604, 34.084243371406856],
+        "day": 11
+      }
+    ]
+  },
+
+  {
+    "startLocation": {
+      "description": "Indore",
+      "type": "Point",
+      "coordinates": [75.8579055765648, 22.721765981957358],
+      "address": "Indore"
+    },
+    "ratingsAverage": 4.7,
+    "ratingsQuantity": 5,
+    "images": ["tour-1.jpg", "tour-2.jpg", "tour-3.jpg"],
+    "startDates": [
+      "2024-09-15T09:00:00.000Z",
+      "2024-10-05T09:00:00.000Z",
+      "2024-11-20T09:00:00.000Z"
+    ],
+    "_id": "5c88fa8cf4afda39709c395a",
+    "name": "The Wine Taster",
+    "duration": 7,
+    "maxGroupSize": 26,
+    "difficulty": "Easy",
+    "price": 16999,
+    "keywords": ["Culinary Tourism", "Budget Travel"],
+
+    "summary": "Uncork the essence of fine wine with a captivating journey through India’s top wine regions",
+    "description": "Embark on a 7-day journey through India’s premier wine regions starting from Indore. Your adventure begins in Nashik, where you’ll explore the renowned Sula Vineyards and savor exceptional wines. Continue to Pune to delve deeper into the local wine culture with visits to celebrated wineries and gourmet dining experiences. Conclude your tour in Mumbai, where you’ll experience the city’s sophisticated wine scene and indulge in fine dining. This tour is a perfect blend of vineyard tours, wine tastings, and culinary delights for wine enthusiasts.",
+    "imageCover": "cover.jpg",
+
+    "itinerary": [
+      {
+        "day": 1,
+        "highlight": "Arrival and Orientation",
+        "plan": "Fly from Indore to Nashik, a renowned wine region in India. Upon arrival, check in to your hotel and take some time to relax. In the evening, enjoy a welcome dinner featuring a selection of local wines, setting the tone for your wine-tasting journey."
+      },
+      {
+        "day": 2,
+        "highlight": "Nashik Wine Tour",
+        "plan": "Start your day with a visit to Sula Vineyards, where you'll experience a guided tour of the vineyard, learn about the wine-making process, and indulge in a tasting session. For lunch, enjoy a meal at the vineyard’s restaurant, savoring local cuisine paired with Sula’s wines. Spend your evening exploring more vineyards or unwinding at your hotel, followed by dinner at a local restaurant with wine pairings."
+      },
+
+      {
+        "day": 3,
+        "highlight": "Heading to Pune",
+        "plan": "Travel from Nashik to Pune, a drive that takes around four hours. After checking in to your hotel, head out to visit local vineyards such as Oakwood and Four Seasons Winery for tours and tastings. In the evening, dine at a fine restaurant in Pune, where you can enjoy a selection of exquisite wines."
+      },
+      {
+        "day": 4,
+        "highlight": "Pune's Wineyards",
+        "plan": "Explore Pune’s wine scene further with visits to additional wineries. Enjoy guided tours and tastings, and then have lunch at a vineyard or upscale restaurant where gourmet dishes are paired with fine wines. Return to your hotel in the evening to relax or experience Pune’s vibrant nightlife"
+      },
+      {
+        "day": 5,
+        "highlight": "En Route to Mumbai",
+        "plan": "Travel from Pune to Mumbai, either by road or flight. Upon arriving in Mumbai, check in to your hotel and take some time to explore the city. In the evening, enjoy dinner at a sophisticated restaurant that offers an extensive wine list, allowing you to sample some of Mumbai’s finest selections."
+      },
+      {
+        "day": 6,
+        "highlight": "Mumbai Wine Experience",
+        "plan": "Visit a boutique winery or a high-end wine bar in Mumbai. Participate in a tasting session and gain insights into the city’s wine trends. For lunch, enjoy a gourmet meal at a vineyard or a restaurant with excellent wine pairings. Spend the evening relaxing at your hotel or exploring Mumbai’s dynamic dining scene and nightlife."
+      },
+      {
+        "day": 7,
+        "highlight": "Bidding goodbye",
+        "plan": "Enjoy some free time in the morning for last-minute shopping or sightseeing in Mumbai. In the afternoon, transfer to the airport for your flight back to Indore or your onward journey, concluding your immersive wine-tasting adventure."
+      }
+    ],
+    "locations": [
+      {
+        "_id": "5c88fa8cf4afda39709c395c",
+        "description": "Nashik",
+        "type": "Point",
+        "coordinates": [73.789803, 19.997454],
+        "day": 2
+      },
+      {
+        "_id": "5c88fa8cf4afda39709c395b",
+        "description": "Pune",
+        "type": "Point",
+        "coordinates": [73.856255, 18.516726],
+        "day": 4
+      },
+      {
+        "_id": "5c88fa8cf4afda39709c395f",
+        "description": "Mumbai",
+        "type": "Point",
+        "coordinates": [72.877426, 19.07609],
+        "day": 6
+      }
+    ]
+  },
+
+  {
+    "startLocation": {
+      "description": "Delhi",
+      "type": "Point",
+      "coordinates": [75.8579055765648, 22.721765981957358],
+      "address": "New Delhi"
+    },
+    "ratingsAverage": 4.8,
+    "ratingsQuantity": 6,
+    "images": ["tour-1.jpg", "tour-2.jpg", "tour-3.jpg"],
+    "startDates": [
+      "2024-09-05T09:00:00.000Z",
+      "2024-10-10T09:00:00.000Z",
+      "2024-11-20T09:00:00.000Z"
+    ],
+    "_id": "5c88fa8cf4afda39709c495a",
+    "name": "The Spiti Circuit",
+    "duration": 10,
+    "maxGroupSize": 30,
+    "difficulty": "Difficult",
+    "price": 28999,
+    "keywords": ["Road Trips", "Sports Activities", "Adventure Travel"],
+
+    "summary": "Experience the tranquility of the hills enjoying cool mountain air and breathtaking views",
+    "description": "Embark on a breathtaking 10-day journey through the heart of the Himalayas on our Spiti Valley Adventure. Starting from the bustling city of Delhi, this tour takes you through the serene hill stations of Shimla and Sarahan, the picturesque valleys of Sangla and Kalpa, and the ancient monasteries of Tabo and Kaza. Experience the high-altitude charm of Key Monastery, Kibber, and Langza, and marvel at the pristine beauty of Chandratal Lake. With scenic drives, cultural immersions, and unforgettable landscapes, this tour offers a perfect blend of adventure and tranquility. Join us for an unforgettable expedition into one of India's most remote and stunning regions.",
+    "imageCover": "cover.jpg",
+
+    "itinerary": [
+      {
+        "day": 1,
+        "highlight": "Evening at Shimla",
+        "plan": "Begin your journey from Delhi to Shimla, the charming hill station known for its colonial architecture and vibrant Mall Road. After a long drive, relax and explore the local sights in the evening."
+      },
+      {
+        "day": 2,
+        "highlight": "Reaching Saharan via Kufri and Narkanda",
+        "plan": "After breakfast depart for Sarahan, Stopping at Kufri and Narkanda. You would be reaching Saharan by afternoon visit the Bhimkali temple. Spend the evening enjoying the serene surroundings"
+      },
+
+      {
+        "day": 3,
+        "highlight": "Sangla Valley",
+        "plan": "You will drive to Sangla, passing through beautiful valleys. Check in to your accommodation at afternoon, Explore the Sangla Valley and Kamru Fort. Overnight stay in Sangla."
+      },
+      {
+        "day": 4,
+        "highlight": "Kalpa and Kinnaur Kailash",
+        "plan": "Morning drive to Kalpa, visit Recong Peo on the way.Visit the Kalpa Monastery and enjoy views of Kinnaur Kailash. Rest overnight."
+      },
+      {
+        "day": 5,
+        "highlight": "Exploring Tabo",
+        "plan": "Depart early for Tabo, stopping at Nako Lake en route. Arrive in Tabo. Visit the Tabo Monastery. In the evening explore the village at your own pace. Overnight stay in Tabo."
+      },
+      {
+        "day": 6,
+        "highlight": "Ruins of the ancient Sakya Tangyud Monastery",
+        "plan": "Drive to Kaza, visiting Dhankar Monastery and Pin Valley on the way. Afternoon: Arrive in Kaza. Check-in at your accommodation. Relax and explore Kaza town. Overnight stay in Kaza."
+      },
+      {
+        "day": 7,
+        "highlight": "Kaza local sightseeing",
+        "plan": "Kaza local sightseeing Visit Key Monastery and Kibber Village. Explore Langza, Hikkim (home to the world’s highest post office), and Komic (one of the highest villages in the world)"
+      },
+      {
+        "day": 8,
+        "highlight": "Drive to Chandratal Lake, via Kunzum Pass",
+        "plan": "Drive to Chandratal Lake, via Kunzum Pass. Arrive at Chandratal. Enjoy the stunning views and take a walk around the lake. Overnight camping at Chandratal."
+      },
+      {
+        "day": 9,
+        "highlight": "Heading to Manali",
+        "plan": "Drive to Manali, via Rohtang Pass. Arrive in Manali. Check-in at your hotel. Explore Mall Road and relax. Overnight stay in Manali."
+      },
+      {
+        "day": 10,
+        "highlight": "Bidding goodbye",
+        "plan": "Depart early from Manali. Arrive back in Delhi, after a memorable trip, it’s time to bid goodbye to the fellow travellers"
+      }
+    ],
+    "locations": [
+      {
+        "_id": "5c88fa8cf4afda39709c495c",
+        "description": "Shimla",
+        "type": "Point",
+        "coordinates": [77.173424, 31.104605],
+        "day": 1
+      },
+      {
+        "_id": "5c88fa8cf4afda39709c495b",
+        "description": "Sangla",
+        "type": "Point",
+        "coordinates": [78.265, 31.4255],
+        "day": 3
+      },
+      {
+        "_id": "5c88fa8cf4afda39709c495f",
+        "description": "Tabo",
+        "type": "Point",
+        "coordinates": [78.3856, 32.0933],
+        "day": 5
+      },
+      {
+        "_id": "5c88fa8cf4afda39709c495d",
+        "description": "Chandratal lake",
+        "type": "Point",
+        "coordinates": [77.61706, 32.47518],
+        "day": 8
+      },
+      {
+        "_id": "5c88fa8cf4afda39709c495e",
+        "description": "Manali",
+        "type": "Point",
+        "coordinates": [77.1892, 32.2432],
+        "day": 9
+      }
+    ]
+  },
+
+  {
+    "startLocation": {
+      "description": "Delhi",
+      "type": "Point",
+      "coordinates": [75.8579055765648, 22.721765981957358],
+      "address": "New Delhi"
+    },
+    "ratingsAverage": 4.8,
+    "ratingsQuantity": 6,
+    "images": ["tour-1.jpg", "tour-2.jpg", "tour-3.jpg"],
+    "startDates": [
+      "2024-10-25T09:00:00.000Z",
+      "2024-11-15T09:00:00.000Z",
+      "2024-12-05T09:00:00.000Z"
+    ],
+    "_id": "5c88fa8cf4afda39709c595a",
+    "name": "The Himalayan Horizons",
+    "duration": 10,
+    "maxGroupSize": 30,
+    "difficulty": "Difficult",
+    "price": 29799,
+    "keywords": ["Road Trips", "Adventure Travel"],
+
+    "summary": "This tour offers a perfect blend of adventure, cultural exploration, and breathtaking Himalayan scenery.",
+    "description": "Experience a thrilling 10-day journey from Delhi to the majestic landscapes of Ladakh. Begin in Srinagar with a serene Shikara ride on Dal Lake and a visit to Mughal Gardens, then drive through Sonamarg to admire the Thajiwas Glacier. Continue to Kargil, exploring the Kargil War Memorial, before heading to Leh via the ancient Lamayuru Monastery and Magnetic Hill. In Leh, immerse yourself in the local culture by visiting Shey Palace, Thiksey Monastery, and the bustling Leh Market.",
+    "imageCover": "cover.jpg",
+
+    "itinerary": [
+      {
+        "day": 1,
+        "highlight": "Arrival and Orientation",
+        "plan": "Fly from Delhi to Srinagar and settle into your houseboat or hotel. Enjoy a tranquil Shikara ride on Dal Lake and explore the historic Mughal Gardens in the evening. Overnight stay in Srinagar"
+      },
+      {
+        "day": 2,
+        "highlight": "Meadow of Gold",
+        "plan": "Depart from Srinagar and drive to the scenic Sonamarg, known for its beautiful meadows and Thajiwas Glacier. Spend the night in Sonamarg, taking in the breathtaking views."
+      },
+
+      {
+        "day": 3,
+        "highlight": "Kargil war memorial",
+        "plan": "Journey from Sonamarg to Kargil, passing through the formidable Zoji La Pass and the chilly town of Drass. Visit the Kargil War Memorial before resting for the night in Kargil."
+      },
+      {
+        "day": 4,
+        "highlight": "Land of Lamas",
+        "plan": "Travel from Kargil to Leh, with a stop at the ancient Lamayuru Monastery. Drive through the captivating landscapes of Fotu La Pass and visit the intriguing Magnetic Hill before arriving in Leh for an overnight stay."
+      },
+      {
+        "day": 5,
+        "highlight": "Exploring Leh",
+        "plan": "Explore the cultural richness of Leh with visits to Shey Palace, Thiksey Monastery, and Hemis Monastery. Spend the afternoon browsing the vibrant Leh Market and admiring the views from Shanti Stupa."
+      },
+      {
+        "day": 6,
+        "highlight": "The Orchard of Ladakh",
+        "plan": "Drive to Nubra Valley via the thrilling Khardung La Pass, one of the highest motorable roads in the world. Visit Diskit Monastery and the Hunder Sand Dunes before an overnight stay in the serene Nubra Valley."
+      },
+      {
+        "day": 7,
+        "highlight": "Visit to Pangong",
+        "plan": "Continue your adventure from Nubra Valley to the stunning Pangong Lake, driving along the picturesque Shyok River. Arrive at Pangong Lake and enjoy the serene beauty of this high-altitude lake. Overnight stay near Pangong Lake."
+      },
+      {
+        "day": 8,
+        "highlight": "Rest for the day",
+        "plan": "Drive back to Leh via the scenic Chang La Pass, arriving in the afternoon for some rest and exploration of local markets. Spend the evening relaxing in Leh."
+      },
+      {
+        "day": 9,
+        "highlight": "Additional day",
+        "plan": "Take a day trip from Leh to visit the ancient Alchi Monastery and the fascinating Likir Monastery. Return to Leh in the afternoon and enjoy some leisure time before your final night in Leh."
+      },
+      {
+        "day": 10,
+        "highlight": "Bidding goodbye",
+        "plan": "Transfer to Leh Airport for your flight back to Delhi, bringing your unforgettable Ladakh adventure to a close. After a memorable trip, it’s time to bid goodbye to the fellow travellers"
+      }
+    ],
+    "locations": [
+      {
+        "_id": "5c88fa8cf4afda39709c595c",
+        "description": "Sonmarg",
+        "type": "Point",
+        "coordinates": [75.2931, 34.3032],
+        "day": 2
+      },
+      {
+        "_id": "5c88fa8cf4afda39709c595b",
+        "description": "Kargil",
+        "type": "Point",
+        "coordinates": [76.1349, 34.5539],
+        "day": 3
+      },
+      {
+        "_id": "5c88fa8cf4afda39709c595f",
+        "description": "Leh",
+        "type": "Point",
+        "coordinates": [77.5771, 34.1526],
+        "day": 5
+      },
+      {
+        "_id": "5c88fa8cf4afda39709c595d",
+        "description": "Pangong lake",
+        "type": "Point",
+        "coordinates": [78.6674, 33.7595],
+        "day": 7
+      }
+    ]
+  },
+
+  {
+    "startLocation": {
+      "description": "Indore",
+      "type": "Point",
+      "coordinates": [75.8579055765648, 22.721765981957358],
+      "address": "Indore"
+    },
+    "ratingsAverage": 4.8,
+    "ratingsQuantity": 6,
+    "images": ["tour-1.jpg", "tour-2.jpg", "tour-3.jpg"],
+    "startDates": [
+      "2024-09-10T09:00:00.000Z",
+      "2024-10-15T09:00:00.000Z",
+      "2024-12-22T09:00:00.000Z"
+    ],
+    "_id": "5c88fa8cf4afda39709c695a",
+    "name": "The Majestic Rajasthan",
+    "duration": 9,
+    "maxGroupSize": 22,
+    "difficulty": "Easy",
+    "price": 19999,
+    "keywords": [
+      "Family-Friendly",
+      "Heritage Tours",
+      "Budget Travel",
+      "Cultural Tours"
+    ],
+
+    "summary": "Discover the grandeur of Rajasthan with a royal adventure through palatial splendor and desert mystique.",
+    "description": "A captivating 10-day journey from Indore to the heart of Rajasthan’s grandeur. Begin your adventure in Jaipur, exploring majestic palaces and vibrant markets. Traverse the golden sands of Jaisalmer, uncovering its rich heritage and desert beauty. Journey through Jodhpur, with its stunning forts and opulent palaces, before arriving in the enchanting city of Udaipur, renowned for its serene lakes and regal architecture. Conclude your tour with visits to the sacred towns of Ajmer and Pushkar, immersing yourself in their spiritual and cultural allure. This meticulously crafted tour blends royal heritage with mesmerizing landscapes, offering a royal adventure through Rajasthan's rich tapestry.",
+    "imageCover": "cover.jpg",
+
+    "itinerary": [
+      {
+        "day": 1,
+        "highlight": "Arrival and Orientation",
+        "plan": "Depart from Indore early in the morning for Jaipur. Arrive in Jaipur by evening, check into your hotel, and rest for the night."
+      },
+      {
+        "day": 2,
+        "highlight": "The pink city",
+        "plan": "Explore Jaipur's highlights, including Amber Fort, Hawa Mahal, and City Palace. Visit Jantar Mantar and experience Rajasthani culture at Chokhi Dhani in the evening."
+      },
+
+      {
+        "day": 3,
+        "highlight": "The Golden city",
+        "plan": "Travel from Jaipur to Jaisalmer. Arrive in Jaisalmer by evening and check into your hotel."
+      },
+      {
+        "day": 4,
+        "highlight": "Exploring Jaisalmer",
+        "plan": "Discover Jaisalmer’s Fort, Patwon Ki Haveli, and Salim Singh Ki Haveli. Enjoy a desert safari and camel ride at Sam Sand Dunes, followed by a cultural evening."
+      },
+      {
+        "day": 5,
+        "highlight": "The Blue City",
+        "plan": "Drive from Jaisalmer to Jodhpur. Explore Mehrangarh Fort, Jaswant Thada, and Umaid Bhawan Palace. Relax in the evening or visit local markets"
+      },
+      {
+        "day": 6,
+        "highlight": "City of Lakes",
+        "plan": "Journey from Jodhpur to Udaipur. Visit City Palace, Jagdish Temple, and take a boat ride on Lake Pichola. Explore local markets in the evening."
+      },
+      {
+        "day": 7,
+        "highlight": "Local sightseeing at Udaipur",
+        "plan": "Spend the day exploring Udaipur, including Saheliyon Ki Bari and the Vintage Car Museum. Enjoy a sunset view from Lake Palace or a traditional dinner."
+      },
+      {
+        "day": 8,
+        "highlight": "Visiting Ajmer",
+        "plan": "Travel to Ajmer and Pushkar. Visit Ajmer Sharif Dargah and the Brahma Temple in Pushkar, and return to Jaipur in the evening."
+      },
+      {
+        "day": 9,
+        "highlight": "Bidding goodbye",
+        "plan": "Depart from Jaipur and return to Indore. After a memorable trip, it’s time to bid goodbye to the fellow travellers"
+      }
+    ],
+    "locations": [
+      {
+        "_id": "5c88fa8cf4afda39709c695c",
+        "description": "Jaipur",
+        "type": "Point",
+        "coordinates": [75.7873, 26.9124],
+        "day": 2
+      },
+      {
+        "_id": "5c88fa8cf4afda39709c695b",
+        "description": "Jaisalmer",
+        "type": "Point",
+        "coordinates": [70.9083, 26.9157],
+        "day": 3
+      },
+      {
+        "_id": "5c88fa8cf4afda39709c695f",
+        "description": "Jodhpur",
+        "type": "Point",
+        "coordinates": [73.0243, 26.2389],
+        "day": 5
+      },
+      {
+        "_id": "5c88fa8cf4afda39709c695d",
+        "description": "Udaipur",
+        "type": "Point",
+        "coordinates": [73.7125, 24.5854],
+        "day": 6
+      },
+      {
+        "_id": "5c88fa8cf4afda39709c695e",
+        "description": "Ajmer",
+        "type": "Point",
+        "coordinates": [74.6399, 26.4499],
+        "day": 8
+      }
+    ]
+  },
+
+  {
+    "startLocation": {
+      "description": "Delhi",
+      "type": "Point",
+      "coordinates": [75.8579055765648, 22.721765981957358],
+      "address": "New Delhi"
+    },
+    "ratingsAverage": 4.8,
+    "ratingsQuantity": 6,
+    "images": ["tour-1.jpg", "tour-2.jpg", "tour-3.jpg"],
+    "startDates": [
+      "2024-09-02T09:00:00.000Z",
+      "2024-10-14T09:00:00.000Z",
+      "2024-11-26T09:00:00.000Z"
+    ],
+    "_id": "5c88fa8cf4afda39709c795a",
+    "name": "The Eastern Summit",
+    "duration": 9,
+    "maxGroupSize": 30,
+    "difficulty": "Medium",
+    "price": 21999,
+    "keywords": [
+      "Family-Friendly",
+      "Budget Travel",
+      "Cultural Tours",
+      "Eco-tourism"
+    ],
+
+    "summary": "Experience the magic of the Himalayas with the a perfect blend of scenic beauty and mountain adventure",
+    "description": "Embark for an unforgettable 10-day journey through the breathtaking landscapes of the Himalayas. Start your adventure in the charming hill station of Darjeeling, where you'll witness stunning sunrises, explore historical sites, and enjoy scenic train rides. Continue your exploration in Gangtok, the vibrant capital of Sikkim, visiting its monasteries, cultural centers, and stunning viewpoints. A day trip to the picturesque Tsomgo Lake and Baba Mandir adds a touch of serenity to your journey. Conclude your tour in Pelling, known for its majestic views of the Kanchenjunga range, and return to Delhi with cherished memories of this Himalayan sojourn.",
+    "imageCover": "cover.jpg",
+
+    "itinerary": [
+      {
+        "day": 1,
+        "highlight": "Arrival and Orientation",
+        "plan": "Fly from Delhi to Bagdogra, where you'll be greeted and driven to the charming hill station of Darjeeling. Upon arrival, check into your hotel, freshen up, and spend the evening exploring the local markets. Enjoy your first night in the scenic beauty of Darjeeling."
+      },
+      {
+        "day": 2,
+        "highlight": "The Queen of Hills",
+        "plan": "Begin your day with a pre-dawn visit to Tiger Hill to witness a stunning sunrise over the Kanchenjunga range. Afterward, explore the Batasia Loop and take a ride on the historic Darjeeling Himalayan Railway. In the afternoon, visit the Peace Pagoda, the Himalayan Mountaineering Institute, and the Tibetan Refugee Centre. Conclude your day with a leisurely walk along Mall Road and sample local delicacies."
+      },
+
+      {
+        "day": 3,
+        "highlight": "En Route to Gangtok",
+        "plan": "Depart Darjeeling and head to Gangtok, the vibrant capital of Sikkim. Upon arrival, check into your hotel and take some time to explore the local markets. In the evening, visit Enchey Monastery for a peaceful end to your day"
+      },
+      {
+        "day": 4,
+        "highlight": "Exploring Gangtok",
+        "plan": "Spend your day exploring Gangtok's attractions, including Rumtek Monastery, the Namgyal Institute of Tibetology, and the Flower Exhibition Centre. Enjoy panoramic views of the Himalayas from Tashi Viewpoint. In the evening, stroll around M.G. Road, where you can shop and dine at local eateries."
+      },
+      {
+        "day": 5,
+        "highlight": "To and Fro",
+        "plan": "Take a day trip to the picturesque Tsomgo Lake, nestled in the mountains, followed by a visit to the Baba Mandir, dedicated to a revered soldier. Return to Gangtok in the evening to relax at your hotel."
+      },
+      {
+        "day": 6,
+        "highlight": "Exploring the unexplored",
+        "plan": "Drive to Pelling, a serene town offering stunning views of the Kanchenjunga range. After checking into your hotel, explore the local surroundings and unwind with the breathtaking landscapes."
+      },
+      {
+        "day": 7,
+        "highlight": "Local Sightseeing",
+        "plan": "Discover Pelling’s highlights, including Pemayangtse Monastery, Khecheopalri Lake, and the historical Rabdentse Ruins. In the afternoon, visit Kanchenjunga Falls and Rimbi Falls. Return to your hotel in the evening to enjoy the serene environment."
+      },
+      {
+        "day": 8,
+        "highlight": "Heading back",
+        "plan": "Travel back to Bagdogra, where you'll have the evening free to relax or explore the local area. Enjoy a quiet evening before your flight the next day."
+      },
+      {
+        "day": 9,
+        "highlight": "Bidding goodbye",
+        "plan": "Fly back to Delhi from Bagdogra. After a memorable trip, it’s time to bid goodbye to the fellow travellers."
+      }
+    ],
+    "locations": [
+      {
+        "_id": "5c88fa8cf4afda39709c795c",
+        "description": "Darjeeling",
+        "type": "Point",
+        "coordinates": [88.2664, 27.0416],
+        "day": 2
+      },
+      {
+        "_id": "5c88fa8cf4afda39709c795b",
+        "description": "Gangtok",
+        "type": "Point",
+        "coordinates": [88.6138, 27.3314],
+        "day": 4
+      },
+      {
+        "_id": "5c88fa8cf4afda39709c795f",
+        "description": "Pelling",
+        "type": "Point",
+        "coordinates": [88.24, 27.3198],
+        "day": 6
+      },
+      {
+        "_id": "5c88fa8cf4afda39709c795d",
+        "description": "Bagdogra",
+        "type": "Point",
+        "coordinates": [88.3117, 26.6986],
+        "day": 8
+      }
+    ]
+  },
+
+  {
+    "startLocation": {
+      "description": "Indore",
+      "type": "Point",
+      "coordinates": [75.8579055765648, 22.721765981957358],
+      "address": "Indore"
+    },
+    "ratingsAverage": 4.8,
+    "ratingsQuantity": 6,
+    "images": ["tour-1.jpg", "tour-2.jpg", "tour-3.jpg"],
+    "startDates": [
+      "2024-10-03T09:00:00.000Z",
+      "2024-11-17T09:00:00.000Z",
+      "2024-12-24T09:00:00.000Z"
+    ],
+    "_id": "5c88fa8cf4afda39709c995a",
+    "name": "The Secret Trails of South",
+    "duration": 12,
+    "maxGroupSize": 30,
+    "difficulty": "Easy",
+    "price": 23999,
+    "keywords": ["Family-Friendly", "Cultural Tours", "Heritage Tours"],
+
+    "summary": "Explore the hidden treasures of South India with us, a unique journey through serene landscapes",
+    "description": "Embark on the **Offbeat South India Circuit**, a captivating 12-day journey from Indore to the hidden gems of South India. Discover the serene beaches of Kannur, the historical richness of Madurai, and the tranquil hill stations of Yercaud and Kodaikanal. This tour offers a blend of scenic beauty, cultural heritage, and local experiences, away from the usual tourist trails. Enjoy tranquil settings, picturesque landscapes, and authentic South Indian culture.",
+    "imageCover": "cover.jpg",
+
+    "itinerary": [
+      {
+        "day": 1,
+        "highlight": "Arrival and Orientation",
+        "plan": "Travel from Indore to Bengaluru, arriving in the evening. Check in to your hotel and unwind after the journey."
+      },
+      {
+        "day": 2,
+        "highlight": "Bengaluru : Where every street is a fusion of the future and timeless elegance",
+        "plan": "Explore Bengaluru’s highlights, including Lalbagh Botanical Garden and Bangalore Palace. Spend your afternoon at Cubbon Park and local markets, and enjoy a relaxed dinner."
+      },
+
+      {
+        "day": 3,
+        "highlight": "Evening at Kannur",
+        "plan": "Journey to Kannur, arriving in the afternoon. Check in to your hotel and spend the evening relaxing on Payyambalam Beach."
+      },
+      {
+        "day": 4,
+        "highlight": "Exploring Kannur",
+        "plan": "Discover Kannur’s attractions, such as St. Angelo Fort and the Arakkal Museum. Experience the local Theyyam performances in the afternoon and enjoy Kannur’s cuisine in the evening."
+      },
+      {
+        "day": 5,
+        "highlight": "Madurai - Where every temple tells a tale of timeless devotion",
+        "plan": "Travel to Madurai, arriving by afternoon. Visit the Meenakshi Amman Temple and explore the local markets."
+      },
+      {
+        "day": 6,
+        "highlight": "Discover Madurai",
+        "plan": "Explore Madurai further with visits to the Thirumalai Nayak Palace and Gandhi Museum. Enjoy the vibrant bazaars and a traditional South Indian meal."
+      },
+      {
+        "day": 7,
+        "highlight": "Yercaud - The jewel of the Shevaroy Hills",
+        "plan": "Drive to Yercaud, arriving in the afternoon. Explore the scenic viewpoints of Lady’s Seat and Yercaud Lake, and relax in the tranquil surroundings."
+      },
+      {
+        "day": 8,
+        "highlight": "Relax and enjoy",
+        "plan": "Visit coffee and spice plantations in Yercaud. Spend the afternoon exploring nearby waterfalls and nature trails, and unwind in the serene environment."
+      },
+      {
+        "day": 9,
+        "highlight": "Kodaikanal - The princess of the hills",
+        "plan": "Journey to Kodaikanal, arriving in the afternoon. Check in to your hotel and explore local attractions such as Kodaikanal Lake and Coaker's Walk."
+      },
+      {
+        "day": 10,
+        "highlight": "Discover Kodaikanal",
+        "plan": "Discover Kodaikanal’s sights, including Bryant Park, Pillar Rocks, and Silver Cascade Falls. Enjoy a leisurely walk and local cuisine in the evening."
+      },
+      {
+        "day": 11,
+        "highlight": "Drive to Coimbatore",
+        "plan": "Drive to Coimbatore, arriving by afternoon. Explore local sites like Perur Patteeswarar Temple and the city markets. Relax and enjoy dinner in Coimbatore."
+      },
+      {
+        "day": 12,
+        "highlight": "Bidding goodbye",
+        "plan": "Return from Coimbatore to Indore by train or flight. After a memorable trip, it’s time to bid goodbye to the fellow travellers"
+      }
+    ],
+    "locations": [
+      {
+        "_id": "5c88fa8cf4afda39709c995c",
+        "description": "Bengaluru",
+        "type": "Point",
+        "coordinates": [77.5946, 12.9716],
+        "day": 2
+      },
+      {
+        "_id": "5c88fa8cf4afda39709c995b",
+        "description": "Madurai",
+        "type": "Point",
+        "coordinates": [78.1198, 9.9252],
+        "day": 5
+      },
+      {
+        "_id": "5c88fa8cf4afda39709c995f",
+        "description": "Yercaud",
+        "type": "Point",
+        "coordinates": [78.2097, 11.7748],
+        "day": 7
+      },
+      {
+        "_id": "5c88fa8cf4afda39709c995d",
+        "description": "Kodaikanal",
+        "type": "Point",
+        "coordinates": [77.4977, 10.2391],
+        "day": 9
+      },
+      {
+        "_id": "5c88fa8cf4afda39709c995e",
+        "description": "Coimbatore",
+        "type": "Point",
+        "coordinates": [76.9558, 11.0168],
+        "day": 11
+      }
+    ]
+  },
+
+  {
+    "startLocation": {
+      "description": "Indore",
+      "type": "Point",
+      "coordinates": [75.8579055765648, 22.721765981957358],
+      "address": "Indore"
+    },
+    "ratingsAverage": 4.8,
+    "ratingsQuantity": 6,
+    "images": ["tour-1.jpg", "tour-2.jpg", "tour-3.jpg"],
+    "startDates": [
+      "2024-09-05T09:00:00.000Z",
+      "2024-10-15T09:00:00.000Z",
+      "2024-11-26T09:00:00.000Z"
+    ],
+    "_id": "5c88fa8cf4afda39709c895a",
+    "name": "The Coastal Gems",
+    "duration": 10,
+    "maxGroupSize": 30,
+    "difficulty": "Medium",
+    "price": 22899,
+    "keywords": [
+      "Family-Friendly",
+      "Sports Activities",
+      "Culinary Tourism",
+      "Beach Holidays"
+    ],
+
+    "summary": "Discover the essence of India’s coastlines with a perfect fusion of vibrant cities and historic treasures",
+    "description": "Embark on the **Coastal Gems Journey**, a captivating 10-day exploration from Indore to the enchanting coastlines of India. Begin your adventure in Mumbai, where you'll discover its iconic landmarks and vibrant markets. Journey south to the sun-kissed beaches of Goa, soaking in its rich history and lively atmosphere. Continue to Udupi and Mangalore, where you'll experience local culture and picturesque coastal views. Conclude your trip with the serene backwaters of Kerala, enjoying a tranquil houseboat cruise in Alleppey and relaxing in Kumarakom’s lush landscapes. This tour offers a perfect blend of bustling cities, historic sites, and serene coastal retreats.",
+    "imageCover": "cover.jpg",
+
+    "itinerary": [
+      {
+        "day": 1,
+        "highlight": "Arrival and Orientation",
+        "plan": "Travel from Indore to Mumbai by train or road. Arrive in Mumbai, check into your hotel, and spend the evening exploring Marine Drive and Juhu Beach. Enjoy a relaxed evening by the sea."
+      },
+      {
+        "day": 2,
+        "highlight": "Exploring the city of dreams",
+        "plan": "Visit the Elephanta Caves in the morning. Explore the historic Chhatrapati Shivaji Maharaj Terminus and the vibrant markets of Colaba and Crawford Market in the afternoon. Spend your evening enjoying the sunset at Marine Drive."
+      },
+
+      {
+        "day": 3,
+        "highlight": "Mumbai to Goa Journey",
+        "plan": "Drive from Mumbai to Goa (approximately 12-14 hours). Arrive in Goa, check into your hotel, and relax. Explore the nearby beaches of North Goa in the evening."
+      },
+      {
+        "day": 4,
+        "highlight": "Goa Sightseeing",
+        "plan": "Discover the historic Aguada Fort and Chapora Fort in the morning. Visit the churches of Old Goa, including the Basilica of Bom Jesus, in the afternoon. Relax on the serene beaches of South Goa, such as Palolem or Colva, in the evening."
+      },
+      {
+        "day": 5,
+        "highlight": "The Temple city",
+        "plan": "Drive from Goa to Udupi (approximately 2-3 hours). Arrive in Udupi, check into your hotel, and visit the Udupi Krishna Temple. Explore the local market and enjoy a leisurely evening."
+      },
+      {
+        "day": 6,
+        "highlight": "A Gateway to Karnataka hidden Treasure",
+        "plan": "Drive to Mangalore (approximately 1.5-2 hours). Visit St. Aloysius Chapel and Panambur Beach. Spend the evening exploring Mangalore’s seafood and markets."
+      },
+      {
+        "day": 7,
+        "highlight": "Place where history sails through the backwaters",
+        "plan": "Travel from Mangalore to Cochin by train or road (approximately 8-10 hours). Arrive in Cochin, check into your hotel, and explore Fort Kochi, including the Chinese fishing nets and Mattancherry Palace. Enjoy a Kathakali dance performance in the evening."
+      },
+      {
+        "day": 8,
+        "highlight": "Explore Alleppey - The Venice of the East",
+        "plan": "Drive to Alleppey (approximately 1.5-2 hours). Board a houseboat for a relaxing backwater cruise through the Kerala backwaters. Enjoy a traditional Kerala meal on the houseboat and spend the night on the water."
+      },
+      {
+        "day": 9,
+        "highlight": "Discover Kumarakom",
+        "plan": "Disembark from the houseboat and drive to Kumarakom (approximately 1 hour). Check into your resort and explore the backwaters and bird sanctuary. Enjoy a relaxing evening amidst the tranquil surroundings."
+      },
+      {
+        "day": 10,
+        "highlight": "Bidding goodbye",
+        "plan": "Drive back to Cochin (approximately 1.5-2 hours). After a memorable trip, it’s time to bid goodbye to the fellow travellers"
+      }
+    ],
+    "locations": [
+      {
+        "_id": "5c88fa8cf4afda39709c895c",
+        "description": "Mumbai",
+        "type": "Point",
+        "coordinates": [72.8777, 19.076],
+        "day": 2
+      },
+      {
+        "_id": "5c88fa8cf4afda39709c895b",
+        "description": "Goa",
+        "type": "Point",
+        "coordinates": [74.124, 15.2993],
+        "day": 3
+      },
+      {
+        "_id": "5c88fa8cf4afda39709c895f",
+        "description": "Udupi",
+        "type": "Point",
+        "coordinates": [74.7421, 13.3409],
+        "day": 5
+      },
+      {
+        "_id": "5c88fa8cf4afda39709c895d",
+        "description": "Cochin",
+        "type": "Point",
+        "coordinates": [76.2673, 9.9312],
+        "day": 7
+      },
+      {
+        "_id": "5c88fa8cf4afda39709c895e",
+        "description": "Kumarakom",
+        "type": "Point",
+        "coordinates": [76.4301, 9.6175],
+        "day": 9
+      }
+    ]
+  },
+
+  {
+    "startLocation": {
+      "description": "Bhopal",
+      "type": "Point",
+      "coordinates": [77.4126, 23.2599],
+      "address": "Bhopal"
+    },
+    "ratingsAverage": 4.8,
+    "ratingsQuantity": 6,
+    "images": ["tour-1.jpg", "tour-2.jpg", "tour-3.jpg"],
+    "startDates": [
+      "2024-09-08T09:00:00.000Z",
+      "2024-10-13T09:00:00.000Z",
+      "2024-11-06T09:00:00.000Z"
+    ],
+    "_id": "5c88fa8cf4afda39709c296a",
+    "name": "The Central Highlands",
+    "duration": 11,
+    "maxGroupSize": 25,
+    "difficulty": "Easy",
+    "price": 19499,
+    "keywords": ["Family-Friendly", "Eco-tourism", "Budget Travel"],
+
+    "summary": "Embark for a captivating journey through central India’s hidden tribal treasures, lush landscapes, and ancient wonders.",
+    "description": "Experience the rich cultural tapestry of central India with **The Tribal Heritage Trail**. This 12-day journey takes you through the heart of India’s tribal regions, exploring the vibrant traditions and lifestyles of the Baiga, Gond, and other indigenous communities. From the scenic beauty of Pachmarhi to the wildlife of Kanha and Bandhavgarh, and the ancient temples of Khajuraho and Orchha, this tour offers a deep dive into the region's cultural and natural heritage.",
+    "imageCover": "cover.jpg",
+
+    "itinerary": [
+      {
+        "day": 1,
+        "highlight": "Arrival and Orientation",
+        "plan": "Arrive in Bhopal and check into your hotel. Visit the Sanchi Stupa, a UNESCO World Heritage site, and relax with a local dinner."
+      },
+      {
+        "day": 2,
+        "highlight": "Pachmarhi - The queen of Satpura",
+        "plan": "Travel to Pachmarhi. Check into your hotel and explore scenic sites like Bee Falls and Jata Shankar Cave. Enjoy a relaxing evening."
+      },
+
+      {
+        "day": 3,
+        "highlight": "Discover Pachmarhi",
+        "plan": "Discover Pachmarhi’s ancient temples and viewpoints such as Dhoopgarh. Visit local tribal markets and engage with the Adivasi communities."
+      },
+      {
+        "day": 4,
+        "highlight": "The Marble rocks",
+        "plan": "Drive to Jabalpur and check into your hotel. Visit the Marble Rocks at Bhedaghat and explore local markets."
+      },
+      {
+        "day": 5,
+        "highlight": "Kanha National Park : An untamed paradise",
+        "plan": "Journey to Kanha National Park. Check into your resort and enjoy an evening safari."
+      },
+      {
+        "day": 6,
+        "highlight": "Explore the tribal culture",
+        "plan": "Go on a morning safari in Kanha National Park to spot diverse wildlife. Visit a nearby tribal village to learn about the Baiga and Gond tribes."
+      },
+      {
+        "day": 7,
+        "highlight": "Discover Bandhavgarh",
+        "plan": "Drive to Bandhavgarh National Park and check into your lodge. Enjoy an evening safari in the park."
+      },
+      {
+        "day": 8,
+        "highlight": "Jungle safari at Bandhavgarh",
+        "plan": "Explore Bandhavgarh National Park on a morning safari and visit local tribal villages to interact with the tribes."
+      },
+      {
+        "day": 9,
+        "highlight": "Khajuraho : A journey through time",
+        "plan": "Travel to Khajuraho and check into your hotel. Visit the UNESCO World Heritage temples and explore local markets."
+      },
+      {
+        "day": 10,
+        "highlight": "Orchha : A timeless realm",
+        "plan": "Drive to Orchha. Visit the Orchha Fort complex and the Chhatris, then relax with a dinner at your hotel."
+      },
+      {
+        "day": 11,
+        "highlight": "Bidding goodbye",
+        "plan": "Return to Bhopal and explore any remaining sights or shop for souvenirs. After a memorable trip, it’s time to bid goodbye to the fellow travellers"
+      }
+    ],
+    "locations": [
+      {
+        "_id": "5c88fa8cf5afda39709c296c",
+        "description": "Pachmarhi",
+        "type": "Point",
+        "coordinates": [78.4346, 22.4674],
+        "day": 2
+      },
+      {
+        "_id": "5c88fa8cf5afda39709c296b",
+        "description": "Jabalpur",
+        "type": "Point",
+        "coordinates": [79.9339, 23.1686],
+        "day": 4
+      },
+      {
+        "_id": "5c88fa8cf5afda39709c296f",
+        "description": "Bandhavgarh National park",
+        "type": "Point",
+        "coordinates": [80.96194, 23.69944],
+        "day": 7
+      },
+      {
+        "_id": "5c88fa8cf5afda39709c296d",
+        "description": "Khajuraho",
+        "type": "Point",
+        "coordinates": [79.9199, 24.8318],
+        "day": 9
+      },
+      {
+        "_id": "5c88fa8cf5afda39709c296e",
+        "description": "Orchha",
+        "type": "Point",
+        "coordinates": [78.6389, 25.3511],
+        "day": 10
+      }
+    ]
+  },
+
+  {
+    "startLocation": {
+      "description": "Delhi",
+      "type": "Point",
+      "coordinates": [75.8579055765648, 22.721765981957358],
+      "address": "New Delhi"
+    },
+    "ratingsAverage": 4.8,
+    "ratingsQuantity": 6,
+    "images": ["tour-1.jpg", "tour-2.jpg", "tour-3.jpg"],
+    "startDates": [
+      "2024-09-08T09:00:00.000Z",
+      "2024-10-19T09:00:00.000Z",
+      "2024-01-02T09:00:00.000Z"
+    ],
+    "_id": "5c88fa8cf5afda39709c297a",
+    "name": "The Celestial Northeast",
+    "duration": 11,
+    "maxGroupSize": 30,
+    "difficulty": "Medium",
+    "price": 21499,
+    "keywords": ["Family-Friendly", "Eco-tourism", "Cultural Tours"],
+
+    "summary": "Venture into the heart of Northeast India, a remarkable journey through vibrant tribal cultures",
+    "description": "Embark on The Northeast Frontier Expedition, a captivating 12-day journey through the unexplored wonders of Northeast India. Starting from Delhi, this tour takes you through the lush landscapes of Kaziranga National Park, the serene hill stations of Shillong and Cherrapunji, and the culturally rich region of Tawang. Discover the unique tribal cultures, pristine natural beauty, and historical landmarks that define this hidden gem of India.",
+    "imageCover": "cover.jpg",
+
+    "itinerary": [
+      {
+        "day": 1,
+        "highlight": "Arrival and Orientation",
+        "plan": "Fly from Delhi to Guwahati. Arrive and check in to your hotel. Visit the Kamakhya Temple and relax with a local dinner."
+      },
+      {
+        "day": 2,
+        "highlight": "Kaziranga : The land where the one horned rhino roams free and the wild heart of Assam beats strong",
+        "plan": "Drive to Kaziranga National Park. Check in to your resort and enjoy an introductory visit to the park."
+      },
+
+      {
+        "day": 3,
+        "highlight": "Discover Kaziranga",
+        "plan": "Experience an early morning jeep safari in Kaziranga to spot wildlife. Visit a nearby tribal village in the afternoon and relax at the resort in the evening."
+      },
+      {
+        "day": 4,
+        "highlight": "Shillong : The Scotland of the East",
+        "plan": "Drive to Shillong. Check in to your hotel and visit Elephant Falls and Shillong Peak. Explore local markets and enjoy dinner."
+      },
+      {
+        "day": 5,
+        "highlight": "Exploring Cherrapunji",
+        "plan": "Drive to Cherrapunji. Visit the living root bridges, Nohkalikai Falls, and Mawsmai Caves. Return to Shillong for an overnight stay."
+      },
+      {
+        "day": 6,
+        "highlight": "Mawlynnong : Asia'scleanest village",
+        "plan": "Drive to Mawlynnong, Asia’s cleanest village. Explore the village and the crystal-clear Dawki River. Return to Shillong for the night."
+      },
+      {
+        "day": 7,
+        "highlight": "Back to Guwahati",
+        "plan": "Drive back to Guwahati. Visit the Umananda Temple and enjoy a river cruise on the Brahmaputra River. Overnight stay in Guwahati."
+      },
+      {
+        "day": 8,
+        "highlight": "Fall asleep in Tawang",
+        "plan": "Fly from Guwahati to Tezpur, then drive to Tawang. Check in to your hotel and relax."
+      },
+      {
+        "day": 9,
+        "highlight": "Explore Tawang",
+        "plan": "Explore Tawang, including Tawang Monastery, the Tawang War Memorial, and Pangang Teng Lake. Enjoy local cuisine and relax at the hotel."
+      },
+      {
+        "day": 10,
+        "highlight": "Bomdila : Where peace meats peaks",
+        "plan": "Drive to Bomdila. Check in to your hotel and visit Bomdila Monastery and the local market. Relax and have dinner"
+      },
+      {
+        "day": 11,
+        "highlight": "Gulmarg “The Meadow of Flowers”",
+        "plan": "Drive back to Guwahati. Check in to your hotel and enjoy a dinner.After a memorable trip, it’s time to bid goodbye to the fellow travellers"
+      }
+    ],
+    "locations": [
+      {
+        "_id": "5c88fa8cf5afda39709c297c",
+        "description": "Kaziranga National park",
+        "type": "Point",
+        "coordinates": [93.3525, 26.6445],
+        "day": 2
+      },
+      {
+        "_id": "5c88fa8cf5afda39709c297b",
+        "description": "Shillong",
+        "type": "Point",
+        "coordinates": [91.8933, 25.5788],
+        "day": 4
+      },
+      {
+        "_id": "5c88fa8cf5afda39709c297f",
+        "description": "Mawlynnong",
+        "type": "Point",
+        "coordinates": [91.916, 25.2018],
+        "day": 6
+      },
+      {
+        "_id": "5c88fa8cf5afda39709c297d",
+        "description": "Tawang",
+        "type": "Point",
+
+        "coordinates": [91.7539, 27.6325],
+
+        "day": 8
+      },
+      {
+        "_id": "5c88fa8cf5afda39709c297e",
+        "description": "Bomdila",
+        "type": "Point",
+        "coordinates": [92.4159, 27.2645],
+        "day": 10
+      }
+    ]
+  },
+
+  {
+    "startLocation": {
+      "description": "Indore",
+      "type": "Point",
+      "coordinates": [75.8579055765648, 22.721765981957358],
+      "address": "Indore"
+    },
+    "ratingsAverage": 4.8,
+    "ratingsQuantity": 6,
+    "images": ["tour-1.jpg", "tour-2.jpg", "tour-3.jpg"],
+
+    "startDates": [
+      "2024-10-07T09:00:00.000Z",
+      "2024-11-25T09:00:00.000Z",
+      "2024-12-16T09:00:00.000Z"
+    ],
+    "_id": "5c88fa8cf4afda39709c2955",
+    "name": "The Beach Paradise",
+    "duration": 12,
+    "maxGroupSize": 25,
+    "difficulty": "Medium",
+    "price": 27999,
+    "keywords": [
+      "Family-Friendly",
+      "Eco-tourism",
+      "Sports Activities",
+      "Beach Holidays"
+    ],
+
+    "summary": "Set sail on an unforgettable coastal journey, where every wave leads to new horizons",
+    "description": "With our beach holiday package, you can enjoy your dream beach retreat at some of the best destinations in India. Covering places including the golden beaches of Goa, famed for their good vibes, delicious food, and watersports making them perfect for family vacationers, trips with friends, and honeymoon as well. \nFrom the siesta and sussegado of beaches in Kerala and Chennai, to the snorkeling and exploring rich coral life at the tropical islands Lakshadweep, take your pick for the beach tour package tastefully crafted for you by our team.",
+    "imageCover": "cover.jpg",
+    "itinerary": [
+      {
+        "day": 1,
+        "highlight": "Arrival and Orientation",
+        "plan": "Begin your coastal adventure by arriving in Goa. Check in to your beachside resort and unwind on the golden sands. Spend the evening exploring the vibrant nightlife and local cuisine."
+      },
+      {
+        "day": 2,
+        "highlight": "Exploring North Goa",
+        "plan": "Spend the day discovering North Goa’s famous beaches such as Calangute, Baga, and Anjuna. Visit the historic Aguada Fort and the charming streets of Panjim, followed by a sunset cruise on the Mandovi River."
+      },
+
+      {
+        "day": 3,
+        "highlight": "Exploring South Goa",
+        "plan": "Explore the quieter, more serene beaches of South Goa, including Palolem and Colva. Visit the beautiful temples and churches, such as Basilica of Bom Jesus, and enjoy a traditional Goan seafood dinner in the evening."
+      },
+      {
+        "day": 4,
+        "highlight": "Kochi - The gateway to Kerala's charm",
+        "plan": "Fly from Goa to Kochi, the gateway to Kerala. Check in to your hotel and spend the evening exploring Fort Kochi, known for its colonial architecture, Chinese fishing nets, and vibrant art cafes."
+      },
+      {
+        "day": 5,
+        "highlight": "Munnar - The land of tea gardens",
+        "plan": "Travel from Kochi to Munnar, the stunning hill station known for its tea plantations. Check in to your hotel and spend the evening exploring the lush tea gardens and scenic viewpoints."
+      },
+      {
+        "day": 6,
+        "highlight": "Exploring Munnar",
+        "plan": "Spend the day discovering Munnar’s natural beauty. Visit the Eravikulam National Park, home to the endangered Nilgiri Tahr, and explore the picturesque Mattupetty Dam and Echo Point."
+      },
+      {
+        "day": 7,
+        "highlight": "Alleppey - Venice of the East",
+        "plan": "Drive to Alleppey, famous for its backwaters. Board a traditional houseboat and cruise through the serene backwaters, passing by lush paddy fields, coconut groves, and quaint villages. Enjoy an overnight stay on the houseboat."
+      },
+      {
+        "day": 8,
+        "highlight": "Kovalam - Sun, sand and serenity",
+        "plan": "After disembarking from the houseboat, drive to Kovalam, Kerala’s most famous beach destination. Check in to your beachside resort and relax by the shores of the Arabian Sea."
+      },
+      {
+        "day": 9,
+        "highlight": "Exploring Kovalam",
+        "plan": "Spend the day exploring the beaches of Kovalam, including Lighthouse Beach, Hawah Beach, and Samudra Beach. Indulge in water sports or relax with an Ayurvedic massage at your resort."
+      },
+      {
+        "day": 10,
+        "highlight": "Lakshadweep - Pristine islands, endless blues",
+        "plan": "Fly from Kochi to Agatti Island in Lakshadweep, one of India’s most beautiful and remote island groups. Check in to your beachfront resort and spend the evening exploring the pristine shores."
+      },
+      {
+        "day": 11,
+        "highlight": "Exploring Lakshadweep",
+        "plan": "Discover the underwater wonders of Lakshadweep. Go snorkeling or scuba diving in the crystal-clear waters, exploring the vibrant coral reefs and marine life. Spend the evening relaxing by the beach, soaking in the tranquil island atmosphere."
+      },
+      {
+        "day": 12,
+        "highlight": "Bidding goodbye",
+        "plan": "Conclude your sea exploration with a return flight to Kochi or Mumbai for your onward journey. Reflect on your unforgettable coastal adventure as you bid farewell to the turquoise waters and golden sands."
+      }
+    ],
+    "locations": [
+      {
+        "_id": "5c88fa8cf4afda39709c2959",
+        "description": "Goa",
+        "type": "Point",
+        "coordinates": [73.8903113201252, 15.390378722716783],
+        "day": 2
+      },
+      {
+        "_id": "5c88fa8cf4afda39709c2958",
+        "description": "Kochi",
+        "type": "Point",
+        "coordinates": [76.2673, 9.9312],
+        "day": 4
+      },
+      {
+        "_id": "5c88fa8cf4afda39709c2957",
+        "description": "Kovalam",
+        "type": "Point",
+        "coordinates": [76.982, 8.3988],
+        "day": 8
+      },
+      {
+        "_id": "5c88fa8cf4afda39709c2956",
+        "description": "Lakshadweep",
+        "type": "Point",
+        "coordinates": [72.64, 10.57],
+        "day": 11
+      }
+    ]
+  },
+
+  {
+    "startLocation": {
+      "description": "Ahmedabad",
+      "type": "Point",
+      "coordinates": [72.5714, 23.0225],
+      "address": "Ahmedabad"
+    },
+    "ratingsAverage": 4.4,
+    "ratingsQuantity": 7,
+    "images": ["tour-1.jpg", "tour-2.jpg", "tour-3.jpg"],
+
+    "startDates": [
+      "2024-09-02T10:00:00.000Z",
+      "2024-10-12T10:00:00.000Z",
+      "2024-11-18T10:00:00.000Z"
+    ],
+    "_id": "5c88fa8cf4afda39709c296c",
+    "name": "The Desert Camper",
+    "duration": 10,
+    "maxGroupSize": 30,
+    "difficulty": "Easy",
+    "price": 19699,
+    "keywords": [
+      "Family-Friendly",
+      "Cultural Tours",
+      "Culinary Tourism",
+      "Budget Travel"
+    ],
+
+    "summary": "Venture into the heart of India’s deserts with endless adventure and timeless beauty.",
+    "description": "It's hard to describe the feeling of approaching a desert to someone who has never seen one before. You can describe what you see; a drying of landscape, a browning of land and a slow disappearing of trees and shrubs and signs of life.\n Get ready to witness a sea of golden waves that appears to have no beginning and no end. You can show pictures and write words but portraying that feeling is harder. Perhaps it's one of those things, like seeing the ocean for the first time, that you need to experience for yourself.",
+    "imageCover": "tour-3-cover.jpg",
+    "itinerary": [
+      {
+        "day": 1,
+        "highlight": "Arrival and Orientation",
+        "plan": "Begin your desert adventure with your arrival in Ahmedabad. From there, take a scenic drive to Bhuj, the gateway to Kutch. Check in to your hotel and explore the local markets and the historic Aina Mahal."
+      },
+      {
+        "day": 2,
+        "highlight": "Kutch - White desert, endless horizons",
+        "plan": "Spend the day exploring the vast and mesmerizing Rann of Kutch. Visit the White Desert, where the salt flats stretch as far as the eye can see. In the evening, enjoy a cultural performance and camp under the starry sky, experiencing the tranquil beauty of the desert."
+      },
+
+      {
+        "day": 3,
+        "highlight": "Jaisalmer - The golden mirage of Rajasthan",
+        "plan": "Travel from Bhuj to the golden city of Jaisalmer, famous for its sandstone architecture. Upon arrival, check in to your hotel and take a leisurely evening walk through the streets of Jaisalmer, soaking in the unique atmosphere."
+      },
+      {
+        "day": 4,
+        "highlight": "Exploring Jaisalmer",
+        "plan": "Discover the beauty and history of Jaisalmer with visits to Jaisalmer Fort, Patwon Ki Haveli, and the Gadisar Lake. In the evening, head out to the Sam Sand Dunes, where you’ll enjoy a camel ride at sunset and an overnight stay in a desert camp, complete with cultural performances and a traditional Rajasthani dinner."
+      },
+      {
+        "day": 5,
+        "highlight": "The Thar Desert - A symphony of sands",
+        "plan": "Continue your journey deeper into the Thar Desert. Visit remote desert villages, interact with the local communities, and learn about their way of life. Spend the night camping in the desert, where the vast dunes and clear skies create a perfect setting for stargazing."
+      },
+      {
+        "day": 6,
+        "highlight": "Bikaner - Camel country and royal legacy",
+        "plan": "Travel from the Thar Desert to Bikaner, a city steeped in history and known for its camel breeding farms. Upon arrival, check in to your hotel and explore the local markets or relax after your journey."
+      },
+      {
+        "day": 7,
+        "highlight": "Exploring Bikaner",
+        "plan": "Spend the day exploring Bikaner’s historical and cultural sites, including the Junagarh Fort, Lalgarh Palace, and the Karni Mata Temple (famous for its resident rats). In the evening, enjoy a traditional Rajasthani meal at a local restaurant."
+      },
+      {
+        "day": 8,
+        "highlight": "Drive to Mandvi",
+        "plan": "Drive from Bikaner to Mandvi, a coastal town in Gujarat known for its pristine beaches and historic shipyards. Upon arrival, visit the Vijay Vilas Palace and relax on the beach as you watch the sun set over the Arabian Sea."
+      },
+      {
+        "day": 9,
+        "highlight": "Back to Bhuj",
+        "plan": "Travel back to Bhuj from Mandvi. Spend your day visiting the local artisans and craftspeople who create the famous Kutch embroidery, pottery, and other handicrafts. In the evening, enjoy some free time in Bhuj."
+      },
+      {
+        "day": 10,
+        "highlight": "Bidding goodbye",
+        "plan": "Conclude your desert adventure with a drive back to Ahmedabad. Upon arrival, transfer to the airport or your hotel for your onward journey, bringing your journey through the heart of the desert to a close."
+      }
+    ],
+
+    "locations": [
+      {
+        "_id": "5c88fa8cf4afda39709c296f",
+        "description": "Kutch, Gujarat",
+        "type": "Point",
+        "coordinates": [69.90777700157354, 25.746094047772747],
+        "day": 2
+      },
+      {
+        "_id": "5c88fa8cf4afda39709c296e",
+        "description": "Jaisalmer",
+        "type": "Point",
+        "coordinates": [70.90667834520426, 27.003750450593856],
+        "day": 4
+      },
+      {
+        "_id": "5c88fa8cf4afda39709c296d",
+        "description": "The Thar Desert",
+        "type": "Point",
+        "coordinates": [70.64970626426188, 27.672991146193947],
+        "day": 5
+      },
+      {
+        "_id": "5c88fa8cf4afda39709c296c",
+        "description": "Bikaner",
+        "type": "Point",
+        "coordinates": [73.26834152869021, 28.2839277148558],
+        "day": 7
+      },
+      {
+        "_id": "5c88fa8cf4afda39709c296b",
+        "description": "Bhuj",
+        "type": "Point",
+        "coordinates": [73.26834152869021, 28.2839277148558],
+        "day": 9
+      }
+    ]
+  },
+  {
+    "startLocation": {
+      "description": "New Delhi",
+      "type": "Point",
+      "coordinates": [75.99382391254495, 28.527383292739948],
+      "address": "New Delhi"
+    },
+    "ratingsAverage": 4.8,
+    "ratingsQuantity": 6,
+    "images": ["tour-1.jpg", "tour-2.jpg", "tour-3.jpg"],
+
+    "startDates": [
+      "2024-09-23T10:00:00.000Z",
+      "2024-10-26T10:00:00.000Z",
+      "2024-12-17T10:00:00.000Z"
+    ],
+    "_id": "5c88fa8cf4afda39709c2970",
+    "name": "The Hills Wanderer",
+    "duration": 10,
+    "maxGroupSize": 18,
+    "difficulty": "Medium",
+    "price": 18999,
+    "keywords": [
+      "Sports Activities",
+      "Adventure Travel",
+      "Budget Travel",
+      "Road Trips",
+      "Eco-tourism"
+    ],
+
+    "summary": "Unveil the charm of India's most beloved hill stations where every turn reveals a new horizon, and every stop, a new story.",
+    "description": "The hills do not call for attention as does the sea but the silence is the prime sign of recognition, surrounded with breathtaking views, spectacular attractions, and surreal experiences.\nOne might wonder that what in the world people see in Hill Station that they couldn't resist the urge to caress the soothing grey of clouds and green of flora with their eyes. However, exactly this and more reasons are the bait, like the quaint ambience noticed while walking over huge rocks under the cover of fog hanging over the hills and the valley.",
+    "imageCover": "tour-4-cover.jpg",
+    "itinerary": [
+      {
+        "day": 1,
+        "highlight": "Arrival and Orientation",
+        "plan": "Start your journey with a drive from Delhi to Mussoorie, the “Queen of the Hills.” Upon arrival, check in to your hotel and take a leisurely evening walk along Mall Road, soaking in the cool mountain air."
+      },
+      {
+        "day": 2,
+        "highlight": "Mussoorie - The Queen of the hills",
+        "plan": "Spend the day exploring Mussoorie. Visit the famous Kempty Falls, take a cable car ride to Gun Hill for panoramic views, and explore the lush gardens at Company Bagh. In the evening, enjoy a stroll on Camel’s Back Road, watching the sunset over the Himalayas."
+      },
+
+      {
+        "day": 3,
+        "highlight": "Nainital - Tranquility in the highlands",
+        "plan": "Drive from Mussoorie to Nainital, a picturesque hill station known for its scenic lakes and forested hills. Upon arrival, check in to your hotel and spend the evening at leisure, exploring the local markets and enjoying the serene atmosphere."
+      },
+      {
+        "day": 4,
+        "highlight": "Exploring Nainital",
+        "plan": "Start with a boat ride on the iconic Naini Lake, followed by visits to Naina Devi Temple and Snow View Point. In the afternoon, visit the lush forests of Kilbury and Pangot, and return to the town for an evening of shopping and dining at Mall Road."
+      },
+      {
+        "day": 5,
+        "highlight": "Exploring nearby places",
+        "plan": "Day Trip to Bhimtal and Sattal Take a day trip to the nearby lakes of Bhimtal and Sattal. Enjoy the tranquil surroundings, go for a boat ride, and explore the rich birdlife in the area. Return to Nainital in the evening for a relaxing night."
+      },
+      {
+        "day": 6,
+        "highlight": "Darjeeling - The queen of the himalayas",
+        "plan": "After breakfast, drive from Nainital to Pantnagar Airport for your flight to Bagdogra. Upon arrival in Bagdogra, drive through the scenic foothills to reach Darjeeling. Check in to your hotel and spend the evening relaxing or exploring Chowrasta and Mall Road at your leisure."
+      },
+      {
+        "day": 7,
+        "highlight": "Explore Darjeeling",
+        "plan": "Start your day with a visit to Tiger Hill for a breathtaking sunrise view over Mount Kanchenjunga. Afterward, explore the lush tea gardens and visit the Darjeeling Himalayan Railway, a UNESCO World Heritage site. In the evening, enjoy a cup of world-famous Darjeeling tea at a local café."
+      },
+      {
+        "day": 8,
+        "highlight": "Exploring nearby attractions",
+        "plan": "Take a day trip to nearby attractions such as the Padmaja Naidu Himalayan Zoological Park, the Himalayan Mountaineering Institute, and the peaceful Japanese Peace Pagoda. Spend the evening enjoying the cool mountain breeze and beautiful views."
+      },
+      {
+        "day": 9,
+        "highlight": "Visiting tea estates",
+        "plan": "Day Trip to Mirik Visit the serene hill town of Mirik, known for its beautiful Sumendu Lake and sprawling tea estates. Take a boat ride on the lake, walk through the tea gardens, and enjoy the tranquil environment. Return to Darjeeling in the evening."
+      },
+      {
+        "day": 10,
+        "highlight": "Bidding goodbye",
+        "plan": "Conclude your hill journey with a drive back to Bagdogra, from where you’ll fly back to Delhi. Upon arrival in Delhi, transfer to the airport or your hotel, bringing your journey through the hills to a close."
+      }
+    ],
+    "locations": [
+      {
+        "_id": "5c88fa8cf4afda39709c2973",
+        "description": "Mussoorie",
+        "type": "Point",
+        "coordinates": [78.07047323152081, 30.5389825067287],
+        "day": 2
+      },
+      {
+        "_id": "5c88fa8cf4afda39709c2972",
+        "description": "Nainital",
+        "type": "Point",
+        "coordinates": [79.44231600911358, 29.500347408519215],
+        "day": 4
+      },
+      {
+        "_id": "5c88fa8cf4afda39709c2971",
+        "description": "Darjeeling",
+        "type": "Point",
+        "coordinates": [88.27142535422382, 27.242864444255947],
+        "day": 6
+      }
+    ]
+  },
+  {
+    "startLocation": {
+      "description": "New Delhi",
+      "type": "Point",
+      "coordinates": [75.99382391254495, 28.527383292739948],
+      "address": "New Delhi"
+    },
+    "ratingsAverage": 4.6,
+    "ratingsQuantity": 7,
+    "images": ["tour-1.jpg", "tour-2.jpg", "tour-3.jpg"],
+
+    "startDates": [
+      "2024-09-09T09:00:00.000Z",
+      "2024-10-06T09:00:00.000Z",
+      "2024-12-19T09:00:00.000Z"
+    ],
+    "_id": "5c88fa8cf4afda39709c2966",
+    "name": "The Divine Seeker",
+    "duration": 12,
+    "maxGroupSize": 25,
+    "difficulty": "Medium",
+    "price": 26999,
+    "keywords": ["Family-Friendly", "Heritage Tours"],
+
+    "summary": "A glimpse to realise one's relationship with god, join us for a path to salvation with a journey to the temples",
+    "description": "Trudge through the mighty mountains and you shall experience divine presence or traverse through the meandering alleys, where spirituality combined with history waits to quench your spiritual thirst.Whether it is a holy song in the temple, the 'azaan' of the mosque or the hymns of the church - India's unity in diversity can be very well seen in such religious places.\nFor those seeking transcendence, pilgrimage places in India are umpteen and are spread all across the country, join us today and get a chance to meet and socialize with fellow believers.",
+    "imageCover": "tour-5-cover.jpg",
+    "itinerary": [
+      {
+        "day": 1,
+        "highlight": "Arrival and Temple visit",
+        "plan": "Begin your spiritual journey by traveling from Delhi to Amritsar. Upon arrival, check in to your hotel and visit the Golden Temple, the holiest shrine of Sikhism, to experience the evening prayer (Rehraas Sahib) and witness the divine ambiance of the Harmandir Sahib illuminated at night."
+      },
+      {
+        "day": 2,
+        "highlight": "Exploring Amritsar",
+        "plan": "Spend the day exploring Amritsar. Participate in the early morning prayer at the Golden Temple, followed by a visit to the Jallianwala Bagh and the historic Wagah Border for the flag-lowering ceremony. In the evening, return to the Golden Temple for the soulful Kirtan."
+      },
+
+      {
+        "day": 3,
+        "highlight": "Amritsar to Katra",
+        "plan": "Travel from Amritsar to Katra, the base for the Vaishno Devi pilgrimage. Check in to your hotel and prepare for the trek to the sacred shrine."
+      },
+      {
+        "day": 4,
+        "highlight": "Vaishno Devi Pilgrimage",
+        "plan": "Embark on the trek to Vaishno Devi, one of the most revered pilgrimage sites in India. After seeking blessings from Mata Vaishno Devi, return to Katra for an overnight stay."
+      },
+      {
+        "day": 5,
+        "highlight": "Rishikesh - The yoga capital",
+        "plan": "Fly from Jammu to Rishikesh, the Yoga Capital of the World. Check in to your hotel and spend the evening by the Ganges, attending the Ganga Aarti at Triveni Ghat, where the sacred river is worshiped with lamps and hymns."
+      },
+      {
+        "day": 6,
+        "highlight": "Guptkashi - Gateway to sacred peaks",
+        "plan": "Begin your journey to Kedarnath with a drive from Rishikesh to Guptkashi. En route, enjoy the scenic beauty of the Garhwal Himalayas. Upon arrival in Guptkashi, check in to your hotel and rest for the night."
+      },
+      {
+        "day": 7,
+        "highlight": "Prayers at Kedarnath temple",
+        "plan": "Drive from Guptkashi to Gaurikund, the starting point of the Kedarnath trek. Undertake the sacred trek to Kedarnath, located at the head of the Mandakini River. Upon arrival, check in to your guesthouse and visit the Kedarnath Temple for evening prayers."
+      },
+      {
+        "day": 8,
+        "highlight": "Back to Guptkashi",
+        "plan": "After attending the early morning prayers at Kedarnath Temple, trek back to Gaurikund and then drive to Guptkashi for an overnight stay."
+      },
+      {
+        "day": 9,
+        "highlight": "Badrinath - Where spirituality and peaks converge",
+        "plan": "Travel from Guptkashi to Badrinath, the most revered of the four Char Dham pilgrimage sites. Check in to your hotel and visit the Badrinath Temple, dedicated to Lord Vishnu, to participate in the evening Aarti."
+      },
+      {
+        "day": 10,
+        "highlight": "Exploring Badrinath",
+        "plan": "Spend the day exploring Badrinath. Visit the Tapt Kund, a hot water spring near the temple, and the Mana Village, the last village on the Indian border. Attend the evening Aarti at Badrinath Temple and soak in the divine energy of this sacred place."
+      },
+      {
+        "day": 11,
+        "highlight": "Time to retrospectate",
+        "plan": "Drive from Badrinath back to Rishikesh. Upon arrival, check in to your hotel and spend the evening at leisure, reflecting on your spiritual journey."
+      },
+      {
+        "day": 12,
+        "highlight": "Bidding goodbye",
+        "plan": "Conclude your pilgrimage by traveling from Rishikesh to Delhi. Arrive in Delhi and transfer to the airport or your hotel, ending your divine journey."
+      }
+    ],
+    "locations": [
+      {
+        "_id": "5c88fa8cf4afda39709c296b",
+        "description": "Amritsar",
+        "type": "Point",
+        "coordinates": [74.88628190866895, 31.775942491810003],
+        "day": 2
+      },
+      {
+        "_id": "5c88fa8cf4afda39709c296a",
+        "description": "Vaishno Devi",
+        "type": "Point",
+        "coordinates": [74.93363816805856, 33.16419570352027],
+        "day": 4
+      },
+      {
+        "_id": "5c88fa8cf4afda39709c2969",
+        "description": "Rishikesh",
+        "type": "Point",
+        "coordinates": [78.2853, 30.1158],
+        "day": 5
+      },
+      {
+        "_id": "5c88fa8cf4afda39709c2968",
+        "description": "Kedarnath",
+        "type": "Point",
+        "coordinates": [79.07175080170406, 30.913914020235545],
+        "day": 7
+      },
+      {
+        "_id": "5c88fa8cf4afda39709c2967",
+        "description": "Badrinath",
+        "type": "Point",
+        "coordinates": [79.47545342705982, 30.848431219591493],
+        "day": 10
+      }
+    ]
+  },
+  {
+    "startLocation": {
+      "description": "New Delhi",
+      "type": "Point",
+      "coordinates": [75.99382391254495, 28.527383292739948],
+      "address": "New Delhi"
+    },
+    "ratingsAverage": 4.7,
+    "ratingsQuantity": 7,
+    "images": ["tour-1.jpg", "tour-2.jpg", "tour-3.jpg"],
+
+    "startDates": [
+      "2024-09-07T10:00:00.000Z",
+      "2024-11-18T10:00:00.000Z",
+      "2024-12-21T10:00:00.000Z"
+    ],
+    "_id": "5c88fa8cf4afda39709c2974",
+    "name": "The Star Gazer",
+    "duration": 13,
+    "maxGroupSize": 25,
+    "difficulty": "Medium",
+    "price": 25999,
+    "keywords": ["Adventure Travel", "Road Trips", "Eco-tourism"],
+
+    "summary": "Embark on a celestial adventure through the mystical Himalayas under the stars",
+    "description": "Space outside the human living capacity has always been one of the greatest mysteries of our lives. Stargazing feels like staring into the depths of space and into the vastness. Come and live on to being young beings who lie on grassy hilltops staring at those magical twinkling beauties. Those who can, will throw their imagination in the right places and trying to give a face to what the unknown may be.\nThere's nothing quite like looking up into an expansive night sky dotted with shooting stars, planets, and constellations.Spectacular stargazing spots offer you opportunities to learn more about the universe and reconnect with the incredible planet we all call home.",
+    "imageCover": "tour-6-cover.jpg",
+    "itinerary": [
+      {
+        "day": 1,
+        "highlight": "Arrival and Orientation",
+        "plan": "Begin your journey with a train ride from Delhi to Kathgodam. Upon arrival, transfer to your hotel and prepare for the adventure ahead."
+      },
+      {
+        "day": 2,
+        "highlight": "Trekking and Camping",
+        "plan": "Drive from Kathgodam to Lohajung, the base camp for the Roopkund trek. Check in to your guesthouse, enjoy the scenic surroundings, and prepare for the trek."
+      },
+
+      {
+        "day": 3,
+        "highlight": "Trek to Dunda village",
+        "plan": "Start your trek from Lohajung to Dudna Village. Hike through dense forests, crossing small streams, and arrive at Dunda Village. Set up camp and enjoy the clear night sky."
+      },
+      {
+        "day": 4,
+        "highlight": "Lush meadows to Alpine pastures",
+        "plan": "Trek through lush meadows and alpine pastures from Didna Village to Bedni Bugyal. Enjoy breathtaking views of the Himalayan peaks and camp under the stars in Bedni Bugyal."
+      },
+      {
+        "day": 5,
+        "highlight": "Camping in Bhagwabasa",
+        "plan": "Continue your trek from Bedni Bugyal to Bhagwabasa. The trail takes you through rocky terrain and offers stunning views of Trishul and Nanda Ghunti peaks. Set up camp in Bhagwabasa."
+      },
+      {
+        "day": 6,
+        "highlight": "Discover Roopkund's night sky wonders",
+        "plan": "Ascend to Roopkund Lake, known for its mystery and beauty. After exploring the lake, trek back to Bedni Bugyal for another night under the stars."
+      },
+      {
+        "day": 7,
+        "highlight": "Descend back and rest for the day",
+        "plan": "Descend from Bedni Bugyal to Lohajung. Celebrate the completion of your trek and rest in your guesthouse."
+      },
+      {
+        "day": 8,
+        "highlight": "Back to delhi",
+        "plan": "Drive back to Kathgodam and take the train to Delhi. Check in to your hotel and relax."
+      },
+      {
+        "day": 9,
+        "highlight": "Nubra Valley - Where the stars light up the highlands",
+        "plan": "Fly from Delhi to Leh. Acclimate to the high altitude and then drive to Nubra Valley. Check in to your camp and enjoy the stunning desert landscapes and starry skies."
+      },
+      {
+        "day": 10,
+        "highlight": "Exploring Nubra Valley",
+        "plan": "Spend the day exploring Nubra Valley. Visit Diskit Monastery, ride a Bactrian camel in the sand dunes of Hunder, and enjoy the tranquility of the valley. Camp under the stars at night."
+      },
+      {
+        "day": 11,
+        "highlight": "Spiti Valley - The land of Lamas",
+        "plan": "Drive from Nubra Valley to Spiti Valley, passing through some of the most breathtaking landscapes in the Himalayas. Check in to your guesthouse in Kaza and prepare for stargazing"
+      },
+      {
+        "day": 12,
+        "highlight": "Exploring Spiti Valley",
+        "plan": "Spend the day exploring Spiti Valley. Visit Key Monastery, Kibber Village, and the stunning Chandra Taal Lake. In the evening, set up camp and enjoy stargazing in the clear night sky."
+      },
+
+      {
+        "day": 13,
+        "highlight": "Bidding goodbye",
+        "plan": "Drive from Spiti Valley to Manali, then take an overnight bus back to Delhi, concluding your stargazing adventure."
+      }
+    ],
+    "locations": [
+      {
+        "_id": "5c88fa8cf4afda39709c2981",
+        "description": "Kathgodam",
+        "type": "Point",
+        "coordinates": [79.5441, 29.2693],
+        "day": 2
+      },
+      {
+        "_id": "5c88fa8cf4afda39709c2980",
+        "description": "Dunda Village",
+        "type": "Point",
+        "coordinates": [78.3537, 30.7088],
+        "day": 4
+      },
+      {
+        "_id": "5c88fa8cf4afda39709c2977",
+        "description": "Roop Kund",
+        "type": "Point",
+        "coordinates": [79.79530020801491, 30.716389325924943],
+        "day": 6
+      },
+
+      {
+        "_id": "5c88fa8cf4afda39709c2976",
+        "description": "Nubra Valley",
+        "type": "Point",
+        "coordinates": [77.12279237298316, 35.60172393175687],
+        "day": 9
+      },
+      {
+        "_id": "5c88fa8cf4afda39709c2975",
+        "description": "Spiti Valley",
+        "type": "Point",
+        "coordinates": [78.08357404738514, 32.58488681841126],
+        "day": 12
+      }
+    ]
+  },
+  {
+    "startLocation": {
+      "description": "Indore",
+      "type": "Point",
+      "coordinates": [75.8579055765648, 22.721765981957358],
+      "address": "Indore"
+    },
+    "ratingsAverage": 4.7,
+    "ratingsQuantity": 7,
+    "images": ["tour-1.jpg", "tour-2.jpg", "tour-3.jpg"],
+
+    "startDates": [
+      "2024-09-09T10:00:00.000Z",
+      "2024-11-08T10:00:00.000Z",
+      "2024-12-25T10:00:00.000Z"
+    ],
+    "_id": "5c88fa8cf4afda39709c2978",
+    "name": "The City Rambler",
+    "duration": 10,
+    "maxGroupSize": 25,
+    "difficulty": "Easy",
+    "price": 17399,
+    "keywords": [
+      "Family-Friendly",
+      "Cultural Tours",
+      "Culinary Tourism",
+      "Budget Travel"
+    ],
+
+    "summary": "Embark on an urban odyssey with a thrilling journey through India's most vibrant cities",
+    "description": "India is synonymous with diversity and in each city of the country you can glimpse at the mesmerizing diversity. Browse through the cities with us and find out what there is to see and do in each of these cities. Explore India and its treasures in the nooks and corners of these charming Indian cities.\nCome and explore the confusion that never seems to end in the streets. Dive into the varieties of local food, culture and night life of these cities.",
+    "imageCover": "tour-7-cover.jpg",
+    "itinerary": [
+      {
+        "day": 1,
+        "highlight": "Arrival and Orientation",
+        "plan": "Fly from Indore to the bustling metropolis of Mumbai. Upon arrival, check in to your hotel and start your exploration with visits to the iconic Gateway of India and a scenic stroll along Marine Drive. In the evening, enjoy a welcome dinner at a local restaurant, introducing you to Mumbai’s vibrant culinary scene."
+      },
+      {
+        "day": 2,
+        "highlight": "Mumbai - The city of dreams",
+        "plan": "Discover Mumbai’s rich history with visits to the Chhatrapati Shivaji Maharaj Terminus and the Elephanta Caves. Spend the afternoon shopping at Crawford Market and Colaba Causeway. Cap off your day with a delightful dinner at a popular Mumbai restaurant, experiencing the city’s diverse cuisine."
+      },
+
+      {
+        "day": 3,
+        "highlight": "Hyderabad - Where historic grandeur meets celestial beauty",
+        "plan": "Fly from Mumbai to Hyderabad. After checking in to your hotel, visit the historic Charminar and explore the bustling Laad Bazaar. Enjoy a dinner featuring the city’s famous Hyderabadi biryani, immersing yourself in the local flavors."
+      },
+      {
+        "day": 4,
+        "highlight": "Exploring Hyderabad",
+        "plan": "Tour the ancient Golconda Fort and the Qutub Shahi Tombs in the morning. In the afternoon, visit the Salar Jung Museum and the opulent Chowmahalla Palace. End your day with a traditional Hyderabadi meal at a renowned restaurant, savoring the city’s culinary heritage."
+      },
+      {
+        "day": 5,
+        "highlight": "Bengaluru - A tech city with a timeless sky",
+        "plan": "Fly from Hyderabad to Bengaluru. Check in to your hotel and visit the lush Lalbagh Botanical Garden and the historic Tipu Sultan’s Summer Palace. Enjoy a dinner at a local restaurant, experiencing Bengaluru’s culinary diversity."
+      },
+      {
+        "day": 6,
+        "highlight": "Exploring Bengaluru",
+        "plan": "Explore the serene Cubbon Park and the majestic Bangalore Palace in the morning. In the afternoon, visit the ISKCON Temple and shop at the bustling Commercial Street. End your day with dinner at a popular restaurant, enjoying the flavors of Bengaluru."
+      },
+      {
+        "day": 7,
+        "highlight": "Chennai - Where history meets the stary sea",
+        "plan": "Fly from Bengaluru to Chennai. Upon arrival, check in to your hotel and visit Marina Beach and Fort St. George. In the evening, enjoy a dinner at a local restaurant, sampling traditional Tamil cuisine."
+      },
+      {
+        "day": 8,
+        "highlight": "Exploring Chennai",
+        "plan": "Start your day with visits to the Kapaleeshwarar Temple and San Thome Basilica. Spend the afternoon exploring the Government Museum and shopping in the vibrant T Nagar. Experience a South Indian meal at a renowned restaurant in the evening."
+      },
+      {
+        "day": 9,
+        "highlight": "Mahabalipuram - Where stone speaks of ancient empires",
+        "plan": "Take a day trip to the coastal town of Mahabalipuram. Explore the UNESCO World Heritage site, including the Shore Temple and the Five Rathas. Enjoy lunch by the seaside and return to Chennai in the evening for a relaxing evening and farewell dinner."
+      },
+      {
+        "day": 10,
+        "highlight": "Bidding goodbye",
+        "plan": "Spend your morning with free time for last-minute sightseeing or shopping in Chennai. In the afternoon, transfer to the airport for your flight back to Indore, concluding your memorable city adventure."
+      }
+    ],
+    "locations": [
+      {
+        "_id": "5c88fa8cf4afda39709c2979",
+        "description": "Mumbai",
+        "type": "Point",
+        "coordinates": [72.83857872909144, 18.85200303405638],
+        "day": 2
+      },
+      {
+        "_id": "5c88fa8cf4afda39709c2980",
+        "description": "Hyderabad",
+        "type": "Point",
+        "coordinates": [77.17335511562008, 17.213629261417292],
+        "day": 4
+      },
+      {
+        "_id": "5c88fa8cf4afda39709c2981",
+        "description": "Bengaluru",
+        "type": "Point",
+        "coordinates": [77.69844101287691, 13.626203331942142],
+        "day": 6
+      },
+      {
+        "_id": "5c88fa8cf4afda39709c2982",
+        "description": "Chennai",
+        "type": "Point",
+        "coordinates": [80.23338715549653, 13.644620420794675],
+        "day": 8
+      }
+    ]
+  }
+]

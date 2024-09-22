@@ -1,0 +1,145 @@
+.section__hero {
+  display: flex;
+  justify-content: space-between;
+  max-width: 135rem;
+  margin-bottom: 9.6rem;
+}
+
+.wrapper_box {
+  background-color: #f2f2f2;
+  position: relative;
+  z-index: 8;
+}
+
+.wrapper_box::before {
+  content: "";
+  display: inline-block;
+  background: url("../../../assets/images/hero/world.png");
+  background-size: contain;
+  top: 0px;
+  left: 0px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0.25;
+}
+
+.section__hero__text {
+  padding-left: 6.4rem;
+  padding-top: 9.6rem;
+}
+
+.hero_btn {
+  margin-top: 4.8rem;
+}
+
+.hero_underline__text {
+  position: relative;
+  z-index: 9;
+}
+
+.text_main::before {
+  content: "";
+  position: absolute;
+  bottom: 2.5rem;
+  width: 100%;
+  height: 1rem;
+  background-color: #ffd205;
+  z-index: -99;
+}
+
+.text_sub::before {
+  content: "";
+  position: absolute;
+  bottom: 0.4rem;
+  width: 90%;
+  height: 0.5rem;
+  background-color: #ffd205;
+  z-index: -99;
+}
+
+.section__hero__imgBoxContent {
+  justify-self: center;
+}
+
+.section__hero_imgBox {
+  display: flex;
+  column-gap: 4.8rem;
+  padding-top: 4.8rem;
+  width: 70%;
+  height: 90rem;
+}
+
+.section__hero_img {
+  height: 80%;
+  width: 44%;
+  background-position: bottom;
+  background-size: cover;
+  border-radius: 40rem 40rem 40rem 40rem;
+}
+
+.hero_img1 {
+  background-image: url("../../../assets/images/services/services_home_main.jpeg");
+  z-index: 9;
+}
+
+.hero_img2 {
+  background-image: url("../../../assets/images/services/services_5.jpeg");
+  align-self: flex-end;
+  z-index: 9;
+}
+
+@media (max-width: 56.25em) {
+  .section__hero {
+    flex-direction: column;
+  }
+
+  .section__hero__text {
+    padding-left: 0rem;
+    text-align: center;
+  }
+
+  .section__hero_imgBox {
+    height: 100%;
+    column-gap: 2.4rem;
+    padding: 6.4rem 1.6rem 4.8rem 1.6rem;
+    width: 100%;
+  }
+
+  .section__hero_img {
+    height: 30rem;
+    width: 100%;
+    border-radius: 2rem;
+  }
+
+  .hero_img2 {
+    align-self: flex-start;
+  }
+
+  .text_main::before {
+    bottom: 1.8rem;
+  }
+}
+
+@media (max-width: 37.5em) {
+  .section__hero_imgBox {
+    flex-direction: column;
+    gap: 4.8rem;
+    height: 200%;
+  }
+
+  .section__hero_img {
+    height: 20rem;
+  }
+
+  .text_main::before {
+    bottom: 1.5rem;
+  }
+}
+
+@media (min-width: 84.375em) {
+  .section__hero {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

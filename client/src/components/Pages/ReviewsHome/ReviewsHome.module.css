@@ -1,0 +1,69 @@
+.wrapper_container {
+  background-image: url("../../../assets/images/services/services_3.jpeg");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  position: relative;
+  z-index: -99;
+}
+
+.wrapper_container::after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, #000000 50%, #00000000 100%);
+  opacity: 0.5;
+  background-color: transparent;
+  z-index: -9;
+}
+
+.reviews_body {
+  padding: 12rem 1.6rem;
+  max-width: 135rem;
+  margin: 0 auto;
+}
+
+.body_main,
+.body_sub {
+  width: 60%;
+}
+
+.body_sub {
+  margin: 2rem 0;
+}
+
+.color_white {
+  color: white;
+}
+
+.review_container {
+  margin-top: 7rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4.8rem;
+}
+
+@media (max-width: 56.25em) {
+  .body_main,
+  .body_sub {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+}
+
+@media (max-width: 37.5em) {
+  .body_main,
+  .body_sub {
+    width: 100%;
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+
+  .review_container {
+    grid-template-columns: 1fr;
+  }
+}

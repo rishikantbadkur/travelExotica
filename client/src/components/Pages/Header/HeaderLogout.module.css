@@ -1,0 +1,29 @@
+.logout_container {
+  position: absolute;
+  left: -100%;
+  top: 75%;
+  background-color: #00000097;
+}
+
+.options_list {
+  list-style: none;
+  padding: 0.6rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 9999;
+}
+
+.btn_custom {
+  cursor: pointer;
+  color: #fff;
+  border: none;
+  background: none;
+  padding: 1.2rem 1.4rem;
+  font-size: 1.2rem;
+  letter-spacing: 0.5px;
+}
+
+.btn_custom:hover {
+  background-color: #ffffff28;
+}

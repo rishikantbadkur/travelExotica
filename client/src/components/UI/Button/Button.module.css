@@ -1,0 +1,45 @@
+.btn_general {
+  padding: 1.6rem 3.2rem;
+  background-color: #1bbc9b;
+  color: #fff;
+  border-radius: 0.7rem;
+  font-weight: 500;
+  font-size: 1.6rem;
+  border: none;
+  letter-spacing: 1.8px;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Poppins", sans-serif;
+}
+
+.btn_general:hover,
+.btn_general:visited {
+  background-color: #434a54;
+  cursor: pointer;
+}
+
+.btn_sub {
+  background-color: #fff;
+  outline: 1.5px solid #1bbc9b;
+  color: #6e6e6e;
+}
+
+.btn_sub:hover {
+  background-color: #434a54;
+  color: #fff;
+  outline: none;
+}
+
+@media (max-width: 37.5em) {
+  .btn_general {
+    letter-spacing: 0.8px;
+  }
+}
+
+@media (max-width: 21.2em) {
+  .btn_general {
+    padding: 1.2rem 1.8rem;
+  }
+}

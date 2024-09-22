@@ -1,0 +1,11 @@
+.featureList_item {
+  display: flex;
+  column-gap: 0.8rem;
+  margin-bottom: 0.8rem;
+}
+
+.checkmark {
+  color: #1bbc9b;
+  font-size: 2.4rem;
+  stroke-width: 3rem;
+}

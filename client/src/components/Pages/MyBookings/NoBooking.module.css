@@ -1,0 +1,46 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+  max-width: 135rem;
+
+  margin: 9.6rem auto;
+}
+
+.container {
+  width: 50%;
+  padding: 3.2rem 1.6rem;
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.text_main {
+  display: inline-block;
+  width: 50%;
+
+  margin-bottom: 1.8rem;
+
+  text-transform: uppercase;
+  font-family: inherit;
+  font-size: 2.2rem;
+  letter-spacing: 5.4px;
+  line-height: 3.5rem;
+}
+
+.text_nobooking {
+  text-align: center;
+
+  gap: 1.8rem;
+}
+
+@media (max-width: 56.25em) {
+  .container {
+    padding: 2.4rem 1.2rem;
+  }
+}
+
+@media (max-width: 37.5em) {
+  .container {
+    width: 100%;
+  }
+}

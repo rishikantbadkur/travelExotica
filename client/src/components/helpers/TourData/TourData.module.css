@@ -1,0 +1,12 @@
+.text_notours {
+  display: flex;
+  flex-direction: column;
+  gap: 8rem;
+  padding-top: 3.2rem;
+  padding-bottom: 2.4rem;
+}
+
+.text_bold {
+  font-weight: 700;
+  font-size: 4.8rem;
+}

@@ -1,0 +1,66 @@
+.option_destination,
+.option_typology,
+.option_price,
+.option_duration,
+.option_difficulty {
+  display: flex;
+  flex-direction: column;
+  padding: 4.8rem 0rem;
+  gap: 2.4rem;
+}
+
+.option_title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #000;
+}
+
+.select_option_styles {
+  font-family: "Poppins", sans-serif;
+  color: #6e6e6e;
+  width: 100%;
+  padding: 0.6rem 0rem;
+}
+
+.select_option_styles:focus {
+  outline: none;
+}
+
+.option_body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.8rem;
+}
+
+.option_body_item {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.price_bar {
+  width: 100%;
+  accent-color: #434a54;
+}
+
+.option_body_price {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.price_box {
+  align-self: flex-end;
+}
+
+.price_value_sign {
+  font-size: 1.6rem;
+  line-height: 1.6rem;
+  margin-right: 0.8rem;
+}
+
+@media (max-width: 37.5em) {
+  .option_body {
+    grid-template-columns: 1fr;
+  }
+}

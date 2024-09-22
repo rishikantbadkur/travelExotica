@@ -1,0 +1,161 @@
+.card {
+  display: flex;
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+  backface-visibility: hidden;
+  will-change: transform;
+  justify-content: space-around;
+}
+
+.contentReverse {
+  flex-direction: row-reverse;
+}
+
+.custom_text_style {
+  font-size: 1.8rem;
+  letter-spacing: 1.8px;
+}
+
+.card:hover {
+  cursor: pointer;
+
+  transform: scale(1.01);
+}
+
+.img {
+  width: 100%;
+}
+
+.img_ctn {
+  width: 20rem;
+  display: inline-block;
+  position: relative;
+}
+
+.img_ctn::after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, #0000008b 50%, #00000000 100%);
+  opacity: 0.5;
+  background-color: transparent;
+  z-index: 99;
+}
+
+.text_ctn {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding-left: 2.4rem;
+  padding-right: 2.4rem;
+}
+
+.body_ctn {
+  display: flex;
+  align-items: center;
+}
+
+.text_color_black {
+  color: #000;
+  margin-right: 0.3rem;
+}
+
+.text_booking_ctn {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.font_text {
+  font-size: 1.3rem;
+}
+
+.body_spec {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5rem;
+  font-size: 1.3rem;
+}
+
+.booking_status {
+  padding: 0.8rem;
+  align-self: flex-start;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  font-family: inherit;
+  font-weight: 500;
+  color: #000;
+}
+
+.color_confirm {
+  background-color: #28a745;
+}
+
+.color_pending {
+  background-color: #ffd205;
+}
+
+@media (max-width: 68.75em) {
+  .body_spec {
+    gap: 0.8rem;
+  }
+
+  .text_ctn {
+    gap: 0.8rem;
+  }
+
+  .custom_text_style {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 37.5em) {
+  .custom_text_style {
+    font-size: 1.8rem;
+  }
+  .font_text {
+    font-size: 1.5rem;
+  }
+
+  .body_spec {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 34.375em) {
+  .card {
+    flex-direction: column;
+    gap: 2.8rem;
+  }
+
+  .body_ctn {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .body_spec {
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .img_ctn {
+    width: 70%;
+    display: inline;
+
+    align-self: center;
+  }
+
+  .text_booking_ctn {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 21.875em) {
+  .img_ctn {
+    width: 80%;
+  }
+}

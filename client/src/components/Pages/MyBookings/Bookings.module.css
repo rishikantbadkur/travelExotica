@@ -1,0 +1,38 @@
+.ctn_wrap {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem auto;
+  list-style: none;
+  gap: 5.6rem;
+  width: 60%;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  max-width: 135rem;
+
+  margin: 4.8rem auto 9.6rem auto;
+}
+
+.text_head_ctn {
+  text-align: center;
+  text-transform: uppercase;
+  font-family: inherit;
+  font-size: 2.2rem;
+  letter-spacing: 5.4px;
+  margin-top: 6.8rem;
+  line-height: 3.5rem;
+}
+
+@media (max-width: 68.75rem) {
+  .ctn_wrap {
+    width: 80%;
+  }
+}
+
+@media (max-width: 21.875em) {
+  .ctn_wrap {
+    width: 90%;
+  }
+}

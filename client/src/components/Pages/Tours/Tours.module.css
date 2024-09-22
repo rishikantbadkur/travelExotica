@@ -1,0 +1,121 @@
+.section__tours {
+  max-width: 135rem;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
+.section__tours_intro_container {
+  display: flex;
+  overflow: hidden;
+}
+
+.section__tours_intro {
+  width: 50%;
+  padding-left: 1.6rem;
+}
+
+.section__tours_intro__image {
+  width: 50%;
+  background: url("../../../assets/images/hero/world.png");
+  background-size: cover;
+  scale: 150%;
+  opacity: 0.25;
+  /* z-index: 9; */
+}
+
+.section__tours_intro__heading_container {
+  margin-top: 3.2rem;
+}
+
+.section__tours_intro__text_container {
+  margin-top: 2.4rem;
+}
+
+.section__tours_imagesBox {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 3.2rem;
+  padding: 0 1.6rem;
+  column-gap: 3.2rem;
+  margin-bottom: 16rem;
+}
+
+.section__tours_imageBox_self {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  background-size: cover;
+  background-position: bottom;
+  width: 100%;
+  height: 300%;
+  font-size: 2rem;
+  line-height: 3rem;
+  letter-spacing: 0.5px;
+  color: #fff;
+  font-weight: 1000;
+}
+
+.tours_imgBox1 {
+  background-image: url("https://travel.nicdark.com/travel-agency-wordpress-theme/wp-content/uploads/sites/9/2023/05/d-banner-03.jpeg");
+}
+
+.tours_imgBox2 {
+  background-image: url("https://travel.nicdark.com/travel-agency-wordpress-theme/wp-content/uploads/sites/9/2023/05/d-banner-01.jpeg");
+}
+
+.tours_imgBox3 {
+  background-image: url("https://travel.nicdark.com/travel-agency-wordpress-theme/wp-content/uploads/sites/9/2023/05/d-banner-02.jpeg");
+}
+
+.tours_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 3.2rem;
+  padding: 1.6rem;
+}
+
+@media (max-width: 56.25em) {
+  .section__tours_intro_container {
+    flex-direction: column;
+  }
+
+  .section__tours_intro {
+    width: 100%;
+    text-align: center;
+  }
+
+  .section__tours_intro__text_container {
+    padding-right: 1.6rem;
+  }
+
+  .section__tours_intro__image {
+    display: none;
+  }
+
+  .section__tours_imagesBox {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .section__tours_imageBox_self {
+    height: 10rem;
+  }
+  .tours_container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 37.5em) {
+  .tours_container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 84.375em) {
+  .section__tours {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
