@@ -83,7 +83,7 @@ function UserAccountDetails() {
     toast.error("Something went wrong while fetching the account details");
   }
 
-  if (userState?.user.length === 0) {
+  if (!isLoading && userState?.user.length === 0) {
     // navigate("/app/login");
     window.location.href = "/app/login";
     return;

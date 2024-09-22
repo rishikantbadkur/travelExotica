@@ -29,7 +29,7 @@ const MyBooking = () => {
     );
   }
 
-  if (userState?.user.length === 0) {
+  if (!isUserLoading && userState?.user.length === 0) {
     navigate("/app/login");
     return;
   }
