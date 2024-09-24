@@ -1,19 +1,20 @@
 import React, { useContext } from "react";
 import { motion } from "framer-motion";
-// import { useNavigate } from "react-router-dom";
 
 import styles from "./Blogs.module.css";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import { UserContext } from "../../users/UserProvider";
+import useWindowScroll from "../../../hooks/useWindowScroll";
+import useTitle from "../../../hooks/useTitle";
 
 function Blogs() {
   const { userState } = useContext(UserContext);
 
-  // const navigate = useNavigate();
+  useWindowScroll();
+  useTitle("Blogs");
 
   if (userState?.user.length === 0) {
-    // navigate("/app/login");
     window.location.href = "/app/login";
     return;
   }

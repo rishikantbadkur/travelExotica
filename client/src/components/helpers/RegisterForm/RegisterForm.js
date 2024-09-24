@@ -28,7 +28,7 @@ function RegisterForm() {
       }
 
       setUserState({
-        user: res.data,
+        user: [res.data.user],
         authenticated: true,
       });
       localStorage.setItem("travelExoticaJwt", res.token);

@@ -9,6 +9,7 @@ import useTitle from "../../../hooks/useTitle";
 
 const Bookings = ({ bookings }) => {
   useWindowScroll();
+  useTitle("My Bookings");
 
   useTitle("My Bookings");
 
