@@ -72,11 +72,9 @@ const ContactForm = () => {
               <label htmlFor="name"></label>
               <input
                 className={styles.enquiry_form_fields}
-                placeholder={
-                  userState.user.length === 0 && "Enter your full name"
-                }
+                placeholder="Enter your full name"
                 defaultValue={
-                  userState.user.length > 0 && userState.user[0]?.name
+                  userState.user.length > 0 ? userState.user[0]?.name : ""
                 }
                 type="text"
                 id="name"
@@ -88,9 +86,9 @@ const ContactForm = () => {
 
               <input
                 className={styles.enquiry_form_fields}
-                placeholder={userState.user.length === 0 && "Enter your email"}
+                placeholder="Enter your email"
                 defaultValue={
-                  userState.user.length > 0 && userState.user[0]?.email
+                  userState.user.length > 0 ? userState.user[0]?.email : ""
                 }
                 type="email"
                 id="email"
