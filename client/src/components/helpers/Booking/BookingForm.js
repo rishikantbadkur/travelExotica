@@ -175,7 +175,7 @@ const BookingForm = ({ tour }) => {
             in test mode should be less than{" "}
             {new Intl.NumberFormat("en-IN", {
               maximumFractionDigits: 0,
-            }).format(50000)}
+            }).format(40000)}
           </p>
         )}
 
