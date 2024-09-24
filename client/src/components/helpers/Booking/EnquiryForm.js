@@ -10,7 +10,7 @@ import toast from "react-hot-toast";
 import SpinnerMini from "../../UI/SpinnerMini/SpinnerMini";
 
 const EnquiryForm = ({ tour }) => {
-  const { userState } = useContext(UserContext);
+  const { userState, isLoading } = useContext(UserContext);
   const [success, setSuccess] = useState(false);
 
   const { register, handleSubmit } = useForm();
@@ -33,8 +33,8 @@ const EnquiryForm = ({ tour }) => {
     mutation.mutate(data);
   };
 
-  return (
-    <div className={styles.enquiry_form_body}>
+  return <>
+    { !isLoading && <div className={styles.enquiry_form_body}>
       <form
         className={styles.enquiry_form}
         onSubmit={handleSubmit(formSubmitHandler)}
@@ -52,7 +52,7 @@ const EnquiryForm = ({ tour }) => {
           required
           className={styles.enquiry_form_fields}
           placeholder="Enter yor Name"
-          defaultValue={!userState.authenticated ? "" : userState.user[0].name}
+          defaultValue={!userState.authenticated ? "" : userState.user[0]?.name}
           type="text"
           id="name"
           name="name"
@@ -64,7 +64,7 @@ const EnquiryForm = ({ tour }) => {
           required
           className={styles.enquiry_form_fields}
           placeholder="Enter your email"
-          defaultValue={!userState.authenticated ? "" : userState.user[0].email}
+          defaultValue={!userState.authenticated ? "" : userState.user[0]?.email}
           type="email"
           id="email"
           name="email"
@@ -94,8 +94,8 @@ const EnquiryForm = ({ tour }) => {
           {mutation.status === "pending" ? <SpinnerMini /> : "SEND REQUEST"}
         </Button>
       </form>
-    </div>
-  );
+    </div>}
+ </>
 };
 
 export default EnquiryForm;
