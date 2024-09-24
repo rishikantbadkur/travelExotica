@@ -167,6 +167,18 @@ const BookingForm = ({ tour }) => {
           </p>
         )}
 
+        {booking.adult * tour.price +
+          booking.children * Math.floor(tour.price * 0.6) >
+          50000 && (
+          <p>
+            <span style={{ fontWeight: "bolder" }}>Note :</span> Payment amount
+            in test mode should be less than{" "}
+            {new Intl.NumberFormat("en-IN", {
+              maximumFractionDigits: 0,
+            }).format(50000)}
+          </p>
+        )}
+
         <Button onClick={bookingClickHandler}>
           {orderMutation.status === "pending" ||
           bookingMutation.status === "pending" ? (
