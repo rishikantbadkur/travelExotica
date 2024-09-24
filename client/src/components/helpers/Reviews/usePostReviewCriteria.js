@@ -33,7 +33,7 @@ function usePostReviewCriteria(tourName, tourId) {
         return;
       }
 
-      const daysPassed = checkDaysPassed(booking.createdAt);
+      const daysPassed = checkDaysPassed(booking.tourDate);
 
       if (!(daysPassed >= booking.tour.duration)) {
         return;
