@@ -51,7 +51,7 @@ const EnquiryForm = ({ tour }) => {
         <input
           required
           className={styles.enquiry_form_fields}
-          placeholder="Enter yor Name"
+          placeholder="Enter your Name"
           defaultValue={!userState.authenticated ? "" : userState.user[0]?.name}
           type="text"
           id="name"
