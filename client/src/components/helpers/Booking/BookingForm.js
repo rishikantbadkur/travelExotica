@@ -169,7 +169,7 @@ const BookingForm = ({ tour }) => {
 
         {booking.adult * tour.price +
           booking.children * Math.floor(tour.price * 0.6) >
-          50000 && (
+          40000 && (
           <p style={{ fontSize: "1.5rem", color: "red", lineHeight: "2rem" }}>
             <span style={{ fontWeight: "bolder" }}>Note :</span> Payment amount
             in test mode should be less than{" "}
