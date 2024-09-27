@@ -27,7 +27,7 @@ function Reviews({ tourName, tourId }) {
             Hear from the fellow travellers...
           </h2>
 
-          {reviewsData?.data.length === 0 ? (
+          { ( reviewsData?.data.length === 0 && !isUserEligibleToReview ) ? (
             <p
               className={stylesGeneral.body__text}
               style={{
