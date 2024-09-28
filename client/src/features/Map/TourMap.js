@@ -33,6 +33,7 @@ const TourMap = ({ tourMap }) => {
   const customIcon = new Icon({
     iconUrl: require("../../assets/marker.png"),
     iconSize: [36, 36],
+    iconAnchor: [12, 41],
   });
 
   return (
@@ -56,7 +57,7 @@ const TourMap = ({ tourMap }) => {
             icon={customIcon}
             key={location.coordinates[0]}
           >
-            <Tooltip permanent opacity={1}>
+            <Tooltip permanent opacity={1} offset={[0, -30]}>
               <span>
                 <p className="popupText">{`Day ${location.day}: ${location.place}`}</p>
               </span>
