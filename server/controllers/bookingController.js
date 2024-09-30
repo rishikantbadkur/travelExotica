@@ -108,7 +108,7 @@ exports.postBooking = async (req, res, next) => {
 
 exports.getUserBooking = async (req, res, next) => {
   try {
-    const query = Booking.find({ user: req.params.userId });
+    const query = await Booking.find({ user: req.params.userId });
 
     query.sort('-createdAt');
 
