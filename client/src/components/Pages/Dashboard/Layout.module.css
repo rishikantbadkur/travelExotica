@@ -1,0 +1,48 @@
+.wrapper {
+  max-width: 135rem;
+}
+
+.logo_ctn {
+  padding: 2.4rem 1.6rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logout_icon {
+  font-size: 2.4rem;
+  color: #000;
+}
+
+.logout_icon:hover {
+  cursor: pointer;
+}
+
+.body_ctn {
+  display: grid;
+  grid-template-columns: 1.5fr 8.5fr;
+}
+
+.nav_ctn {
+  padding-left: 2.8rem;
+  padding-top: 6rem;
+  margin-right: auto;
+  width: 100%;
+}
+
+.body_main_ctn {
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 37.5em) {
+  .body_ctn {
+    grid-template-columns: 1fr;
+  }
+
+  .nav_ctn {
+    padding-top: 1.5rem;
+  }
+
+  .logout_icon {
+    font-size: 3.2rem;
+  }
+}

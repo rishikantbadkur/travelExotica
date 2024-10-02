@@ -10,9 +10,29 @@ const Services = lazy(() => import("./components/Pages/Services/Services"));
 const Contacts = lazy(() => import("./components/Pages/Contacts/Contacts"));
 const Packages = lazy(() => import("./components/helpers/Packages/Packages"));
 
+const AdminLogin = lazy(() =>
+  import("./components/Pages/AdminLogin/AdminLogin")
+);
+
+const Statistics = lazy(() =>
+  import("./components/Pages/Dashboard/AdminPages/Statistics/Statistics")
+);
+
+const ToursAdmin = lazy(() =>
+  import("./components/Pages/Dashboard/AdminPages/ToursAdmin/ToursAdmin")
+);
+const UsersAdmin = lazy(() =>
+  import("./components/Pages/Dashboard/AdminPages/UsersAdmin/UsersAdmin")
+);
+const Settings = lazy(() =>
+  import("./components/Pages/Dashboard/AdminPages/Settings/Settings")
+);
+
 const TourLanding = lazy(() =>
   import("./components/Pages/TourLanding/TourLanding")
 );
+
+const Layout = lazy(() => import("./components/Pages/Dashboard/Layout"));
 
 const Blogs = lazy(() => import("./components/Pages/Blogs/Blogs"));
 const Login = lazy(() => import("./components/Login/Login"));
@@ -31,8 +51,6 @@ const WildSearch = lazy(() =>
   import("./components/Pages/WildSearch/WildSearch")
 );
 
-const Header = lazy(() => import("./components/Pages/Header/Header"));
-
 function App() {
   return (
     <>
@@ -46,6 +64,23 @@ function App() {
             path="/app"
             element={<Navigate to="/app/home" replace></Navigate>}
           />
+          <Route path="/app/admin/login" element={<AdminLogin />} />
+
+          <Route path="/app/admin" element={<Layout />}>
+            <Route
+              path="*"
+              element={
+                <Suspense fallback={<Spinner />}>
+                  <Routes>
+                    <Route path="dashboard" element={<Statistics />} />
+                    <Route path="tours" element={<ToursAdmin />} />
+                    <Route path="users" element={<UsersAdmin />} />
+                    <Route path="settings" element={<Settings />} />
+                  </Routes>
+                </Suspense>
+              }
+            ></Route>
+          </Route>
           <Route path="/app" element={<AppLayout></AppLayout>}>
             <Route path="home" element={<HomePage />} />
             <Route
@@ -66,6 +101,7 @@ function App() {
                     <Route path="forgetpassword" element={<ForgetPassword />} />
                     <Route path="mybookings" element={<MyBooking />} />
                     <Route path="account" element={<UserAccount />} />
+
                     <Route
                       path="users/resetPassword/:token"
                       element={<ResetPassword />}

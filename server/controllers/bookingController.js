@@ -1,6 +1,7 @@
 const Razorpay = require('razorpay');
 const crypto = require('crypto');
 const Booking = require('../models/bookingModel');
+const AppError = require('../utils/AppError');
 
 exports.createOrder = async (req, res, next) => {
   try {
@@ -108,7 +109,7 @@ exports.postBooking = async (req, res, next) => {
 
 exports.getUserBooking = async (req, res, next) => {
   try {
-    const query = Booking.find({ user: req.params.userId });
+    const query = Booking.find({ user: req.params.userId, active: true });
 
     query.sort('-createdAt');
 
@@ -126,6 +127,162 @@ exports.getUserBooking = async (req, res, next) => {
       status: 'success',
       results: bookings.length,
       data: bookings,
+    });
+  } catch (error) {
+    next(error);
+  }
+};
+
+// Admin specific routes
+
+exports.getAllBookings = async (req, res, next) => {
+  try {
+    const page = parseInt(req.query.page, 10) || 1;
+
+    const limit = parseInt(req.query.limit, 10) || 20;
+
+    const skip = (page - 1) * limit;
+
+    let query = Booking.find({ active: true })
+      .sort('-createdAt')
+      .select('-paymentSignature -__v')
+      .skip(skip)
+      .limit(limit);
+
+    let totalCount;
+
+    if (req.query.year && req.query.month) {
+      const year = parseInt(req.query.year, 10);
+      const month = parseInt(req.query.month, 10);
+
+      const startDate = new Date(year, month - 1, 1);
+
+      const endDate = new Date(year, month, 1);
+
+      query = query.find({
+        createdAt: {
+          $gte: startDate,
+          $lt: endDate,
+        },
+      });
+
+      totalCount = await Booking.countDocuments({
+        createdAt: {
+          $gte: startDate,
+          $lt: endDate,
+        },
+      });
+    }
+
+    const bookings = await query;
+
+    if (totalCount === undefined) {
+      totalCount = await Booking.countDocuments();
+    }
+
+    const totalPages = Math.ceil(totalCount / limit);
+
+    res.status(200).json({
+      status: 'success',
+      results: bookings.length,
+      pagination: {
+        totalBookings: totalCount,
+        currentPage: page,
+        totalPages,
+      },
+      data: bookings,
+    });
+  } catch (error) {
+    next(error);
+  }
+};
+
+exports.getBooking = async (req, res, next) => {
+  try {
+    const booking = await Booking.findById(req.params.id).select(
+      '-paymentSignature',
+    );
+
+    if (!booking) {
+      res.status(200).json({
+        status: 'success',
+        message: 'No Booking found',
+      });
+    }
+
+    res.status(200).json({
+      status: 'success',
+      data: booking,
+    });
+  } catch (error) {
+    next(error);
+  }
+};
+
+exports.createBooking = async (req, res, next) => {
+  try {
+    const { tour, user, price, tourDate, bookingData } = req.body;
+
+    const booking = await Booking.create({
+      tour,
+      user,
+      price,
+      tourDate,
+      paid: 'confirmed',
+      bookingData,
+      paymentSignature: 'manual',
+      orderId: 'admin booking',
+    });
+
+    res.status(201).json({
+      status: 'success',
+      data: booking,
+    });
+  } catch (error) {
+    next(error);
+  }
+};
+
+exports.updateBooking = async (req, res, next) => {
+  try {
+    const booking = await Booking.findByIdAndUpdate(req.params.id, req.body, {
+      runValidators: true,
+      new: true,
+    });
+
+    if (!booking) {
+      return next(new AppError('Booking Not Found', 404));
+    }
+
+    res.status(200).json({
+      status: 'success',
+      data: {
+        booking,
+      },
+    });
+  } catch (error) {
+    next(error);
+  }
+};
+
+exports.deleteBooking = async (req, res, next) => {
+  try {
+    const booking = await Booking.findByIdAndUpdate(
+      req.params.id,
+      { active: false },
+      {
+        runValidators: true,
+        new: true,
+      },
+    );
+
+    if (!booking) {
+      return next(new AppError('Booking Not Found', 404));
+    }
+
+    res.status(200).json({
+      status: 'success',
+      data: null,
     });
   } catch (error) {
     next(error);

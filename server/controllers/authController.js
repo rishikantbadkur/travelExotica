@@ -45,7 +45,7 @@ exports.signup = async (req, res, next) => {
       email: req.body.email,
       password: req.body.password,
       passwordConfirm: req.body.passwordConfirm,
-      role: 'user'
+      role: 'user',
     });
 
     await new Email(newUser).sendWelcome();
@@ -67,6 +67,29 @@ exports.login = async (req, res, next) => {
 
     if (!user || !(await user.checkPassword(password, user.password))) {
       return next(new AppError('Incorrect Email or Password', 401));
+    }
+
+    createSendToken(user, 200, res);
+  } catch (error) {
+    next(error);
+  }
+};
+
+exports.adminLogin = async (req, res, next) => {
+  try {
+    const { email, password } = req.body;
+    if (!email || !password) {
+      return next(new AppError('Email and Password are required', 400));
+    }
+
+    const user = await User.findOne({ email: email }).select('+password');
+
+    if (!user || !(await user.checkPassword(password, user.password))) {
+      return next(new AppError('Incorrect Email or Password', 401));
+    }
+
+    if (!(user.role === 'admin')) {
+      return next(new AppError('Unauthorized Access', 401));
     }
 
     createSendToken(user, 200, res);

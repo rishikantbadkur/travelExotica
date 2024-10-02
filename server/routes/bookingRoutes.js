@@ -14,17 +14,17 @@ router.route('/post').post(bookingController.postBooking);
 
 router.route('/user/:userId').get(bookingController.getUserBooking);
 
-// router.use(authController.restrictTo('admin'));
+router.use(authController.restrictTo('admin'));
 
-// router
-//   .route('/')
-//     .get(bookingController.getAllBookings)
-//   .post(bookingController.createBooking);
+router
+  .route('/')
+  .get(bookingController.getAllBookings)
+  .post(bookingController.createBooking);
 
-// router
-//   .route('/:id')
-//   .get(bookingController.getBooking)
-//   .patch(bookingController.updateBooking)
-//   .delete(bookingController.deleteBooking);
+router
+  .route('/:id')
+  .get(bookingController.getBooking)
+  .patch(bookingController.updateBooking)
+  .delete(bookingController.deleteBooking);
 
 module.exports = router;
