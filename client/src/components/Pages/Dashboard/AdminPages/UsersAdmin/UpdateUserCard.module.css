@@ -1,0 +1,8 @@
+.btn_ctn {
+  display: flex;
+  gap: 0.6rem;
+}
+
+.btn {
+  padding: 0.8rem;
+}

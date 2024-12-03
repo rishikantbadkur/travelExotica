@@ -1,0 +1,55 @@
+.modal_ctn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  width: 50%;
+  z-index: 99;
+  padding: 3.4rem 2.4rem;
+  max-width: 80rem;
+}
+
+.container {
+  width: 80%;
+}
+
+.close_ctn {
+  align-self: flex-end;
+  font-size: 2.4rem;
+}
+
+.close_ctn:hover {
+  cursor: pointer;
+}
+
+.enquiry_form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.enquiry_form_fields {
+  font: inherit;
+  font-size: 1.4rem;
+  padding: 1.6rem;
+  border: 0.1rem solid #e4e4e4;
+  background-color: #f2f2f2;
+
+  color: inherit;
+}
+
+@media (max-width: 50em) {
+  .modal_ctn {
+    width: 70%;
+  }
+}
+
+@media (max-width: 37.5em) {
+  .modal_ctn {
+    width: 90%;
+  }
+  .container {
+    width: 100%;
+  }
+}

@@ -7,7 +7,7 @@ exports.setTourUserIds = (req, res, next) => {
   next();
 };
 
-exports.getAllReviews = async (req, res, next) => {
+exports.getReviewStats = async (req, res, next) => {
   try {
     const reviews = await Reviews.find();
     res.status(200).json({
@@ -17,7 +17,42 @@ exports.getAllReviews = async (req, res, next) => {
       },
     });
   } catch (error) {
-    next(error.message);
+    next(error);
+  }
+};
+
+exports.getAllReviews = async (req, res, next) => {
+  try {
+    const page = parseInt(req.query.page, 10) || 1;
+
+    const limit = parseInt(req.query.limit, 10) || 20;
+    const skip = (page - 1) * limit;
+
+    const query = Reviews.find().sort('-createdAt').skip(skip).limit(limit);
+
+    let totalCount;
+
+    const reviews = await query;
+
+    if (totalCount === undefined) {
+      totalCount = await Reviews.countDocuments();
+    }
+
+    const totalPages = Math.ceil(totalCount / limit);
+
+    res.status(200).json({
+      status: 'success',
+      results: reviews.length,
+      pagination: {
+        totalReviews: totalCount,
+        currentPage: page,
+        totalPages,
+        resultsPerPage: limit,
+      },
+      data: reviews,
+    });
+  } catch (error) {
+    next(error);
   }
 };
 
@@ -32,7 +67,7 @@ exports.createNewReview = async (req, res, next) => {
       },
     });
   } catch (error) {
-    next(error.message);
+    next(error);
   }
 };
 
@@ -51,12 +86,21 @@ exports.getReview = async (req, res, next) => {
       },
     });
   } catch (error) {
-    next(error.message);
+    next(error);
   }
 };
 
 exports.updateReview = async (req, res, next) => {
   try {
+    if (req.body.feature === true) {
+      const featuresReviews = await Reviews.find({ feature: true });
+      if (!(featuresReviews.length < 4)) {
+        return next(
+          new AppError('There can be at max 4 feature reviews at a time', 400),
+        );
+      }
+    }
+
     const review = await Reviews.findByIdAndUpdate(req.params.id, req.body, {
       new: true,
       runValidators: true,
@@ -71,7 +115,7 @@ exports.updateReview = async (req, res, next) => {
       data: review,
     });
   } catch (error) {
-    next(error.message);
+    next(error);
   }
 };
 
@@ -88,7 +132,7 @@ exports.deleteReview = async (req, res, next) => {
       data: null,
     });
   } catch (error) {
-    next(error.message);
+    next(error);
   }
 };
 
@@ -108,7 +152,7 @@ exports.getTourReview = async (req, res, next) => {
       data: reviews,
     });
   } catch (error) {
-    next(error.message);
+    next(error);
   }
 };
 
@@ -121,6 +165,6 @@ exports.getFeatureReviews = async (req, res, next) => {
       data: reviews,
     });
   } catch (error) {
-    next(error.message);
+    next(error);
   }
 };

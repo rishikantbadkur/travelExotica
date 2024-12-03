@@ -7,11 +7,13 @@ import { Link } from "react-router-dom";
 
 const Tours = () => {
   const { data: tourData } = useQuery({
-    queryKey: ["toursDemo"],
+    queryKey: ["toursFeature"],
     queryFn: () => getAllTours(true),
   });
 
   const tours = tourData?.data?.tours;
+
+  console.log(tours);
 
   return (
     <>

@@ -27,21 +27,46 @@ const bookingSchema = new mongoose.Schema({
     type: String,
   },
   bookingData: {
-    type: Object,
-    required: [true, 'A tour should have the required booking information'],
+    adult: {
+      type: Number,
+      required: [true, 'Number of adults are required'],
+      min: 1,
+    },
+    children: {
+      type: Number,
+      min: 0,
+    },
   },
   orderId: {
     type: String,
     required: [true, 'Order id is required'],
   },
   paymentSignature: String,
+  active: {
+    type: Boolean,
+    default: true,
+  },
+  cancellationDetails: {
+    remarks: {
+      type: String,
+    },
+    owner: {
+      type: mongoose.Schema.ObjectId,
+      ref: 'User',
+    },
+    date: {
+      type: Date,
+    },
+  },
 });
 
 bookingSchema.pre(/^find/, function (next) {
-  this.populate('user').populate({
-    path: 'tour',
-    select: ['name', 'duration', 'difficulty', 'maxGroupSize', 'slug'],
-  });
+  this.populate({ path: 'user', select: ['name', 'email', '_id'] })
+    .populate({
+      path: 'tour',
+      select: ['name', 'duration', 'difficulty', 'maxGroupSize', 'slug'],
+    })
+    .populate({ path: 'cancellationDetails.owner', select: ['name', 'email'] });
   next();
 });
 

@@ -59,8 +59,11 @@ const TourLanding = () => {
                 <div className={styles.tourLanding__hero__imageBox} key={path}>
                   <img
                     className={styles.tourLanding__hero__image}
-                    src={`/assets/images/tours/${tour?.name}/${path}`}
+                    src={`${
+                      process.env.REACT_APP_SERVER_ROOT_PATH
+                    }/images/tours/${(tour?.name).split(" ").join("")}/${path}`}
                     alt={tour.name}
+                    crossOrigin="anonymous"
                   ></img>
                 </div>
               ))}

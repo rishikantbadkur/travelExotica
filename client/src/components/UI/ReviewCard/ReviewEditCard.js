@@ -63,7 +63,7 @@ function ReviewEditCard({ writeCard, editCard, reviewData }) {
         </div>
         <div className={styles.rating_ctn}>
           <Rating
-            initialValue={4.5}
+            initialValue={5}
             size={16}
             onClick={(e) => {
               ratingChangeHandler(e);

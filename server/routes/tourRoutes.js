@@ -11,23 +11,31 @@ router
   .get(tourController.getAllTours)
   .post(
     authController.protect,
-    authController.restrictTo(['admin']),
+    authController.restrictTo('admin'),
     tourController.createTour,
   );
 
 router.route('/tourQuery').post(tourController.createTourQuery);
 
 router
+  .route('/feature/:id')
+  .patch(
+    authController.protect,
+    authController.restrictTo('admin'),
+    tourController.updateFeatureTours,
+  );
+
+router
   .route('/:id')
   .get(tourController.getTour)
   .patch(
     authController.protect,
-    authController.restrictTo(['admin']),
+    authController.restrictTo('admin'),
     tourController.updateTour,
   )
   .delete(
     authController.protect,
-    authController.restrictTo(['admin']),
+    authController.restrictTo('admin'),
     tourController.deleteTour,
   );
 

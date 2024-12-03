@@ -16,7 +16,7 @@ export async function getMe() {
 
     return response.data;
   } catch (error) {
-    console.error(error);
+    console.log(error);
     throw new Error(error.response?.data?.message || error.message);
   }
 }

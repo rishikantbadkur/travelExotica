@@ -26,7 +26,7 @@ const MyBooking = () => {
     return <Spinner></Spinner>;
   }
 
-  if (!!error || !!userLoadError) {
+  if (!!error) {
     toast.error(
       "Something went wrong while fetching the booking data, please try again later"
     );

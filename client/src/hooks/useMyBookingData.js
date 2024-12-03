@@ -10,8 +10,6 @@ function useMyBookingData() {
     error: userLoadError,
   } = useContext(UserContext);
 
-  // console.log(userState);
-
   const {
     data: bookingData,
     isLoading,

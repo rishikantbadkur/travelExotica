@@ -6,7 +6,13 @@ import Button from "../Button/Button";
 import { Link } from "react-router-dom";
 import { Rating } from "react-simple-star-rating";
 
-const TourCard = ({ destinations, startLocation, tour }) => {
+const TourCard = ({
+  destinations,
+  startLocation,
+  tour,
+  adminCard,
+  onClick,
+}) => {
   const { name, price, duration, summary, startDates } = tour;
 
   const tourDate = new Date(startDates[0]).toDateString().split(" ");
@@ -20,14 +26,18 @@ const TourCard = ({ destinations, startLocation, tour }) => {
       <div className={styles.card_img_box}>
         <img
           className={styles.card_img}
-          src={`/assets/images/tours/${name}/cover.jpg`}
+          src={`${
+            process.env.REACT_APP_SERVER_ROOT_PATH
+          }/images/tours/${(tour?.name).split(" ").join("")}/cover.jpg`}
           alt={name}
+          crossOrigin="anonymous"
         ></img>
         <aside className={styles.img_text}>
           <ion-icon name="time"></ion-icon>
           <p className={styles.text_days}>{`${duration} days`}</p>
         </aside>
       </div>
+
       <div className={styles.description_box}>
         <aside className={styles.description_item}>
           <ion-icon name="flag"></ion-icon>
@@ -58,18 +68,24 @@ const TourCard = ({ destinations, startLocation, tour }) => {
             </div>
           </div>
 
-          <div
-            className={`${styles.body_main} ${stylesGeneral.body__text} ${stylesGeneral.section_border}`}
-          >
-            <p>{summary}</p>
-          </div>
-          <div className={styles.body_footer}>
-            <Link
-              to={`/app/tours/${tour._id}/${tour.slug}`}
-              style={{ textDecoration: "none" }}
+          {!adminCard && (
+            <div
+              className={`${styles.body_main} ${stylesGeneral.body__text} ${stylesGeneral.section_border}`}
             >
-              <Button>Details</Button>
-            </Link>
+              <p>{summary}</p>
+            </div>
+          )}
+          <div className={styles.body_footer}>
+            {adminCard ? (
+              <Button onClick={() => onClick(tour)}>Edit</Button>
+            ) : (
+              <Link
+                to={`/app/tours/${tour._id}/${tour.slug}`}
+                style={{ textDecoration: "none" }}
+              >
+                <Button>Details</Button>
+              </Link>
+            )}
 
             <aside>
               <span

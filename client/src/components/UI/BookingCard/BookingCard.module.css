@@ -99,6 +99,16 @@
   background-color: #ffd205;
 }
 
+.color_cancel {
+  background-color: #ff0000;
+}
+
+.user_ctn {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+}
+
 @media (max-width: 68.75em) {
   .body_spec {
     gap: 0.8rem;

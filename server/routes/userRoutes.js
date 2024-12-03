@@ -6,6 +6,7 @@ const authController = require('../controllers/authController');
 
 router.post('/signup', authController.signup);
 router.post('/login', authController.login);
+router.post('/adminLogin', authController.adminLogin);
 
 router.post('/forgotPassword', authController.forgotPassword);
 router.patch('/resetPassword/:token', authController.resetPassword);
@@ -17,7 +18,11 @@ router.get('/me', userController.getMe, userController.getUser);
 router.patch('/updateMyProfile', userController.updateUserData);
 router.delete('/deleteMyProfile', userController.deleteUserData);
 
-router.use(authController.restrictTo(['admin']));
+router.use(authController.restrictTo('admin'));
+
+router.patch('/master', userController.updateMasterAdmin);
+
+router.get('/stats', userController.getUserStats);
 
 router
   .route('/')
@@ -27,7 +32,7 @@ router
 router
   .route('/:id')
   .get(userController.getUser)
-  .patch(userController.updateUser)
-  .delete(userController.deleteUser);
+  .patch(userController.checkUserToUpdate, userController.updateUser)
+  .delete(userController.checkUserToUpdate, userController.deleteUser);
 
 module.exports = router;

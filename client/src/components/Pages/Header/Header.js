@@ -46,8 +46,7 @@ const Header = () => {
   function logoutHandler() {
     localStorage.removeItem("travelExoticaJwt");
     setLogOutMenu(false);
-    // setAuthenticated(false);
-    // setUser([]);
+
     setUserState({ user: [], authenticated: false });
     navigate("/app/logout");
     toast.success("Successfully Logged Out");

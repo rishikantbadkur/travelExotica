@@ -1,0 +1,24 @@
+.wrapper {
+  height: 100vh;
+  background-color: #d9dbdd;
+}
+
+.logo_ctn {
+  padding: 1rem;
+}
+
+.ctn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80%;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 37.5em) {
+  .ctn {
+    width: 100%;
+  }
+}

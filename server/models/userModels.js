@@ -30,6 +30,10 @@ const userSchema = new mongoose.Schema({
     enum: ['user', 'admin'],
     default: 'user',
   },
+  master: {
+    type: Boolean,
+    default: false,
+  },
   photo: String,
   passwordConfirm: {
     type: String,
@@ -49,6 +53,10 @@ const userSchema = new mongoose.Schema({
   active: {
     type: Boolean,
     default: true,
+  },
+  createdAt: {
+    type: Date,
+    default: Date.now(),
   },
 });
 

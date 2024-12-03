@@ -1,0 +1,35 @@
+.booking_list_ctn {
+  margin-top: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
+  overflow: auto;
+  max-height: 110vh;
+  min-height: 80vh;
+}
+
+.booking_card_ctn {
+  padding: 1rem;
+}
+
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+}
+
+.error_ctn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  min-height: 60vh;
+}
+
+@media (max-width: 37.5em) {
+  .booking_list_ctn {
+    padding-left: 1.6rem;
+    padding-right: 1.6rem;
+  }
+}
