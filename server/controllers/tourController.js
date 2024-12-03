@@ -147,3 +147,49 @@ exports.createTourQuery = async (req, res, next) => {
     next(error);
   }
 };
+
+exports.updateFeatureTours = async (req, res, next) => {
+  try {
+    const tours = await Tour.find({ feature: true });
+
+    if (req.query.action === 'add') {
+      if (tours.length >= 3) {
+        return next(
+          new AppError('There can be a maximum of 3 featured tours', 400),
+        );
+      }
+
+      const tour = await Tour.findByIdAndUpdate(
+        req.params.id,
+        { feature: true },
+        {
+          new: true,
+          runValidators: true,
+        },
+      );
+
+      return res.status(200).json({
+        status: 'success',
+        tour,
+      });
+    }
+
+    if (req.query.action === 'remove') {
+      const tour = await Tour.findByIdAndUpdate(
+        req.params.id,
+        { feature: false },
+        {
+          new: true,
+          runValidators: true,
+        },
+      );
+
+      return res.status(200).json({
+        status: 'success',
+        tour,
+      });
+    }
+  } catch (error) {
+    next(error);
+  }
+};

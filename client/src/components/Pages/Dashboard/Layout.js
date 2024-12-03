@@ -6,11 +6,14 @@ import AdminNav from "./AdminNav";
 
 import styles from "./Layout.module.css";
 import stylesGeneral from "../../../styles/general.module.css";
-import { Outlet } from "react-router-dom";
+import { Outlet, useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
+import Button from "../../UI/Button/Button";
 
 const Layout = memo(() => {
   const { userState, isLoading, error, setUserState } = useContext(UserContext);
+
+  const navigate = useNavigate();
 
   const logoutHandler = () => {
     const flag = window.confirm("Are you sure, you want to log out ?");
@@ -43,6 +46,21 @@ const Layout = memo(() => {
 
   return (
     <>
+      {userState.authenticated === false && (
+        <div className={styles.fallback}>
+          <p className={stylesGeneral.body__text}>
+            Please login again to continue.
+          </p>
+          <Button
+            btnSub={true}
+            onClick={() => {
+              window.location.href = "/app/admin/login";
+            }}
+          >
+            Login
+          </Button>
+        </div>
+      )}
       {!isLoading && userState.user[0]?.role === "admin" && (
         <section className={styles.wrapper}>
           <div className={styles.logo_ctn}>
@@ -60,7 +78,7 @@ const Layout = memo(() => {
             <div className={styles.nav_ctn}>
               <AdminNav />
             </div>
-            <div className={styles.body_main_ctn} style={{ height: "80vh" }}>
+            <div className={styles.body_main_ctn}>
               <Outlet />
             </div>
           </div>

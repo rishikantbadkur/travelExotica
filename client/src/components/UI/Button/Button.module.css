@@ -20,6 +20,10 @@
   cursor: pointer;
 }
 
+.btn_general:disabled {
+  background-color: #c8cbcf;
+}
+
 .btn_sub {
   background-color: #fff;
   outline: 1.5px solid #1bbc9b;
@@ -30,6 +34,10 @@
   background-color: #434a54;
   color: #fff;
   outline: none;
+}
+
+.btn_delete {
+  background-color: #ff0000;
 }
 
 @media (max-width: 37.5em) {

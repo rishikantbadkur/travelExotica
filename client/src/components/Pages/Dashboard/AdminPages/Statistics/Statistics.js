@@ -1,7 +1,6 @@
 import React from "react";
 
-import styles from "./Statistics.module.css";
-import stylesGeneral from "../../../../../styles/general.module.css";
+import StatBox from "../UI/StatBox/StatBox";
 
 const FEATURES = [
   {
@@ -36,22 +35,12 @@ const FEATURES = [
 
 function Statistics() {
   return (
-    <div className={styles.ctn}>
-      {FEATURES.map((feature) => (
-        <div className={styles.feature_ctn}>
-          <span
-            className={styles.icon_ctn}
-            style={{ color: feature.color, backgroundColor: feature.bgColor }}
-          >
-            {feature.icon}
-          </span>
-          <div className={styles.text_ctn}>
-            <p className={styles.text}>{feature.name}</p>
-            <span className={styles.text_quantity}>{feature.value}</span>
-          </div>
-        </div>
-      ))}
-    </div>
+    <>
+      <StatBox feature={FEATURES[0]} />
+      <StatBox feature={FEATURES[1]} />
+      <StatBox feature={FEATURES[2]} />
+      <StatBox feature={FEATURES[3]} />
+    </>
   );
 }
 

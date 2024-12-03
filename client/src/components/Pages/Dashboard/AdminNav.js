@@ -21,6 +21,16 @@ const NAV_OPTIONS = [
     icon: <ion-icon name="people-outline"></ion-icon>,
   },
   {
+    label: "Bookings",
+    url: "/app/admin/bookings",
+    icon: <ion-icon name="id-card-outline"></ion-icon>,
+  },
+  {
+    label: "Reviews",
+    url: "/app/admin/reviews",
+    icon: <ion-icon name="star-outline"></ion-icon>,
+  },
+  {
     label: "Settings",
     url: "/app/admin/settings",
     icon: <ion-icon name="settings-outline"></ion-icon>,

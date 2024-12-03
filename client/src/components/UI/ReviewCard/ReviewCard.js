@@ -5,7 +5,15 @@ import { Rating } from "react-simple-star-rating";
 
 import ReviewEditCard from "./ReviewEditCard";
 
-const ReviewCard = ({ homePage, reviewData, writeCard, editCard }) => {
+const ReviewCard = ({
+  homePage,
+  reviewData,
+  writeCard,
+  editCard,
+  adminCard,
+  onRemoveFromFeature,
+  adminViewCard,
+}) => {
   const home = homePage || false;
 
   return (
@@ -21,7 +29,20 @@ const ReviewCard = ({ homePage, reviewData, writeCard, editCard }) => {
           className={styles.card_container}
           style={home ? { backgroundColor: "#1bbc9b" } : {}}
         >
+          {adminCard && (
+            <div
+              className={styles.remove_ctn}
+              onClick={() => onRemoveFromFeature(reviewData._id)}
+            >
+              <ion-icon name="remove-circle"></ion-icon>
+            </div>
+          )}
           <div className={styles.card_text}>
+            {adminViewCard && (
+              <div className={`${styles.tour_ctn} ${stylesGeneral.body__text}`}>
+                <p>{reviewData.tour.name}</p>
+              </div>
+            )}
             <p className={stylesGeneral.body__text}>
               {reviewData.description}{" "}
             </p>

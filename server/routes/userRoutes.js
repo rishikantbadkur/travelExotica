@@ -18,7 +18,11 @@ router.get('/me', userController.getMe, userController.getUser);
 router.patch('/updateMyProfile', userController.updateUserData);
 router.delete('/deleteMyProfile', userController.deleteUserData);
 
-router.use(authController.restrictTo(['admin']));
+router.use(authController.restrictTo('admin'));
+
+router.patch('/master', userController.updateMasterAdmin);
+
+router.get('/stats', userController.getUserStats);
 
 router
   .route('/')
@@ -28,7 +32,7 @@ router
 router
   .route('/:id')
   .get(userController.getUser)
-  .patch(userController.updateUser)
-  .delete(userController.deleteUser);
+  .patch(userController.checkUserToUpdate, userController.updateUser)
+  .delete(userController.checkUserToUpdate, userController.deleteUser);
 
 module.exports = router;

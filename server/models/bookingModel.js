@@ -46,13 +46,27 @@ const bookingSchema = new mongoose.Schema({
     type: Boolean,
     default: true,
   },
+  cancellationDetails: {
+    remarks: {
+      type: String,
+    },
+    owner: {
+      type: mongoose.Schema.ObjectId,
+      ref: 'User',
+    },
+    date: {
+      type: Date,
+    },
+  },
 });
 
 bookingSchema.pre(/^find/, function (next) {
-  this.populate({ path: 'user', select: ['name', 'email', '_id'] }).populate({
-    path: 'tour',
-    select: ['name', 'duration', 'difficulty', 'maxGroupSize', 'slug'],
-  });
+  this.populate({ path: 'user', select: ['name', 'email', '_id'] })
+    .populate({
+      path: 'tour',
+      select: ['name', 'duration', 'difficulty', 'maxGroupSize', 'slug'],
+    })
+    .populate({ path: 'cancellationDetails.owner', select: ['name', 'email'] });
   next();
 });
 

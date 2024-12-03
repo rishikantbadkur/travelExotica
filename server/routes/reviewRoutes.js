@@ -15,6 +15,8 @@ router.route('/feature').get(reviewsController.getFeatureReviews);
 
 router.use(authController.protect);
 
+router.get('/stats', reviewsController.getReviewStats);
+
 router
   .route('/')
   .get(reviewsController.getAllReviews)

@@ -29,8 +29,6 @@ const corsOptions = {
 
 app.use(cors(corsOptions));
 
-// app.options('*', cors());
-
 app.use(helmet());
 
 const limiter = rateLimit({
@@ -52,7 +50,13 @@ app.use(mongoSanitize());
 
 app.use(xss());
 
-app.use(express.static(`${__dirname}/public`));
+app.use(
+  express.static(`${__dirname}/public`, {
+    setHeaders: (res) => {
+      res.set('Access-Control-Allow-Origin', process.env.CORS_ORIGIN);
+    },
+  }),
+);
 
 app.post('/webhook', razorPayWebhookHandler);
 

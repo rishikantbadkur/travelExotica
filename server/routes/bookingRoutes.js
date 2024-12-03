@@ -16,6 +16,9 @@ router.route('/user/:userId').get(bookingController.getUserBooking);
 
 router.use(authController.restrictTo('admin'));
 
+router.get('/stats', bookingController.getBookingStats);
+router.get('/userEmail/:email', bookingController.getBookingsByUserEmail);
+
 router
   .route('/')
   .get(bookingController.getAllBookings)

@@ -120,8 +120,6 @@ export async function findBookings(userId) {
 
     return bookings?.data;
   } catch (error) {
-    console.log(error);
-
     throw new Error(error.response?.data?.message || error.message);
   }
 }

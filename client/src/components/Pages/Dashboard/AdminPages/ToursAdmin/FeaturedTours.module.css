@@ -1,0 +1,73 @@
+.body_header {
+  font: inherit;
+  font-weight: 700;
+  color: #000;
+  font-size: 2rem;
+  line-height: 3rem;
+  border-bottom: 0.1rem solid #e4e4e4;
+  padding-bottom: 1.4rem;
+}
+
+.rating_ctn {
+  margin-top: 1.2rem;
+}
+
+.body_footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2.8rem 0rem;
+}
+
+.price_value_sign,
+.price_value_number {
+  color: #000;
+  font-weight: 700;
+}
+
+.price_value_sign {
+  font-size: 2rem;
+  line-height: 2.5rem;
+}
+
+.price_value_number {
+  font-size: 2.5rem;
+  line-height: 3.8rem;
+}
+
+.section_body {
+  position: relative;
+}
+
+.remove_icon_ctn {
+  font-size: 3.2rem;
+  color: #ff0000;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.remove_icon_ctn:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.featured_tours_ctn {
+}
+
+.featured_tour {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2.4rem;
+}
+
+.section_body {
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
+  padding: 2.4rem;
+}
+
+@media (max-width: 43em) {
+  .featured_tour {
+    grid-template-columns: 1fr 1fr;
+  }
+}

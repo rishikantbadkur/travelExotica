@@ -1,0 +1,51 @@
+.booking_display_ctn {
+  padding: 1.6rem;
+  margin-top: 17rem;
+}
+
+.display_card_ctn {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
+  padding: 3.2rem;
+  position: relative;
+}
+
+.role_ctn {
+  top: 0;
+  right: 0;
+  position: absolute;
+  font-size: 1.2rem;
+  letter-spacing: 0.8px;
+  color: #000;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 1rem;
+}
+
+.data_ctn {
+  display: flex;
+  /* font-size: 1.8rem; */
+  letter-spacing: 0.6px;
+}
+
+.review_active {
+  background-color: #ffd205;
+}
+
+.text_custom {
+  color: #000;
+  font-weight: bold;
+  margin-right: 1.4rem;
+}
+
+.btn_ctn {
+  margin-top: 2rem;
+}
+
+@media (max-width: 37.5em) {
+  .booking_display_ctn {
+    margin-top: 12rem;
+  }
+}

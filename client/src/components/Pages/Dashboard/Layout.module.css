@@ -1,5 +1,7 @@
 .wrapper {
   max-width: 135rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .logo_ctn {
@@ -31,15 +33,32 @@
 
 .body_main_ctn {
   box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
+  margin-bottom: 12rem;
+  /* padding-top: 2.4rem; */
+  padding-bottom: 5.2rem;
+  max-width: 100%;
+  min-height: 100vh;
+}
+
+.fallback {
+  padding: 2.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  margin-top: 4rem;
 }
 
 @media (max-width: 37.5em) {
   .body_ctn {
     grid-template-columns: 1fr;
+    gap: 3.2rem;
   }
 
   .nav_ctn {
     padding-top: 1.5rem;
+    padding-left: 0rem;
   }
 
   .logout_icon {

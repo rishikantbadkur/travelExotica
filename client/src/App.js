@@ -24,8 +24,15 @@ const ToursAdmin = lazy(() =>
 const UsersAdmin = lazy(() =>
   import("./components/Pages/Dashboard/AdminPages/UsersAdmin/UsersAdmin")
 );
+const BookingsAdmin = lazy(() =>
+  import("./components/Pages/Dashboard/AdminPages/BookingsAdmin/BookingsAdmin")
+);
 const Settings = lazy(() =>
   import("./components/Pages/Dashboard/AdminPages/Settings/Settings")
+);
+
+const ReviewsAdmin = lazy(() =>
+  import("./components/Pages/Dashboard/AdminPages/ReviewsAdmin/ReviewsAdmin")
 );
 
 const TourLanding = lazy(() =>
@@ -76,6 +83,8 @@ function App() {
                     <Route path="tours" element={<ToursAdmin />} />
                     <Route path="users" element={<UsersAdmin />} />
                     <Route path="settings" element={<Settings />} />
+                    <Route path="bookings" element={<BookingsAdmin />} />
+                    <Route path="reviews" element={<ReviewsAdmin />} />
                   </Routes>
                 </Suspense>
               }

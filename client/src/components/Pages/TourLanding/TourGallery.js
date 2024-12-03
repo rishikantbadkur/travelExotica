@@ -38,8 +38,11 @@ function TourGallery({ name }) {
               >
                 <motion.img
                   className={styles.gallery_grid_image}
-                  src={`/assets/images/tours/${name}/tour-${el}.jpg`}
+                  src={`${
+                    process.env.REACT_APP_SERVER_ROOT_PATH
+                  }/images/tours/${name.split(" ").join("")}/tour-${el}.jpg`}
                   alt={name}
+                  crossOrigin="anonymous"
                 ></motion.img>
               </motion.div>
             ))}

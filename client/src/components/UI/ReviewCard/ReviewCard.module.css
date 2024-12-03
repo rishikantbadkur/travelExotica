@@ -1,8 +1,21 @@
 .card_container {
   padding: 4.8rem;
-
+  position: relative;
   box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
   border-radius: 1rem;
+}
+
+.remove_ctn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 3rem;
+  color: #ff0000;
+}
+
+.remove_ctn:hover {
+  cursor: pointer;
+  transform: scale(1.1);
 }
 
 .user_img {
@@ -10,6 +23,13 @@
   width: 40px;
   background-color: grey;
   border-radius: 100px;
+}
+
+.tour_ctn {
+  text-transform: capitalize;
+  padding: 1.2rem 0rem 2.4rem 0rem;
+  letter-spacing: 0.5px;
+  color: #000;
 }
 
 .card_footer {

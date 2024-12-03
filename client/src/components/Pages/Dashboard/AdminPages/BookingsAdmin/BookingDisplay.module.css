@@ -1,0 +1,117 @@
+.booking_display_ctn {
+  padding: 1.6rem;
+  margin-top: 7rem;
+}
+
+.role_ctn {
+  top: 0;
+  right: 0;
+  position: absolute;
+  font-size: 1.2rem;
+  letter-spacing: 0.8px;
+  color: #000;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 1rem;
+}
+
+.booking_active {
+  background-color: #28a745;
+}
+
+.booking_cancelled {
+  background-color: #ff0000;
+}
+
+.cancel_ctn {
+  margin-top: 2rem;
+}
+
+.remarks_ctn {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.cancel_ctn textarea {
+  padding: 0.5rem;
+  font-size: 1.4rem;
+  resize: none;
+  font-family: inherit;
+  letter-spacing: 0.5px;
+  color: inherit;
+}
+
+.delete_btn_ctn {
+  display: flex;
+
+  margin-top: 2rem;
+}
+
+.delete_btn_ctn span {
+  align-self: flex-end;
+}
+
+.cancel_ctn textarea:focus {
+  outline: none;
+}
+
+.cancel_label {
+  color: #000;
+  font-size: 1.6rem;
+  font-weight: bold;
+  letter-spacing: 0.6px;
+}
+
+.cancel_agreement_ctn {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 3rem;
+  gap: 0.8rem;
+}
+
+.cancel_agreement_ctn input {
+  margin-top: 0.3rem;
+}
+
+.cancel_text {
+  font-size: 1.2rem;
+  letter-spacing: 0.4px;
+  line-height: 1.8rem;
+}
+
+.display_card_ctn {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
+  padding: 3.2rem;
+  position: relative;
+}
+
+.data_ctn {
+  display: flex;
+  /* font-size: 1.8rem; */
+  letter-spacing: 0.6px;
+}
+
+.text_custom {
+  color: #000;
+  font-weight: bold;
+  margin-right: 1.4rem;
+}
+
+.display_btn_ctn {
+  display: flex;
+  gap: 2.4rem;
+  margin-top: 2.4rem;
+}
+
+.cancel_button {
+  display: flex;
+  gap: 0.2rem;
+}
+
+.cancel_detail_ctn {
+  margin-top: 2.4rem;
+}

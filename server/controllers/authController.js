@@ -89,7 +89,7 @@ exports.adminLogin = async (req, res, next) => {
     }
 
     if (!(user.role === 'admin')) {
-      return next(new AppError('Unauthorized Access', 401));
+      return next(new AppError('Unauthorized', 401));
     }
 
     createSendToken(user, 200, res);
