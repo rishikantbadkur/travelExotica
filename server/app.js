@@ -17,6 +17,9 @@ const globalErrorHandler = require('./controllers/errorController');
 const AppError = require('./utils/AppError');
 const razorPayWebhookHandler = require('./routes/razorPayWebhook');
 const processPendingWebhookEvent = require('./utils/processPendingWebhooksEvent');
+const {
+  uploadTourImageController,
+} = require('./controllers/imageUploadController');
 
 dotenv.config({ path: './config.env' });
 
@@ -59,6 +62,8 @@ app.use(
 );
 
 app.post('/webhook', razorPayWebhookHandler);
+
+app.post('/api/v1/image/upload', uploadTourImageController);
 
 try {
   setInterval(() => {

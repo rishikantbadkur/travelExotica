@@ -4,10 +4,8 @@ import useTourFilter from "../../../../helpers/Packages/useTourFilter";
 import Button from "../../../../UI/Button/Button";
 import SpinnerMedium from "../../../../UI/SpinnerMedium/SpinnerMedium";
 import styles from "./ToursAdmin.module.css";
-import stylesGeneral from "../../../../../styles/general.module.css";
 import TourCard from "../../../../UI/TourCard/TourCard";
 import StatBox from "../UI/StatBox/StatBox";
-import { Rating } from "react-simple-star-rating";
 import { useQuery } from "@tanstack/react-query";
 import { getAllTours } from "../../../../../features/apiFearures/toursApiFeatures";
 import FeaturedTours from "./FeaturedTours";
@@ -15,8 +13,9 @@ import { useState } from "react";
 import TourModal from "../UI/Modal/TourModal/TourModal";
 
 function ToursAdmin() {
-  const [showModal, setShowModal] = useState(false);
-  const [tourId, setTourId] = useState(null);
+  const [showUpdateModal, setShowUpdateModal] = useState(false);
+  const [showCreateModal, setShowCreateModal] = useState(false);
+  const [tourId, setTourId] = useState();
 
   const [, , tourData, error, isError, , isLoading, , , , , , , , ,] =
     useTourFilter();
@@ -42,25 +41,24 @@ function ToursAdmin() {
   };
 
   const editBtnClickHandler = (tour) => {
-    console.log(tour);
-
     setTourId(tour._id);
-    setShowModal(true);
+    setShowUpdateModal(true);
   };
-
-  // console.log(tourFeatureData);
 
   return (
     <section className={styles.wrapper}>
-      {showModal && !!tourId && (
-        <TourModal tourId={tourId} setShowModal={setShowModal} />
+      {showUpdateModal && !!tourId && (
+        <TourModal tourId={tourId} setShowModal={setShowUpdateModal} />
+      )}
+      {showCreateModal && (
+        <TourModal setShowModal={setShowCreateModal} createModal={true} />
       )}
       <div className={styles.head_ctn}>
         <div className={styles.section_head}>
           <h2>Overview - Tours</h2>
         </div>
         <div className={styles.btn_ctn}>
-          <Button>New</Button>
+          <Button onClick={() => setShowCreateModal(true)}>New</Button>
         </div>
       </div>
       {isLoading ? (
@@ -84,48 +82,6 @@ function ToursAdmin() {
             <div className={styles.feature_review_ctn}>
               <h2 className={styles.text_ctn}>Featured Tours</h2>
               <div className={styles.featured_tours_ctn}>
-                {/* <div className={styles.featured_tour}>
-                  {!isFeatureToursLoading &&
-                    tourFeatureData.data.tours.map((tour) => (
-                      <div className={styles.section_body}>
-                        <span className={styles.remove_icon_ctn}>
-                          <ion-icon name="remove-circle"></ion-icon>
-                        </span>
-                        <div
-                          className={`${styles.body_header} ${stylesGeneral.section_border} `}
-                        >
-                          <p>{tour.name}</p>
-                          <div className={styles.rating_ctn}>
-                            <Rating
-                              initialValue={tour.ratingsAverage}
-                              allowFraction={true}
-                              readonly={true}
-                              size={16}
-                            ></Rating>
-                          </div>
-                        </div>
-
-                        <div className={styles.body_footer}>
-                          <aside>
-                            <span
-                              className={`${styles.price_tag_secondary} ${stylesGeneral.body__text}`}
-                            >
-                              from
-                            </span>
-                            <div className={styles.price_value}>
-                              <span className={styles.price_value_sign}>
-                                &#x20B9;
-                              </span>
-                              <span className={styles.price_value_number}>
-                                {" "}
-                                {tour.price}
-                              </span>
-                            </div>
-                          </aside>
-                        </div>
-                      </div>
-                    ))}
-                </div> */}
                 <FeaturedTours
                   isFeatureToursLoading={isFeatureToursLoading}
                   tourFeatureData={tourFeatureData}

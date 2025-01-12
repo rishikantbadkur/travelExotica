@@ -18,6 +18,7 @@ router.use(authController.restrictTo('admin'));
 
 router.get('/stats', bookingController.getBookingStats);
 router.get('/userEmail/:email', bookingController.getBookingsByUserEmail);
+router.get('/getbookingsbytour/:id', bookingController.getBookingsByTour);
 
 router
   .route('/')

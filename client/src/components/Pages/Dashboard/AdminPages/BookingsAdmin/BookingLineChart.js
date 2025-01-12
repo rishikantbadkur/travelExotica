@@ -11,6 +11,8 @@ import {
 } from "recharts";
 
 function BookingLineChart({ graphData, dataKey }) {
+  // console.log(graphData, dataKey);
+
   return (
     <ResponsiveContainer width="100%" height={400}>
       <LineChart

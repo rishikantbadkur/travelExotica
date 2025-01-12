@@ -27,7 +27,7 @@ function CitySearchInput({ defaultCity, search, setSearch, setCityChange }) {
     }
     const handler = setTimeout(() => {
       searchCityResults(searchCity);
-    }, 300);
+    }, 100);
 
     return () => clearTimeout(handler);
   }, [searchCity]);

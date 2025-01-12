@@ -28,7 +28,9 @@ const TourCard = ({
           className={styles.card_img}
           src={`${
             process.env.REACT_APP_SERVER_ROOT_PATH
-          }/images/tours/${(tour?.name).split(" ").join("")}/cover.jpg`}
+          }/images/tours/${(tour?.name).split(" ").join("")}/${tour.images.at(
+            -1
+          )}`}
           alt={name}
           crossOrigin="anonymous"
         ></img>

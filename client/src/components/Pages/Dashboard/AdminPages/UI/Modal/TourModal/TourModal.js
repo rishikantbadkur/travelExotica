@@ -1,14 +1,23 @@
 import React, { useEffect, useState } from "react";
-import ModalWrapper from "../ModalWrapper";
+import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import toast from "react-hot-toast";
+import { useForm } from "react-hook-form";
 
+import ModalWrapper from "../ModalWrapper";
 import styles from "./TourModal.module.css";
 import stylesGeneral from "../../../../../../../styles/general.module.css";
 import Button from "../../../../../../UI/Button/Button";
-import { useQuery } from "@tanstack/react-query";
 import { getTour } from "../../../../../../../features/apiFearures/toursApiFeatures";
 import SpinnerMedium from "../../../../../../UI/SpinnerMedium/SpinnerMedium";
 import CitySearchInput from "../../CitySearchInput/CitySearchInput";
+import {
+  createTour,
+  updateFeatureTours,
+  updateTour,
+  uploadTourImages,
+} from "../../../../../../../features/adminApi/tourFeatures";
+import SpinnerMini from "../../../../../../UI/SpinnerMini/SpinnerMini";
+import TourDeleteModal from "../TourDeleteModal/TourDeleteModal";
 
 const TYPOLOGY_OPTIONS = [
   "Sports Activities",
@@ -23,22 +32,26 @@ const TYPOLOGY_OPTIONS = [
   "Cultural Tours",
 ];
 
-function TourModal({ tourId, setShowModal }) {
+function TourModal({ tourId, setShowModal, createModal }) {
   const [search, setSearch] = useState(false);
-
+  const [images, setImages] = useState([]);
   const [typologyOptions, setTypologyOptions] = useState([]);
   const [tourItinerary, setTourItinerary] = useState([]);
   const [tourLocations, setTourLocations] = useState([]);
   const [startDates, setStartDates] = useState([]);
-  const [startLocation, setStartLocation] = useState();
+  const [startLocation, setStartLocation] = useState({});
   const [addNewPlan, setAddNewPlan] = useState(false);
   const [addNewLocation, setAddNewLocation] = useState(false);
   const [addNewDate, setAddNewDate] = useState(false);
-  const [date, setDate] = useState();
-  const [day, setDay] = useState();
+  const [date, setDate] = useState("");
+  const [day, setDay] = useState("");
   const [placeData, setPlaceData] = useState([]);
   const [highlight, setHighlight] = useState("");
   const [plan, setPlan] = useState("");
+  const [newTour, setNewTour] = useState({});
+  const [showDeleteModal, setShowDeleteModal] = useState(false);
+
+  const { register, handleSubmit } = useForm();
 
   const {
     data: tourData,
@@ -48,6 +61,61 @@ function TourModal({ tourId, setShowModal }) {
     queryKey: ["tour", tourId],
     queryFn: () => getTour(tourId),
     enabled: !!tourId,
+  });
+
+  const queryClient = useQueryClient();
+
+  const featureToursMutation = useMutation({
+    mutationFn: updateFeatureTours,
+    onSuccess: (res) => {
+      if (res.status === "success") {
+        toast.success("Success");
+        queryClient.invalidateQueries("toursFeature");
+      }
+    },
+    onError: (error) => {
+      toast.error(error.message);
+    },
+  });
+
+  const tourUpdateMutation = useMutation({
+    mutationFn: updateTour,
+    onSuccess: (res) => {
+      if (res.status === "success") {
+        toast.success("Tour updated successfully");
+        setShowModal(false);
+        queryClient.invalidateQueries(["tour", tourId]);
+      }
+    },
+    onError: (error) => {
+      toast.error(error.message);
+    },
+  });
+
+  const tourCreateMutation = useMutation({
+    mutationFn: createTour,
+    onSuccess: (res) => {
+      if (res.status === "success") {
+        toast.success("Tour created successfully");
+        setShowModal(false);
+        queryClient.invalidateQueries(["tours"]);
+      }
+    },
+    onError: (error) => {
+      toast.error(error.message);
+    },
+  });
+
+  const imageUploadMutation = useMutation({
+    mutationFn: uploadTourImages,
+    onSuccess: (res) => {
+      if (res.status === "success") {
+        tourCreateMutation.mutate(newTour);
+      }
+    },
+    onError: (error) => {
+      toast.error(error.message);
+    },
   });
 
   function clickHandler(e) {
@@ -60,6 +128,7 @@ function TourModal({ tourId, setShowModal }) {
       setTourItinerary(tourData?.data.tour.itinerary);
       setTourLocations(tourData?.data.tour.locations);
       setStartDates(tourData?.data.tour.startDates);
+      setStartLocation(tourData?.data.tour.startLocation);
     }
 
     document.addEventListener("click", clickHandler);
@@ -72,9 +141,6 @@ function TourModal({ tourId, setShowModal }) {
     tourData?.data.tour.itinerary,
     tourData?.data.tour,
   ]);
-
-  console.log(tourData?.data.tour);
-  // console.log(tourItinerary);
 
   const typologyChangeHandler = (e) => {
     if (typologyOptions.includes(e.target.value)) {
@@ -118,8 +184,6 @@ function TourModal({ tourId, setShowModal }) {
   };
 
   const addNewPlaceHandler = (cityData) => {
-    // console.log(cityData);
-
     setPlaceData(cityData);
   };
 
@@ -130,15 +194,15 @@ function TourModal({ tourId, setShowModal }) {
       return [
         ...prev,
         {
-          type: "point",
-          day,
+          type: "Point",
+          day: Number(day),
           coordinates: [placeData.lon, placeData.lat],
           description: placeData.name,
         },
       ];
     });
 
-    setDay();
+    setDay("");
     setPlaceData([]);
     setAddNewLocation(false);
   };
@@ -157,10 +221,10 @@ function TourModal({ tourId, setShowModal }) {
     }
 
     setStartDates((prev) => {
-      return [...prev, date];
+      return [...prev, new Date(date).toISOString()];
     });
     setAddNewDate(false);
-    setDate();
+    setDate("");
   };
 
   const dateRemoveHandler = (date) => {
@@ -173,21 +237,135 @@ function TourModal({ tourId, setShowModal }) {
   };
 
   const startLocationChangeHandler = (cityData) => {
-    console.log({
-      type: "Point",
-      coordinates: [cityData.lon, cityData.lat],
-      description: cityData.name,
-    });
+    console.log(cityData);
 
     setStartLocation({
       type: "Point",
       coordinates: [cityData.lon, cityData.lat],
       description: cityData.name,
+      address: cityData.name,
+    });
+  };
+
+  const featureTourUpdateHandler = (tourId) => {
+    featureToursMutation.mutate({
+      tourId,
+      data: { feature: true },
+      action: "add",
+    });
+  };
+
+  const updateFormSubmitHandler = (data, tourId) => {
+    const flag = window.confirm(
+      "Are you sure you want to update the tour details?"
+    );
+
+    if (!flag) return;
+
+    tourUpdateMutation.mutate({
+      tourId,
+      data: {
+        ...data,
+        summary: data.summary.trim(),
+        description: data.description.trim(),
+        price: Number(data.price),
+        maxGroupSize: Number(data.maxGroupSize),
+        duration: tourItinerary.length,
+        keywords: typologyOptions,
+        locations: tourLocations,
+        startDates,
+        startLocation,
+        itinerary: tourItinerary,
+      },
+    });
+  };
+
+  const handleFileChange = (e) => {
+    e.preventDefault();
+
+    const selectedFiles = Array.from(e.target.files);
+
+    const updatedImages = [...images, ...selectedFiles];
+
+    if (updatedImages.length > 4) {
+      alert("You can only upload uoto 4 images");
+      setImages(updatedImages.slice(0, 4));
+      return;
+    }
+
+    setImages(updatedImages);
+  };
+
+  const createFormSubmitHandler = (data) => {
+    if (
+      data.name.trim().length === 0 ||
+      data.description.trim().length === 0 ||
+      data.summary.trim().length === 0 ||
+      tourItinerary.length === 0 ||
+      typologyOptions.length === 0 ||
+      tourLocations.length === 0 ||
+      startDates.length === 0 ||
+      !startLocation
+    ) {
+      return toast.error("All tour fields are required");
+    }
+
+    if (images.length !== 4) {
+      return toast.error("Exactly 4 images are required");
+    }
+
+    const galleryImages = images.map((file) =>
+      file.type.split("/").pop() === "jpeg" ? "jpg" : file.type.split("/").pop()
+    );
+
+    const updatedImageNames = galleryImages.map((name, index) =>
+      index === 3 ? `cover.${name}` : `tour-${index + 1}.${name}`
+    );
+
+    const updatedTourName = data.name
+      .split(" ")
+      .map((word) => {
+        return word.charAt(0).toUpperCase() + word.slice(1);
+      })
+      .join(" ");
+
+    const formData = new FormData();
+    formData.append("tourName", updatedTourName.split(" ").join(""));
+
+    images.forEach((image) => {
+      formData.append("images", image);
+    });
+
+    imageUploadMutation.mutate(formData);
+
+    setNewTour({
+      ...data,
+      name: updatedTourName,
+      summary: data.summary.trim(),
+      description: data.description.trim(),
+      price: Number(data.price),
+      maxGroupSize: Number(data.maxGroupSize),
+      duration: tourItinerary.length,
+      keywords: typologyOptions,
+      locations: tourLocations,
+      startDates,
+      startLocation,
+      itinerary: tourItinerary,
+      feature: false,
+      images: updatedImageNames,
     });
   };
 
   return (
     <ModalWrapper>
+      {showDeleteModal && (
+        <TourDeleteModal
+          setShowDeleteModal={setShowDeleteModal}
+          tourName={tourData?.data.tour.name}
+          tourId={tourId}
+          setShowModal={setShowModal}
+        />
+      )}
       {isLoading ? (
         <div className={styles.loading}>
           <SpinnerMedium />
@@ -201,19 +379,38 @@ function TourModal({ tourId, setShowModal }) {
           <div className={styles.close_ctn} onClick={() => setShowModal(false)}>
             <ion-icon name="close"></ion-icon>
           </div>
+
           <div className={styles.container}>
-            <form
-              className={styles.enquiry_form}
-              // onSubmit={handleSubmit(formSubmitHandler)}
-            >
+            {!createModal && (
+              <div className={styles.featured_ctn}>
+                {!tourData?.data.tour.feature ? (
+                  <button
+                    className={styles.feature_btn}
+                    onClick={() => featureTourUpdateHandler(tourId)}
+                  >
+                    Set as Featured
+                  </button>
+                ) : (
+                  <span className={styles.featured}>Featured</span>
+                )}
+                {featureToursMutation.status === "pending" ? (
+                  <span className={styles.spinner_ctn}>
+                    <SpinnerMini />
+                  </span>
+                ) : (
+                  ""
+                )}
+              </div>
+            )}
+            <form className={styles.enquiry_form}>
               <div className={styles.form_field_ctn}>
                 <label htmlFor="name" className={styles.text_main}>
                   Name :
                 </label>
                 <input
                   className={styles.enquiry_form_fields}
-                  //   {...register("email")}
-                  defaultValue={tourData.data.tour.name}
+                  {...register("name")}
+                  defaultValue={tourData ? tourData.data.tour.name : ""}
                   type="text"
                   id="name"
                   name="name"
@@ -225,14 +422,16 @@ function TourModal({ tourId, setShowModal }) {
                 <label htmlFor="date" className={styles.text_main}>
                   Date Created :
                 </label>
-                <p
-                  className={styles.enquiry_form_fields}
-                  //   {...register("email")}
-                >
-                  {new Date(tourData.data.tour.createdAt)
-                    .toLocaleDateString()
-                    .split("/")
-                    .join("-")}
+                <p className={styles.enquiry_form_fields}>
+                  {tourData
+                    ? new Date(tourData.data.tour.createdAt)
+                        .toLocaleDateString()
+                        .split("/")
+                        .join("-")
+                    : new Date(Date.now())
+                        .toLocaleDateString()
+                        .split("/")
+                        .join("-")}
                 </p>
               </div>
 
@@ -242,8 +441,8 @@ function TourModal({ tourId, setShowModal }) {
                 </label>
                 <input
                   className={styles.enquiry_form_fields}
-                  //   {...register("email")}
-                  defaultValue={tourData.data.tour.price}
+                  {...register("price")}
+                  defaultValue={tourData ? tourData.data.tour.price : ""}
                   type="number"
                   id="price"
                   name="price"
@@ -253,16 +452,16 @@ function TourModal({ tourId, setShowModal }) {
               </div>
 
               <div className={styles.form_field_ctn}>
-                <label htmlFor="size" className={styles.text_main}>
+                <label htmlFor="maxGroupSize" className={styles.text_main}>
                   Group Size :
                 </label>
                 <input
                   className={styles.enquiry_form_fields}
-                  //   {...register("email")}
-                  defaultValue={tourData.data.tour.maxGroupSize}
+                  {...register("maxGroupSize")}
+                  defaultValue={tourData ? tourData.data.tour.maxGroupSize : ""}
                   type="number"
-                  id="size"
-                  name="size"
+                  id="maxGroupSize"
+                  name="maxGroupSize"
                   required
                   step={1}
                 ></input>
@@ -271,7 +470,7 @@ function TourModal({ tourId, setShowModal }) {
               <div
                 className={`${styles.form_field_ctn} ${styles.textarea_field}`}
               >
-                <label htmlFor="description" className={styles.text_main}>
+                <label htmlFor="tourDates" className={styles.text_main}>
                   Tour Dates :
                 </label>
 
@@ -281,7 +480,7 @@ function TourModal({ tourId, setShowModal }) {
                   ) : (
                     startDates.map((date, index) => (
                       <div className={styles.day_plan_ctn} key={date}>
-                        {startDates.length === index + 1 && (
+                        {index === 0 && (
                           <span
                             className={styles.remove_icon}
                             onClick={() => dateRemoveHandler(date)}
@@ -347,7 +546,10 @@ function TourModal({ tourId, setShowModal }) {
 
                 <select
                   className={styles.enquiry_form_fields}
-                  defaultValue={tourData.data.tour.difficulty}
+                  defaultValue={
+                    tourData ? tourData.data.tour.difficulty : "Easy"
+                  }
+                  {...register("difficulty")}
                 >
                   <option value="Easy">Easy</option>
                   <option value="Medium">Medium</option>
@@ -358,13 +560,14 @@ function TourModal({ tourId, setShowModal }) {
               <div
                 className={`${styles.form_field_ctn} ${styles.textarea_field}`}
               >
-                <label htmlFor="description" className={styles.text_main}>
+                <label htmlFor="summary" className={styles.text_main}>
                   Summary :
                 </label>
 
                 <textarea
+                  {...register("summary")}
                   className={styles.enquiry_form_fields}
-                  defaultValue={tourData.data.tour.summary}
+                  defaultValue={tourData ? tourData.data.tour.summary : ""}
                   rows={3}
                 ></textarea>
               </div>
@@ -377,8 +580,9 @@ function TourModal({ tourId, setShowModal }) {
                 </label>
 
                 <textarea
+                  {...register("description")}
                   className={styles.enquiry_form_fields}
-                  defaultValue={tourData.data.tour.description}
+                  defaultValue={tourData ? tourData.data.tour.description : ""}
                   rows={5}
                 ></textarea>
               </div>
@@ -386,7 +590,7 @@ function TourModal({ tourId, setShowModal }) {
               <div
                 className={`${styles.form_field_ctn} ${styles.textarea_field}`}
               >
-                <label htmlFor="description" className={styles.text_main}>
+                <label htmlFor="typologies" className={styles.text_main}>
                   Typologies :
                 </label>
                 <div className={styles.typology_ctn}>
@@ -396,7 +600,7 @@ function TourModal({ tourId, setShowModal }) {
                         type="checkbox"
                         className={styles.typo_input}
                         value={option}
-                        defaultChecked={tourData.data.tour.keywords.includes(
+                        defaultChecked={tourData?.data.tour.keywords.includes(
                           option
                         )}
                         onChange={typologyChangeHandler}
@@ -418,7 +622,9 @@ function TourModal({ tourId, setShowModal }) {
                 <CitySearchInput
                   search={search}
                   setSearch={setSearch}
-                  defaultCity={tourData.data.tour.startLocation.address}
+                  defaultCity={
+                    tourData ? tourData.data.tour.startLocation.address : ""
+                  }
                   setCityChange={startLocationChangeHandler}
                 />
               </div>
@@ -426,7 +632,7 @@ function TourModal({ tourId, setShowModal }) {
               <div
                 className={`${styles.form_field_ctn} ${styles.textarea_field}`}
               >
-                <label htmlFor="description" className={styles.text_main}>
+                <label htmlFor="itinerary" className={styles.text_main}>
                   Itinerary :
                 </label>
 
@@ -532,7 +738,7 @@ function TourModal({ tourId, setShowModal }) {
               <div
                 className={`${styles.form_field_ctn} ${styles.textarea_field}`}
               >
-                <label htmlFor="description" className={styles.text_main}>
+                <label htmlFor="locations" className={styles.text_main}>
                   Locations :
                 </label>
 
@@ -621,14 +827,86 @@ function TourModal({ tourId, setShowModal }) {
                 </div>
               </div>
 
-              <Button
-                onClick={(e) => {
-                  e.preventDefault();
-                  console.log(typologyOptions);
-                }}
-              >
-                Create
-              </Button>
+              {createModal && (
+                <div
+                  className={`${styles.form_field_ctn} ${styles.textarea_field}`}
+                >
+                  <label htmlFor="image" className={styles.text_main}>
+                    Image :
+                  </label>
+                  <div className={styles.img_select_ctn}>
+                    <input
+                      type="file"
+                      multiple
+                      accept="image/*"
+                      required
+                      onChange={handleFileChange}
+                    ></input>
+                    <ul className={styles.selected_img_list}>
+                      {images.map((image, index) => (
+                        <li key={index}>{image.name}</li>
+                      ))}
+                      {images.length > 0 && (
+                        <li
+                          className={styles.remove_img_btn}
+                          onClick={() => {
+                            setImages(
+                              images.filter(
+                                (image, index) => index !== images.length - 1
+                              )
+                            );
+                          }}
+                        >
+                          Remove
+                        </li>
+                      )}
+                    </ul>
+                    <p
+                      style={{
+                        marginTop: "1rem",
+                        color: "#000",
+                        fontSize: "1.1rem",
+                      }}
+                    >
+                      Last image will be used as the cover image for the tour.
+                    </p>
+                  </div>
+                </div>
+              )}
+
+              {createModal ? (
+                <Button onClick={handleSubmit(createFormSubmitHandler)}>
+                  {imageUploadMutation.status === "pending" ||
+                  tourCreateMutation.status === "pending" ? (
+                    <SpinnerMini />
+                  ) : (
+                    "Create"
+                  )}
+                </Button>
+              ) : (
+                <div className={styles.action_btn_ctn}>
+                  <Button
+                    onClick={handleSubmit((data) =>
+                      updateFormSubmitHandler(data, tourId)
+                    )}
+                  >
+                    {tourUpdateMutation.status === "pending" ? (
+                      <SpinnerMini />
+                    ) : (
+                      "Update"
+                    )}
+                  </Button>
+                  <Button
+                    btnSub={true}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      setShowDeleteModal(true);
+                    }}
+                  >
+                    Delete
+                  </Button>
+                </div>
+              )}
             </form>
           </div>
         </div>

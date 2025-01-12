@@ -135,6 +135,22 @@ exports.getUserBooking = async (req, res, next) => {
   }
 };
 
+exports.getBookingsByTour = async (req, res, next) => {
+  try {
+    const bookings = await Booking.find({
+      tour: req.params.id,
+      tourDate: req.query.date,
+    });
+
+    res.status(200).json({
+      status: 'success',
+      bookings,
+    });
+  } catch (error) {
+    next(error);
+  }
+};
+
 // Admin specific routes
 
 exports.getBookingStats = async (req, res, next) => {
@@ -155,6 +171,7 @@ exports.getBookingStats = async (req, res, next) => {
       );
 
       const bookingsGraphData = await Booking.aggregate([
+        { $match: { active: true } },
         {
           $group: {
             _id: { year: { $year: '$createdAt' } },
@@ -166,6 +183,8 @@ exports.getBookingStats = async (req, res, next) => {
           $sort: { '_id.year': 1 },
         },
       ]);
+
+      const cancelledBookings = await Booking.find({ active: false });
 
       bookings.map((booking) => {
         totalAdults += booking.bookingData.adult;
@@ -186,6 +205,7 @@ exports.getBookingStats = async (req, res, next) => {
         totalChildrens,
         bookingsGraphData,
         period: 'all time',
+        cancelledBookings: cancelledBookings.length,
       });
     }
 
@@ -204,9 +224,9 @@ exports.getBookingStats = async (req, res, next) => {
         {
           $match: {
             active: true,
-            tourDate: {
-              $gte: startDate,
-              $lt: endDate,
+            createdAt: {
+              $gt: startDate,
+              $lte: endDate,
             },
           },
         },
@@ -224,8 +244,8 @@ exports.getBookingStats = async (req, res, next) => {
 
       query = query.find({
         createdAt: {
-          $gte: startDate,
-          $lt: endDate,
+          $gt: startDate,
+          $lte: endDate,
         },
       });
     }
@@ -240,8 +260,8 @@ exports.getBookingStats = async (req, res, next) => {
           $match: {
             active: true,
             createdAt: {
-              $gte: startDate,
-              $lt: endDate,
+              $gt: startDate,
+              $lte: endDate,
             },
           },
         },
