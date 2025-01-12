@@ -55,7 +55,7 @@ const TourLanding = () => {
         <section className={styles.tourLanding}>
           <section className={styles.tourLanding__hero}>
             <div className={styles.tourLanding__hero__imagesContainer}>
-              {tour?.images.map((path) => (
+              {tour?.images.slice(0, 3).map((path) => (
                 <div className={styles.tourLanding__hero__imageBox} key={path}>
                   <img
                     className={styles.tourLanding__hero__image}

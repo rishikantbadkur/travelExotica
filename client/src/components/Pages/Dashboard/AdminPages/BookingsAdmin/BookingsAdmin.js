@@ -1,5 +1,6 @@
+import { useState } from "react";
+
 import styles from "./BookingsAdmin.module.css";
-import stylesGeneral from "../../../../../styles/general.module.css";
 import StatBox from "../UI/StatBox/StatBox";
 import BookingGraph from "./BookingGraph";
 
@@ -10,10 +11,8 @@ import useBookingStatData from "./useBookingStatData";
 import YearMonthForm from "../UI/YearMonthForm/YearMonthForm";
 import useAdminBookingData from "./useAdminBookingData";
 import BookingCard from "../../../../UI/BookingCard/BookingCard";
-import Button from "../../../../UI/Button/Button";
-import SpinnerMini from "../../../../UI/SpinnerMini/SpinnerMini";
+
 import BookingDisplay from "./BookingDisplay";
-import { useState } from "react";
 import BookingByEmail from "./BookingByEmail";
 import useGetBookingsByEmail from "./useGetBookingsByEmail";
 
@@ -37,6 +36,8 @@ function BookingsAdmin() {
     isBookingsStatDataLoading,
     bookingsStatLoadError,
   ] = useBookingStatData();
+
+  console.log(bookingsStatData);
 
   const [
     setPageCount,

@@ -1,5 +1,7 @@
 .tourLanding {
   max-width: 135rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* *********************TourLanding HERO*************************** */
@@ -21,6 +23,7 @@
 .tourLanding__hero__image {
   width: 100%;
   object-fit: cover;
+  max-width: 42.8rem;
 }
 
 .tourLanding__hero__imageBox {
@@ -175,6 +178,11 @@
   margin-top: 0.5rem;
 }
 
+@media (max-width: 75em) {
+  .tourLanding {
+  }
+}
+
 @media (max-width: 56.25em) {
   .tourLanding__hero__text {
     flex-direction: column;
@@ -201,6 +209,10 @@
 
   .tourLanding__hero__imagesContainer {
     flex-direction: column;
+  }
+
+  .tourLanding__hero__image {
+    max-width: 100%;
   }
 
   .featureList {

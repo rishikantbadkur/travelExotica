@@ -88,9 +88,6 @@
 
 .typology {
   font-size: 1.6rem;
-  /* display: flex; */
-  /* align-items: center; */
-  /* gap: 1.2rem; */
 }
 
 .typo_input {
@@ -151,6 +148,64 @@
   justify-content: flex-end;
 }
 
+.featured_ctn {
+  display: flex;
+  align-self: flex-start;
+  margin-bottom: 2.4rem;
+  /* padding-left: 1.6rem; */
+}
+
+.feature_btn,
+.featured {
+  outline: 0.1px solid #e4e4e4;
+  border: none;
+  padding: 0.6rem;
+  letter-spacing: 0.3px;
+  font-weight: 700;
+}
+
+.feature_btn {
+  background-color: #ffd205;
+}
+
+.feature_btn:hover {
+  cursor: pointer;
+}
+
+.featured {
+  background-color: #28a745;
+  color: #000;
+  font-size: 1.2rem;
+  letter-spacing: 0.5px;
+}
+
+.spinner_ctn {
+  align-self: flex-end;
+}
+
+.remove_img_btn {
+  color: red;
+}
+
+.remove_img_btn:hover {
+  cursor: pointer;
+}
+
+.action_btn_ctn {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  width: 100%;
+}
+
+.selected_img_list {
+  margin-top: 1.8rem;
+  list-style: none;
+  display: flex;
+  gap: 1.4rem;
+  font-size: 1.2rem;
+}
+
 @media (max-width: 50em) {
   .modal_ctn {
     width: 70%;
@@ -163,5 +218,46 @@
   }
   .container {
     width: 100%;
+  }
+}
+
+@media (max-width: 41.5em) {
+  .modal_ctn {
+    width: 80%;
+  }
+}
+
+@media (max-width: 37.5em) {
+  .modal_ctn {
+    width: 90%;
+  }
+  .typology_ctn {
+    grid-template-columns: 1fr;
+  }
+  .text_main {
+    font-size: 1.6rem;
+  }
+  .container {
+    padding: 1.6rem 0rem;
+  }
+  .form_field_ctn {
+    gap: 1.4rem;
+  }
+  .enquiry_form {
+    gap: 2.4rem;
+  }
+  .selected_img_list {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 22.5em) {
+  .modal_ctn {
+    width: 100%;
+    padding: 3.4rem 1.6rem;
+  }
+
+  .remove_icon {
+    font-size: 3rem;
   }
 }

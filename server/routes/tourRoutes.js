@@ -7,6 +7,22 @@ const router = express.Router();
 router.route('/stats').get(tourController.getTourStats);
 
 router
+  .route('/getupcomingtours')
+  .get(
+    authController.protect,
+    authController.restrictTo('admin'),
+    tourController.getUpcomingTours,
+  );
+
+router
+  .route('/updatetourdates')
+  .patch(
+    authController.protect,
+    authController.restrictTo('admin'),
+    tourController.updateTourDates,
+  );
+
+router
   .route('/')
   .get(tourController.getAllTours)
   .post(

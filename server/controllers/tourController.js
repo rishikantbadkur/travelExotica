@@ -1,3 +1,6 @@
+const path = require('path');
+const fs = require('fs');
+
 const Query = require('../models/queryModel');
 const Tour = require('../models/tourModel');
 const AppError = require('../utils/AppError');
@@ -88,10 +91,22 @@ exports.updateTour = async (req, res, next) => {
 
 exports.deleteTour = async (req, res, next) => {
   try {
+    const tourName = await Tour.findById(req.params.id).populate('name');
+
+    const dir = path.join(
+      __dirname,
+      '../public/images/tours',
+      tourName.name.split(' ').join(''),
+    );
+
     const tour = await Tour.findByIdAndDelete(req.params.id);
 
     if (!tour) {
       return next(new AppError('Tour Not Found', 404));
+    }
+
+    if (fs.existsSync(dir)) {
+      fs.rmSync(dir, { recursive: true, force: true });
     }
 
     res.status(200).json({
@@ -189,6 +204,66 @@ exports.updateFeatureTours = async (req, res, next) => {
         tour,
       });
     }
+  } catch (error) {
+    next(error);
+  }
+};
+
+exports.getUpcomingTours = async (req, res, next) => {
+  try {
+    const tours = await Tour.find().select(
+      'id name startDates maxGroupSize price',
+    );
+
+    const sampled = [];
+
+    tours.forEach((tour) => {
+      tour.startDates.forEach((date) => {
+        sampled.push({
+          date,
+          name: tour.name,
+          id: tour.id,
+          maxGroupSize: tour.maxGroupSize,
+          price: tour.price,
+        });
+      });
+    });
+
+    const data = sampled.sort((tour1, tour2) => tour1.date - tour2.date);
+
+    res.status(200).json({
+      status: 'success',
+      tours: data,
+    });
+  } catch (error) {
+    next(error);
+  }
+};
+
+exports.updateTourDates = async (req, res, next) => {
+  try {
+    const { tourId, tourDate } = req.body;
+
+    const tour = await Tour.findById(tourId);
+
+    if (!tour) {
+      return next(
+        new AppError('Tour with this particular date not found', 404),
+      );
+    }
+
+    const updatedDates = tour.startDates.filter(
+      (date) => new Date(date).getTime() !== new Date(tourDate).getTime(),
+    );
+
+    tour.startDates = updatedDates;
+
+    await tour.save({ validateBeforeSave: true });
+
+    res.status(200).json({
+      status: 'success',
+      tour,
+    });
   } catch (error) {
     next(error);
   }

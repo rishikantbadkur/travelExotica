@@ -1,0 +1,27 @@
+.loading,
+.error {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+}
+
+.error {
+  font-size: 1.2rem;
+}
+
+.ctn {
+  padding: 1.6rem;
+}
+
+.stat_ctn {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1.6rem;
+}
+
+@media (max-width: 50em) {
+  .stat_ctn {
+    grid-template-columns: 1fr 1fr;
+  }
+}

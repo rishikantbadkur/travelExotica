@@ -80,3 +80,20 @@ export async function getBookingByUserMail(userMail) {
     throw new Error(error.response?.data?.message || error.message);
   }
 }
+
+export async function getBookingsByTour(tourId, tourDate) {
+  try {
+    const response = await axios.get(
+      `/api/v1/bookings/getbookingsbytour/${tourId}?date=${tourDate}`,
+      {
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem("travelExoticaJwt")}`,
+        },
+      }
+    );
+
+    return response.data;
+  } catch (error) {
+    throw new Error(error.response?.data?.message || error.message);
+  }
+}

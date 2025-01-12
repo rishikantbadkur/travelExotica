@@ -1,7 +1,7 @@
 .nav_list {
   display: flex;
   flex-direction: column;
-  gap: 3.5rem;
+  gap: 3rem;
   list-style: none;
 }
 
@@ -74,8 +74,13 @@
   }
 
   .nav_list {
-    flex-direction: row;
-    gap: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: space-evenly;
+    gap: 3.2rem;
+  }
+
+  .link_ctn {
     justify-content: center;
   }
 }

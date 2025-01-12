@@ -1,0 +1,40 @@
+.tourdetails_ctn {
+  padding: 1.6rem;
+  max-height: 60rem;
+  overflow: scroll;
+}
+
+.color_black {
+  color: #000;
+  font-weight: bold;
+  margin-right: 0.6rem;
+}
+
+.border {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  padding: 3.2rem;
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
+}
+
+.loading,
+.error {
+  display: flex;
+  justify-content: center;
+  margin-top: 6rem;
+}
+
+.error {
+  font-size: 1.2rem;
+}
+
+.margin_class {
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+.btn_ctn {
+  display: flex;
+  gap: 1.6rem;
+}

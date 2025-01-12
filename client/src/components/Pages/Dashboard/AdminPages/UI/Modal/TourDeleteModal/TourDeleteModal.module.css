@@ -1,0 +1,46 @@
+.ctn {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+  background-color: #fff;
+  padding: 2.4rem;
+  width: 40%;
+  border-radius: 1rem;
+}
+
+.input {
+  font: inherit;
+  font-size: 1.6rem;
+  padding: 1rem;
+  border: 0.15rem solid #e4e4e4;
+  line-height: 2.4rem;
+  color: inherit;
+}
+
+.input:focus {
+  outline: none;
+}
+
+.correct {
+  border: 0.15rem solid rgb(78, 210, 78);
+}
+
+.false {
+  border: 0.15rem solid rgb(225, 69, 69);
+}
+
+.ctn h2 {
+  line-height: 3rem;
+}
+
+.btn_ctn {
+  display: flex;
+  margin-top: 1.6rem;
+  gap: 1.2rem;
+}
+
+@media (max-width: 37.5em) {
+  .ctn {
+    width: 80%;
+  }
+}
