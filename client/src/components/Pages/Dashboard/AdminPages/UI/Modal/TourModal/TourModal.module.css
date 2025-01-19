@@ -206,6 +206,20 @@
   font-size: 1.2rem;
 }
 
+.img_upload_btn {
+  margin-top: 2.4rem;
+  padding: 0.5rem;
+}
+
+.img_upload_btn:hover {
+  cursor: pointer;
+}
+
+.img_upload_text {
+  margin-left: 1.2rem;
+  font-size: 1.2rem;
+}
+
 @media (max-width: 50em) {
   .modal_ctn {
     width: 70%;

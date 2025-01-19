@@ -27,7 +27,7 @@ function CitySearchInput({ defaultCity, search, setSearch, setCityChange }) {
     }
     const handler = setTimeout(() => {
       searchCityResults(searchCity);
-    }, 100);
+    }, 10);
 
     return () => clearTimeout(handler);
   }, [searchCity]);
@@ -51,9 +51,9 @@ function CitySearchInput({ defaultCity, search, setSearch, setCityChange }) {
       )}
       {search && cityResponse.length > 0 && !error && (
         <ul className={styles.city_list}>
-          {cityResponse.map((cityData) => (
+          {cityResponse.map((cityData, index) => (
             <li
-              key={cityData.lat}
+              key={index}
               className={styles.city_item}
               value={cityData.name}
               onClick={() => {

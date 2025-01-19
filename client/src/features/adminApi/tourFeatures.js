@@ -51,6 +51,8 @@ export async function uploadTourImages(formData) {
 
     return response.data;
   } catch (error) {
+    console.log(error);
+
     throw new Error(error.response?.data?.message || error.message);
   }
 }

@@ -13,7 +13,11 @@ const TourCard = ({
   adminCard,
   onClick,
 }) => {
-  const { name, price, duration, summary, startDates } = tour;
+  const { name, price, duration, summary, startDates, galleryImages } = tour;
+
+  const coverImg = galleryImages.find((img) =>
+    img.split("/").includes("cover")
+  );
 
   const tourDate = new Date(startDates[0]).toDateString().split(" ");
   const tourMonth = tourDate[1];
@@ -26,11 +30,7 @@ const TourCard = ({
       <div className={styles.card_img_box}>
         <img
           className={styles.card_img}
-          src={`${
-            process.env.REACT_APP_SERVER_ROOT_PATH
-          }/images/tours/${(tour?.name).split(" ").join("")}/${tour.images.at(
-            -1
-          )}`}
+          src={coverImg}
           alt={name}
           crossOrigin="anonymous"
         ></img>
