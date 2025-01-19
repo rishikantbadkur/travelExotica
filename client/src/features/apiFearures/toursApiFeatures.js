@@ -13,7 +13,7 @@ const QUERY_FIELDS = [
   "difficulty",
   "ratingsAverage",
   "feature",
-  "images",
+  "galleryImages",
 ];
 
 export async function getAllTours(feature) {

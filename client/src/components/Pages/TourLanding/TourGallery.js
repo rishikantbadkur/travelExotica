@@ -6,7 +6,7 @@ import useStaggerEffect from "../../../hooks/useStaggerEffect";
 
 const IMAGES = [1, 2, 3, 3, 2, 1];
 
-function TourGallery({ name }) {
+function TourGallery({ name, images }) {
   const [ref, inView, containerVariants, itemVariants] = useStaggerEffect();
 
   return (
@@ -38,9 +38,7 @@ function TourGallery({ name }) {
               >
                 <motion.img
                   className={styles.gallery_grid_image}
-                  src={`${
-                    process.env.REACT_APP_SERVER_ROOT_PATH
-                  }/images/tours/${name.split(" ").join("")}/tour-${el}.jpg`}
+                  src={images[el]}
                   alt={name}
                   crossOrigin="anonymous"
                 ></motion.img>

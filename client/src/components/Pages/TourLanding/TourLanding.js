@@ -55,18 +55,21 @@ const TourLanding = () => {
         <section className={styles.tourLanding}>
           <section className={styles.tourLanding__hero}>
             <div className={styles.tourLanding__hero__imagesContainer}>
-              {tour?.images.slice(0, 3).map((path) => (
-                <div className={styles.tourLanding__hero__imageBox} key={path}>
-                  <img
-                    className={styles.tourLanding__hero__image}
-                    src={`${
-                      process.env.REACT_APP_SERVER_ROOT_PATH
-                    }/images/tours/${(tour?.name).split(" ").join("")}/${path}`}
-                    alt={tour.name}
-                    crossOrigin="anonymous"
-                  ></img>
-                </div>
-              ))}
+              {queryResponse?.data?.tour.galleryImages
+                .filter((img) => !img.split("/").includes("cover"))
+                .map((path, index) => (
+                  <div
+                    className={styles.tourLanding__hero__imageBox}
+                    key={index}
+                  >
+                    <img
+                      className={styles.tourLanding__hero__image}
+                      src={path}
+                      alt={tour.name}
+                      crossOrigin="anonymous"
+                    ></img>
+                  </div>
+                ))}
             </div>
 
             <div className={styles.tourLanding__hero__content}>
@@ -268,7 +271,10 @@ const TourLanding = () => {
               <TourMap tourMap={tour?.locations} />
             </div>
             <Dropdown itinerary={tour?.itinerary} />
-            <TourGallery name={tour?.name}></TourGallery>
+            <TourGallery
+              name={tour?.name}
+              images={tour?.galleryImages}
+            ></TourGallery>
           </section>
 
           <section className={styles.booking}>

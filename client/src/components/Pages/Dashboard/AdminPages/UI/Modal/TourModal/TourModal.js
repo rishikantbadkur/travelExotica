@@ -33,7 +33,8 @@ const TYPOLOGY_OPTIONS = [
 ];
 
 function TourModal({ tourId, setShowModal, createModal }) {
-  const [search, setSearch] = useState(false);
+  const [searchStartLocation, setSearchStarLocation] = useState(false);
+  const [searchLocation, setSearchLocation] = useState(false);
   const [images, setImages] = useState([]);
   const [typologyOptions, setTypologyOptions] = useState([]);
   const [tourItinerary, setTourItinerary] = useState([]);
@@ -110,16 +111,23 @@ function TourModal({ tourId, setShowModal, createModal }) {
     mutationFn: uploadTourImages,
     onSuccess: (res) => {
       if (res.status === "success") {
-        tourCreateMutation.mutate(newTour);
+        setNewTour((prev) => {
+          return {
+            ...prev,
+            galleryImages: res.images,
+          };
+        });
+        toast.success(res.message);
       }
     },
     onError: (error) => {
-      toast.error(error.message);
+      toast.error("Something went wrong while uploading tour images.");
     },
   });
 
   function clickHandler(e) {
-    setSearch(false);
+    setSearchLocation(false);
+    setSearchStarLocation(false);
   }
 
   useEffect(() => {
@@ -237,8 +245,6 @@ function TourModal({ tourId, setShowModal, createModal }) {
   };
 
   const startLocationChangeHandler = (cityData) => {
-    console.log(cityData);
-
     setStartLocation({
       type: "Point",
       coordinates: [cityData.lon, cityData.lat],
@@ -296,31 +302,11 @@ function TourModal({ tourId, setShowModal, createModal }) {
     setImages(updatedImages);
   };
 
-  const createFormSubmitHandler = (data) => {
-    if (
-      data.name.trim().length === 0 ||
-      data.description.trim().length === 0 ||
-      data.summary.trim().length === 0 ||
-      tourItinerary.length === 0 ||
-      typologyOptions.length === 0 ||
-      tourLocations.length === 0 ||
-      startDates.length === 0 ||
-      !startLocation
-    ) {
-      return toast.error("All tour fields are required");
-    }
-
+  const imageUploadHandler = (data) => {
+    console.log(data);
     if (images.length !== 4) {
       return toast.error("Exactly 4 images are required");
     }
-
-    const galleryImages = images.map((file) =>
-      file.type.split("/").pop() === "jpeg" ? "jpg" : file.type.split("/").pop()
-    );
-
-    const updatedImageNames = galleryImages.map((name, index) =>
-      index === 3 ? `cover.${name}` : `tour-${index + 1}.${name}`
-    );
 
     const updatedTourName = data.name
       .split(" ")
@@ -337,9 +323,32 @@ function TourModal({ tourId, setShowModal, createModal }) {
     });
 
     imageUploadMutation.mutate(formData);
+  };
 
-    setNewTour({
+  const createFormSubmitHandler = (data) => {
+    if (
+      data.name.trim().length === 0 ||
+      data.description.trim().length === 0 ||
+      data.summary.trim().length === 0 ||
+      tourItinerary.length === 0 ||
+      typologyOptions.length === 0 ||
+      tourLocations.length === 0 ||
+      startDates.length === 0 ||
+      !startLocation
+    ) {
+      return toast.error("All tour fields are required");
+    }
+
+    const updatedTourName = data.name
+      .split(" ")
+      .map((word) => {
+        return word.charAt(0).toUpperCase() + word.slice(1);
+      })
+      .join(" ");
+
+    tourCreateMutation.mutate({
       ...data,
+      ...newTour,
       name: updatedTourName,
       summary: data.summary.trim(),
       description: data.description.trim(),
@@ -352,7 +361,6 @@ function TourModal({ tourId, setShowModal, createModal }) {
       startLocation,
       itinerary: tourItinerary,
       feature: false,
-      images: updatedImageNames,
     });
   };
 
@@ -620,8 +628,9 @@ function TourModal({ tourId, setShowModal, createModal }) {
                 </label>
 
                 <CitySearchInput
-                  search={search}
-                  setSearch={setSearch}
+                  key="first-city-search"
+                  search={searchStartLocation}
+                  setSearch={setSearchStarLocation}
                   defaultCity={
                     tourData ? tourData.data.tour.startLocation.address : ""
                   }
@@ -805,9 +814,10 @@ function TourModal({ tourId, setShowModal, createModal }) {
                         </p>
 
                         <CitySearchInput
+                          key="second-city-search"
                           setCityChange={addNewPlaceHandler}
-                          search={search}
-                          setSearch={setSearch}
+                          search={searchLocation}
+                          setSearch={setSearchLocation}
                         />
                       </div>
                       <div className={styles.btn_dayplan_ctn}>
@@ -870,14 +880,28 @@ function TourModal({ tourId, setShowModal, createModal }) {
                     >
                       Last image will be used as the cover image for the tour.
                     </p>
+                    <div>
+                      <button
+                        className={styles.img_upload_btn}
+                        onClick={handleSubmit(imageUploadHandler)}
+                      >
+                        Upload Images
+                      </button>
+                      <span className={styles.img_upload_text}>
+                        {imageUploadMutation.status === "pending"
+                          ? "Uploading..."
+                          : imageUploadMutation.status === "success"
+                          ? "Upload Successful"
+                          : ""}
+                      </span>
+                    </div>
                   </div>
                 </div>
               )}
 
               {createModal ? (
                 <Button onClick={handleSubmit(createFormSubmitHandler)}>
-                  {imageUploadMutation.status === "pending" ||
-                  tourCreateMutation.status === "pending" ? (
+                  {tourCreateMutation.status === "pending" ? (
                     <SpinnerMini />
                   ) : (
                     "Create"
