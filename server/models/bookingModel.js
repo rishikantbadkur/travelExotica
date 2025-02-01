@@ -64,7 +64,14 @@ bookingSchema.pre(/^find/, function (next) {
   this.populate({ path: 'user', select: ['name', 'email', '_id'] })
     .populate({
       path: 'tour',
-      select: ['name', 'duration', 'difficulty', 'maxGroupSize', 'slug'],
+      select: [
+        'name',
+        'duration',
+        'difficulty',
+        'maxGroupSize',
+        'slug',
+        'galleryImages',
+      ],
     })
     .populate({ path: 'cancellationDetails.owner', select: ['name', 'email'] });
   next();
