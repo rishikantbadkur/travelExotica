@@ -16,9 +16,11 @@ const BookingCard = ({ booking, contentReverse, adminCard }) => {
           <img
             className={styles.img}
             alt={booking.tour.name}
-            src={`${
-              process.env.REACT_APP_SERVER_ROOT_PATH
-            }/images/tours/${booking.tour.name.split(" ").join("")}/cover.jpg`}
+            src={
+              booking.tour.galleryImages.filter((path) =>
+                path.split("/").includes("cover")
+              )[0]
+            }
             crossOrigin="anonymous"
           ></img>
         </aside>
